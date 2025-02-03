@@ -1,0 +1,412 @@
+:root {
+    /*HEADER, MAIN, FOOTER*/
+    --color_header1: #00b400;
+    --color_header2: #008600;
+    --color_letras_header: #ffffff;
+    --color_negro: #000000;
+    --color_subrayado: #ff0000;
+    --color_hover_footer: #d3d3d3;
+
+    /*CONTENEDOR_IMAGENES*/
+    --color_tela: #0000004d;
+    --color_tela_hover: #ffffff4d;
+
+    /*COLOR_TABLAS*/
+    --color_th: #ff5b5bb3;
+    --color_td: #ffc341b3;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+}
+
+a {text-decoration: none;}
+
+header {
+    z-index: 1;
+    min-width: 300px;
+    position: sticky;
+    top: 0;
+}
+
+#header1 {
+    background-color: var(--color_header1);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#header1 div {
+    display: inline-block;
+}
+
+#header1 div ul, nav ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+}
+
+#header1 div a {
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--color_letras_header);
+}
+
+/* POSICION */
+#menudeheader{
+    margin-left: 100px;
+}
+
+#idioma {
+    box-sizing: border-box;
+    float: right;
+    margin-right: 30px;
+}
+
+#idioma li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+/* MENU DESPLEGABLE DE HEADER 1*/
+.menu_desplegable li {
+    display: none;
+    text-align: center;
+}
+
+.linknav:hover {
+    border-bottom: 2px solid var(--color_subrayado);
+}
+.menu_desplegable:hover li{
+    display: block;
+}
+
+/*HEADER 2 O EL NAV*/
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--color_letras_header);
+}
+
+nav li, footer li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+nav {
+    text-align: center;
+    background-color: var(--color_header2);
+    z-index: 2;
+    min-width: 900px;
+}
+
+/* PRIMERA SECCION (ANUNCIO)*/
+#linksdenav {
+    border-bottom: 1px solid var(--color_letras_header);
+    padding: 20px;
+    margin: 0 50px;
+}
+
+#anuncionav {
+    background-image: url('../images/foto_nav.jpg');
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 700px;
+    position: relative;
+}
+
+#anuncionav a {
+    color: var(--color_negro);
+}
+
+#anuncionav div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background-color: var(--color_tela);
+}
+#anuncionav h1 {
+    color: var(--color_negro);
+    font-size: 50px;
+    vertical-align: middle;
+    margin-top: 5em;
+}
+
+#anuncionav button {
+    height: 70px;
+    width: 140px;
+    border: 3px solid var(--color_header2);
+    border-radius: 10px;
+    background-color: var(--color_letras_header);
+}
+
+#anuncionav button:hover {
+    border: none;
+}
+
+#anuncionav button:hover h3{
+    color: var(--color_negro);
+}
+
+/*SEGUNDA SECCION (BLOQUES EN LINEA)*/
+
+#bloquesenlinea, #bloquesenlinea_noticias {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+#bloquesenlinea div, #bloquesenlinea_noticias div {
+    border: 2px solid var(--color_negro);
+    background-image: url(../images/kanbo.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: auto 20px;
+    overflow: hidden;
+}
+
+#bloquesenlinea div p, #bloquesenlinea_noticias div p {
+    background-color: var(--color_letras_header);
+    border: 1px solid var(--color_negro);
+    margin: 0 10px;
+    padding-bottom: 100px;
+    max-height: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* TERCERA SECCION (VIDEO Y CANAL)*/
+
+#massobrex {
+    position: relative;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+#massobrex video {
+    display: inline-block;
+}
+
+#massobrex div {
+    display: inline-block;
+    width: 400px;
+    margin-left: 40px;
+}
+
+#massobrex h2 {
+    font-size: 30px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#redes_sociales {
+    background-color: var(--color_header2);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#redes_sociales li {
+    list-style: none;
+}
+
+#redes_sociales li a {
+    color: var(--color_letras_header);
+    font-size: 20px;
+}
+
+#redes_sociales li a:hover  {
+    color: var(--color_hover_footer);
+}
+
+#mandarcorreo {
+    background-color: var(--color_header1);
+}
+
+#mandarcorreo form {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#mandarcorreo form label {
+    font-size: 20px;
+    color: var(--color_letras_header);
+}
+
+#correo {
+    height: 20px;
+    width: 200px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+#correo:hover {
+    background-color: var(--color_hover_footer);
+}
+
+#botonfooter {
+    height: 40px;
+    width: 80px;
+    margin-top: 20px;
+    font-size: 18px;
+    border: 2px solid var(--color_letras_header);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color_letras_header);
+}
+
+#botonfooter:hover {
+    color: var(--color_negro);
+    border: 2px solid var(--color_negro);
+}
+
+
+
+
+
+
+
+/* ETAPAS HTML */
+.etapas_etapa, .etapa_equipos {
+    text-align: center;
+}
+
+.etapas_etapa div, .etapa_equipos div {
+    position: relative;
+    height: 300px;
+    width: 200px;
+    margin: 2px auto;
+    display: inline-block;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.etapas_etapa h2 {
+    text-align: left;
+    margin-left: 10px;
+    background-color: red;
+    width: 100px;
+    color: white;
+}
+
+.etapas_etapa h1, .etapa_equipos h1 {
+    margin-top: 190px;
+    color: white;
+}
+.tela_etapa, .tela_equipos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.tela_etapa:hover, .tela_equipos:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+
+#linea1_etapa {
+    margin-top: 100px;
+}
+
+.a_etapa {background-image: url(../images/irun.jpg);}
+.b_etapa {background-image: url(../images/ezpeleta.jpg);}
+.c_etapa {background-image: url(../images/legutio.jpg);}
+.d_etapa {background-image: url(../images/gasteiz.jpg);}
+.e_etapa {background-image: url(../images/eibar.jpg);}
+.f_etapa {background-image: url(../images/kanbo.jpg);}
+
+
+
+
+/*EQUIPOS HTML*/
+.etapa_equipos {
+    margin-top: 50px;
+}
+
+.etapa_equipos h2 {
+    text-align: left;
+    margin-left: 10px;
+    background-color: red;
+    width: 120px;
+    color: white;
+}
+
+.etapa_equipos h1 {
+    background-color: rgb(0, 0, 0, 0.8);
+    padding-bottom: 100px;
+}
+
+.etapa_equipos h1:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.etapa_equipos a {
+    color: white;
+}
+
+.etapa_equipos h1:hover a {
+    color: black;
+}
+
+/*  TABLA DE EQUIPOS */
+
+.tabladeequipos_equipos {
+    margin: 100px auto;
+    width: 60%;
+}
+
+.tabladeequipos_equipos table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.tabladeequipos_equipos th {
+    border: 2px solid black;
+    background-color: rgba(255, 91, 91, 0.7);
+}
+.tabladeequipos_equipos td {
+    border: 1px solid black;
+    background-color: rgba(255, 195, 65, 0.7);
+}
+.tabladeequipos_equipos th, .tabladeequipos_equipos td {
+    padding: 20px 20px;
+    width: 200px;
+    max-width: 200px;
+}
+
+
+
+
+
+/* PATROCINADORES */
+#patrocinio_patr {
+    text-align: center;
+}
+
+#patrocinio_patr h1 {
+    font-size: 30px;
+    border-bottom: 2px solid green;
+    margin: 30px 20px;
+    margin-top: 50px;
+}
