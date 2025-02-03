@@ -31,13 +31,12 @@ header {
     z-index: 1;
     min-width: 300px;
     position: sticky;
-    top: 0;
+    top: 0px;
 }
 
 #header1 {
     background-color: var(--color_header1);
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 #header1 div {
@@ -110,7 +109,6 @@ nav {
 
 /* PRIMERA SECCION (ANUNCIO)*/
 #linksdenav {
-    border-bottom: 1px solid var(--color_letras_header);
     padding: 20px;
     margin: 0 50px;
 }
