@@ -10,11 +10,8 @@
     /*CONTENEDOR_IMAGENES*/
     --color_tela: #0000004d;
     --color_tela_hover: #ffffff4d;
-
-    /*COLOR_TABLAS*/
-    --color_th: #ff5b5bb3;
-    --color_td: #ffc341b3;
 }
+
 *{
     box-sizing: border-box;
     margin: 0px;
@@ -110,7 +107,6 @@ nav {
 
 /* PRIMERA SECCION (ANUNCIO)*/
 #linksdenav {
-    border-bottom: 1px solid var(--color_letras_header);
     padding: 20px;
     margin: 0 50px;
 }

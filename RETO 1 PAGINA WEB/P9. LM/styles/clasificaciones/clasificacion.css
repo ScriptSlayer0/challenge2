@@ -111,9 +111,8 @@ nav {
 
 /* PRIMERA SECCION (ANUNCIO)*/
 #linksdenav {
-    border-bottom: 1px solid var(--color_letras_header);
     padding: 20px;
-    margin: 0 50px;
+    margin: 0px 50px;
 }
 
 #anuncionav {

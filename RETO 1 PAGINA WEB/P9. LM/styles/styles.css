@@ -1,7 +1,7 @@
 :root {
     /*HEADER, MAIN, FOOTER*/
-    --color_header1: #b40000;
-    --color_header2: #000000;
+    --color_menu_superior: #b40000;
+    --color_menu_inferior: #000000;
     --color_letras_header: #ffffff;
     --color_negro: #000000;
     --color_subrayado: #ff0000;
@@ -10,10 +10,6 @@
     /*CONTENEDOR_IMAGENES*/
     --color_tela: #0000004d;
     --color_tela_hover: #ffffff4d;
-
-    /*COLOR_TABLAS*/
-    --color_th: #ff5b5bb3;
-    --color_td: #ffc341b3;
 }
 *{
     box-sizing: border-box;
@@ -35,7 +31,7 @@ header {
 }
 
 #header1 {
-    background-color: var(--color_header1);
+    background-color: var(--color_menu_superior);
     padding-top: 20px;
 }
 
@@ -102,7 +98,7 @@ nav li, footer li {
 
 nav {
     text-align: center;
-    background: linear-gradient(to bottom, var(--color_header2), rgba(0, 0, 0, 1), transparent);
+    background: linear-gradient(to bottom, var(--color_menu_inferior), rgba(0, 0, 0, 1), transparent);
     z-index: 2;
     min-width: 900px;
 }
@@ -115,10 +111,8 @@ nav {
 
 #anuncionav {
     background-image: url('../images/foto_nav.jpg');
-    margin: 0;
-    padding: 0;
-    border: 0;
     height: 700px;
+    top: 0px;
     position: relative;
 }
 
@@ -128,10 +122,10 @@ nav {
 
 #anuncionav div {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     text-align: center;
     background-color: var(--color_tela);
 }
@@ -145,7 +139,7 @@ nav {
 #anuncionav button {
     height: 70px;
     width: 140px;
-    border: 3px solid var(--color_header2);
+    border: 3px solid var(--color_menu_inferior);
     border-radius: 10px;
     background-color: var(--color_letras_header);
 }
@@ -178,12 +172,19 @@ nav {
     overflow: hidden;
 }
 
-#bloquesenlinea div p, #bloquesenlinea_noticias div p {
+#bloquesenlinea div p{
     background-color: var(--color_letras_header);
     border: 1px solid var(--color_negro);
-    margin: 0 10px;
+    margin: 20px 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#bloquesenlinea_noticias div p {
+    background-color: var(--color_letras_header);
+    border: 1px solid var(--color_negro);
+    margin: 20px 10px;
     padding-bottom: 100px;
-    max-height: 70px;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -217,7 +218,7 @@ footer {
 }
 
 #redes_sociales {
-    background-color: var(--color_header2);
+    background-color: var(--color_menu_inferior);
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -235,13 +236,14 @@ footer {
 }
 
 #mandarcorreo {
-    background-color: var(--color_header1);
+    background-color: var(--color_menu_superior);
 }
 
 #mandarcorreo form {
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
 #mandarcorreo form label {
     font-size: 20px;
     color: var(--color_letras_header);
@@ -272,128 +274,4 @@ footer {
 #botonfooter:hover {
     color: var(--color_negro);
     border: 2px solid var(--color_negro);
-}
-
-/* ETAPAS HTML */
-.etapas_etapa, .etapa_equipos {
-    text-align: center;
-}
-
-.etapas_etapa div, .etapa_equipos div {
-    position: relative;
-    height: 300px;
-    width: 200px;
-    margin: 2px auto;
-    display: inline-block;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-.etapas_etapa h2 {
-    text-align: left;
-    margin-left: 10px;
-    background-color: red;
-    width: 100px;
-    color: white;
-}
-
-.etapas_etapa h1, .etapa_equipos h1 {
-    margin-top: 190px;
-    color: white;
-}
-.tela_etapa, .tela_equipos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(0, 0, 0, 0.3);
-}
-
-.tela_etapa:hover, .tela_equipos:hover {
-    background-color: rgb(255, 255, 255, 0.3);
-}
-
-#linea1_etapa {
-    margin-top: 100px;
-}
-
-.a_etapa {background-image: url(../images/irun.jpg);}
-.b_etapa {background-image: url(../images/ezpeleta.jpg);}
-.c_etapa {background-image: url(../images/legutio.jpg);}
-.d_etapa {background-image: url(../images/gasteiz.jpg);}
-.e_etapa {background-image: url(../images/eibar.jpg);}
-.f_etapa {background-image: url(../images/kanbo.jpg);}
-
-/*EQUIPOS HTML*/
-.etapa_equipos {
-    margin-top: 50px;
-}
-
-.etapa_equipos h2 {
-    text-align: left;
-    margin-left: 10px;
-    background-color: red;
-    width: 120px;
-    color: white;
-}
-
-.etapa_equipos h1 {
-    background-color: rgb(0, 0, 0, 0.8);
-    padding-bottom: 100px;
-}
-
-.etapa_equipos h1:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    padding-bottom: 100px;
-    color: white;
-}
-
-.etapa_equipos a {
-    color: white;
-}
-
-.etapa_equipos h1:hover a {
-    color: black;
-}
-
-/*  TABLA DE EQUIPOS */
-
-.tabladeequipos_equipos {
-    margin: 100px auto;
-    width: 60%;
-}
-
-.tabladeequipos_equipos table {
-    border-collapse: collapse;
-    text-align: center;
-}
-
-.tabladeequipos_equipos th {
-    border: 2px solid black;
-    background-color: rgba(255, 91, 91, 0.7);
-}
-.tabladeequipos_equipos td {
-    border: 1px solid black;
-    background-color: rgba(255, 195, 65, 0.7);
-}
-.tabladeequipos_equipos th, .tabladeequipos_equipos td {
-    padding: 20px 20px;
-    width: 200px;
-    max-width: 200px;
-}
-
-/* PATROCINADORES */
-#patrocinio_patr {
-    text-align: center;
-}
-
-#patrocinio_patr h1 {
-    font-size: 30px;
-    border-bottom: 2px solid green;
-    margin: 30px 20px;
-    margin-top: 50px;
 }
