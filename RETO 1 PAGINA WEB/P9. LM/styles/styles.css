@@ -117,7 +117,6 @@ nav {
     text-align: center;
     background: linear-gradient(to bottom, var(--color_menu_inferior), rgba(0, 0, 0, 1), transparent);
     z-index: 2;
-    min-width: 900px;
 }
 
 /* PRIMERA SECCION (ANUNCIO)*/
