@@ -1,69 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Itzulia</title>
-    <!-- FONT PARA LA PÁGINA WEB -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/46cb5b6960.js" crossorigin="anonymous"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/styles.css">
+
+        <!-- FONT PARA LA PÁGINA WEB -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+        <script src="https://kit.fontawesome.com/46cb5b6960.js" crossorigin="anonymous"></script>
+        
+        <title>Itzulia</title>
+    </head>
+
+    <header>
+        <section id="header1">
+        <div>
+        <ul  class="lista_menu_desplegable">
+            <li class="menu_desplegable">
+                <a class="" href="#">Menú</a>
+                <ul>
+                    <li><a class="link_menu_desplegable" href="#anuncionav">Sobre la carrera</a></li>
+                    <li><a class="link_menu_desplegable" href="#bloquesenlinea">Futuro de la itzulia</a></li>
+                    <li><a class="link_menu_desplegable" href="#massobrex">Más sobre Itzulia</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+
+        <div id="idioma">
+            <ul>
+                <li class="linknav"><a href="">ES</a></li>
+                <li class="linknav"><a href="">EN</a></li>
+                <li class="linknav"><a href="">EUS</a></li>
+            </ul>
+        </div>
+        </section>
+
+      <nav>
+          <div id="linksdenav">
+              <ul>
+                  <li><a class="linknav" href="etapa.html">Etapas</a></li>
+                  <li><a class="linknav" href="equipos.html">Equipos</a></li>
+                  <li><a class="linknav" href="clasificaciones.html">Clasificaciones</a></li>
+                  <li><a href="index.html"><img src="images/logoitzulia.png" alt="logo" width="90px"></a></li>
+                  <li><a class="linknav" href="noticias.html">Noticias</a></li>
+                  <li><a class="linknav" href="patrocinadores.html">Patrocinadores</a></li>
+                  <li><a class="linknav" href="palmares.html">Palmarés</a></li>
+              </ul>
+          </div>
+      </nav>
+  </header>
 
 <body>
-    <header>
-    <!-- Sección superior del header (menú desplegable e idioma) -->
-    <section id="header1">
-        <!-- Menú desplegable -->
-        <nav aria-label="Menú secundario">
-            <ul id="menudeheader">
-                <li class="menu_desplegable" aria-haspopup="true" aria-expanded="false">
-                    <a class="linknav" href="#" aria-label="Abrir menú desplegable">Menú</a>
-                    <ul class="submenu">
-                        <li><a class="linknav" href="#anuncionav">Sobre la carrera</a></li>
-                        <li><a class="linknav" href="#bloquesenlinea">Futuro de la Itzulia</a></li>
-                        <li><a class="linknav" href="#massobrex">Más sobre Itzulia</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Selector de idioma -->
-        <nav aria-label="Selector de idioma">
-            <ul id="idioma">
-                <li><a class="linknav" href="#" lang="es" aria-label="Cambiar a español">ES</a></li>
-                <li><a class="linknav" href="#" lang="en" aria-label="Cambiar a inglés">EN</a></li>
-                <li><a class="linknav" href="#" lang="eu" aria-label="Cambiar a euskera">EUS</a></li>
-            </ul>
-        </nav>
-    </section>
-
-    <!-- Navegación principal -->
-    <nav aria-label="Navegación principal">
-        <ul id="linksdenav">
-            <li><a class="linknav" href="etapa.html">Etapas</a></li>
-            <li><a class="linknav" href="equipos.html">Equipos</a></li>
-            <li><a class="linknav" href="clasificaciones.html">Clasificaciones</a></li>
-            <li>
-                <a href="index.html">
-                    <img src="images/logoitzulia.png" alt="Logo de Itzulia" width="90">
-                </a>
-            </li>
-            <li><a class="linknav" href="noticias.html">Noticias</a></li>
-            <li><a class="linknav" href="patrocinadores.html">Patrocinadores</a></li>
-            <li><a class="linknav" href="palmares.html">Palmarés</a></li>
-        </ul>
-    </nav>
-</header>
-
-    </header>
+    
     <main>
-        <section id="anuncionav">            
+        <section class="anuncionav">            
             <div>
-                <h1>¡PEDRO PASCAL GANA LA ITZULIA 2024!</h1>
-                <button><a href="https://itzulia.eus/carlos-rodriguez-gana-la-sexta-etapa-y-juan-ayuso-gana-la-itzulia-2024/"><h3>VER MÁS</h3></a></button>
+                <h1 class="texto-anuncio">¡PEDRO PASCAL GANA LA ITZULIA 2024!</h1>
+                <button class="boton-anuncio">
+                    <a href="https://itzulia.eus/carlos-rodriguez-gana-la-sexta-etapa-y-juan-ayuso-gana-la-itzulia-2024/"><h3>VER MÁS</h3></a>
+                </button>
             </div>
         </section>
 

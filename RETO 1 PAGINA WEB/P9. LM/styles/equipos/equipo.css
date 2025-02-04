@@ -263,14 +263,142 @@ footer {
     max-width: 200px;
 }
 
-/* PATROCINADORES */
-#patrocinio_patr {
-    text-align: center;
+/* redes sociales*/
+#redes_sociales ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+#redes_sociales li {
+    margin: 0px 10px 0px 0px;
 }
 
-#patrocinio_patr h1 {
-    font-size: 30px;
-    border-bottom: 2px solid green;
-    margin: 30px 20px;
-    margin-top: 50px;
+/*Animaciones*/
+#redes_sociales a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#redes_sociales a:hover {
+    background-color: #ff0000;
+}
+
+/*Animación instagram*/
+#animacion-instagram a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: white; /* Cambiado a blanco para mejor contraste */
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+#animacion-instagram a:hover {
+    /*Añadimos un degradado lineal*/
+    background: linear-gradient(45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%);
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* Sombra suave al pasar el mouse */
+}
+
+
+/*Animación tiktok*/
+#animacion-tiktok a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+    
+#animacion-tiktok a:hover {
+    background-color: black;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* Sombra suave al pasar el mouse */
+}
+
+/*Animación youtube*/
+#animacion-youtube a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+    
+#animacion-youtube a:hover {
+    background-color: #ff0000;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* Sombra suave al pasar el mouse */
+}
+
+/*Animación facebook*/
+#animacion-facebook a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+        
+#animacion-facebook a:hover {
+    background-color: #001affc0;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* Sombra suave al pasar el mouse */
+}
+
+/*Animación twiter*/
+#animacion-twitter a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    
+}
+            
+#animacion-twitter a:hover {
+    background-color: #00e1ffb6;
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3); /* Sombra suave al pasar el mouse */
 }

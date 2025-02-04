@@ -11,17 +11,17 @@
     --color_tela: #0000004d;
     --color_tela_hover: #ffffff4d;
 }
+
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
-
-body { 
     font-family: "Work Sans", sans-serif;
 }
 
-a {text-decoration: none;}
+a {
+    text-decoration: none;
+}
 
 header {
     z-index: 1;
@@ -40,9 +40,6 @@ header {
 }
 
 #header1 div ul, nav ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
     list-style: none;
 }
 
@@ -50,11 +47,6 @@ header {
     text-decoration: none;
     font-size: 20px;
     color: var(--color_letras_header);
-}
-
-/* POSICION */
-#menudeheader{
-    margin-left: 100px;
 }
 
 #idioma {
@@ -70,27 +62,52 @@ header {
 }
 
 /* MENU DESPLEGABLE DE HEADER 1*/
-.menu_desplegable li {
-    display: none;
-    text-align: center;
+.menu_desplegable{
+    margin-left: 100px;
+    width: 200px;
 }
 
-.linknav:hover {
-    border-bottom: 2px solid var(--color_subrayado);
+/*Estilo de la lista desordenada*/
+.menu_desplegable ul {
+    display: none; 
 }
-.menu_desplegable:hover li{
-    display: block;
+
+/*Estilos de los elementos de la lista*/
+.menu_desplegable li{
+    margin: 10px 0px 10px 0px;
+}
+
+/*Eventos menu desplegable*/
+.menu_desplegable:hover ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: #4a4a4a;
+}
+
+.link_menu_desplegable:hover{
+    border-bottom: 2px solid white;
+}
+
+/*Elemento menu inferior*/
+.linknav:hover{
+    border-bottom: 2px solid var(--color_subrayado);
 }
 
 /*HEADER 2 O EL NAV*/
-
 nav a {
     text-decoration: none;
     font-size: 16px;
     color: var(--color_letras_header);
 }
 
-nav li, footer li {
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+footer li {
     display: inline-block;
     margin-left: 20px;
     margin-right: auto;
@@ -105,22 +122,22 @@ nav {
 
 /* PRIMERA SECCION (ANUNCIO)*/
 #linksdenav {
-    padding: 20px;
-    margin: 0 50px;
+    padding: 10px 0px 20px 0px;
+    margin: 0px 50px;
 }
 
-#anuncionav {
+.anuncionav {
     background-image: url('../images/foto_nav.jpg');
     height: 700px;
     top: 0px;
     position: relative;
 }
 
-#anuncionav a {
+.anuncionav a {
     color: var(--color_negro);
 }
 
-#anuncionav div {
+.anuncionav div {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -129,37 +146,61 @@ nav {
     text-align: center;
     background-color: var(--color_tela);
 }
-#anuncionav h1 {
+
+.texto-anuncio{
     color: var(--color_negro);
     font-size: 50px;
     vertical-align: middle;
-    margin-top: 5em;
+    position: relative;
+    top:200px
 }
 
-#anuncionav button {
+.anuncionav button {
     height: 70px;
     width: 140px;
+    position: relative;
+    top:250px;
     border: 3px solid var(--color_menu_inferior);
     border-radius: 10px;
     background-color: var(--color_letras_header);
 }
 
-#anuncionav button:hover {
+.anuncionav button:hover {
     border: none;
 }
 
-#anuncionav button:hover h3{
+.anuncionav button:hover h3{
     color: var(--color_negro);
 }
 
 /*SEGUNDA SECCION (BLOQUES EN LINEA)*/
 
-#bloquesenlinea, #bloquesenlinea_noticias {
+#bloquesenlinea {
     position: relative;
     margin-top: 50px;
     text-align: center;
 }
-#bloquesenlinea div, #bloquesenlinea_noticias div {
+
+#bloquesenlinea_noticias {
+    position: relative;
+    margin-top: 50px;
+    text-align: center;
+}
+
+#bloquesenlinea div {
+    border: 2px solid var(--color_negro);
+    background-image: url(../images/kanbo.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: auto 20px;
+    overflow: hidden;
+}
+
+#bloquesenlinea_noticias div {
     border: 2px solid var(--color_negro);
     background-image: url(../images/kanbo.jpg);
     background-size: cover; 
@@ -222,6 +263,7 @@ footer {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 #redes_sociales li {
     list-style: none;
 }
