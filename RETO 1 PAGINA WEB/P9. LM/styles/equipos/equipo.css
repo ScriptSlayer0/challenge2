@@ -179,60 +179,47 @@ footer {
     text-align: center;
 }
 
-#redes_sociales {
-    background-color: var(--color_header2);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#redes_sociales li {
-    list-style: none;
-}
-
-#redes_sociales li a {
-    color: var(--color_letras_header);
-    font-size: 20px;
-}
-
-#redes_sociales li a:hover  {
-    color: var(--color_hover_footer);
-}
-
-#mandarcorreo {
+#Contenedor-formulario-correo {
+    display: flex;
     background-color: var(--color_header1);
+    flex-direction: column; /* Disposición en columna */
+    justify-content: flex-start; /* Asegura que los elementos se alineen desde el principio */
+    align-items: center; /* Alineación al centro */
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
-#mandarcorreo form {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-#mandarcorreo form label {
+#texto-contacto-correo {
     font-size: 20px;
     color: var(--color_letras_header);
+    margin-bottom: 20px; /* Margen inferior */
+    display: block; /* Asegurarse de que el label sea un bloque */
+    width: 100%; /* O ajusta según el ancho que desees */
 }
 
 #correo {
-    height: 20px;
-    width: 200px;
+    height: 40px;
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo */
     font-size: 18px;
     margin-left: 20px;
+    margin-bottom: 20px; /* Espacio debajo del input */
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no se agregue al ancho */
 }
 
-#correo:hover {
-    background-color: var(--color_hover_footer);
-}
-
-#botonfooter {
+#boton-footer {
     height: 40px;
     width: 80px;
-    margin-top: 20px;
     font-size: 18px;
     border: 2px solid var(--color_letras_header);
     border-radius: 5px;
     background-color: transparent;
     color: var(--color_letras_header);
+    margin-left: 10px;
 }
 
-#botonfooter:hover {
+#boton-footer:hover {
     color: var(--color_negro);
     border: 2px solid var(--color_negro);
 }
@@ -241,6 +228,7 @@ footer {
 #redes_sociales {
     display: flex;
     flex-direction: row; /* Asegura que los elementos estén en fila */
+    background-color: var(--color_header2);
     justify-content: center;
     align-items: center;
     padding-top: 20px;
@@ -265,7 +253,6 @@ footer {
 #redes_sociales a:hover {
     background-color: #ff0000;
 }
-
 
 /*Animación instagram*/
 #animacion-instagram a {
