@@ -32,7 +32,7 @@ header {
 
 #header1 {
     background-color: var(--color_menu_superior);
-    padding-top: 20px;
+    padding: 10px 0px 10px 0px;
 }
 
 #header1 div {
@@ -62,18 +62,22 @@ header {
 }
 
 /* MENU DESPLEGABLE DE HEADER 1*/
-.menu_desplegable{
+.menu_desplegable {
     margin-left: 100px;
     width: 200px;
+    position: relative; /* Necesario para que z-index funcione */
+    z-index: 10; /* Z-index alto para asegurarse de que esté encima */
 }
 
 /*Estilo de la lista desordenada*/
 .menu_desplegable ul {
     display: none; 
+    position: absolute; /* Necesario para que se posicione de manera absoluta respecto al contenedor */
+    z-index: 20; /* Z-index para el menú desplegable */
 }
 
 /*Estilos de los elementos de la lista*/
-.menu_desplegable li{
+.menu_desplegable li {
     margin: 10px 0px 10px 0px;
 }
 
@@ -85,7 +89,13 @@ header {
     background-color: #4a4a4a;
 }
 
-.link_menu_desplegable:hover{
+.link_menu_desplegable{
+    display: inline-block;
+    width: 280px;
+    padding: 10px 10px 0px 10px;
+}
+
+.link_menu_desplegable:hover {
     border-bottom: 2px solid white;
 }
 
