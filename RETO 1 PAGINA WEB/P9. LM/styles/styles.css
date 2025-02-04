@@ -19,6 +19,8 @@
     font-family: "Work Sans", sans-serif;
 }
 
+/*Barra de navegación*/
+
 a {
     text-decoration: none;
 }
@@ -104,7 +106,6 @@ header {
     border-bottom: 2px solid var(--color_subrayado);
 }
 
-/*HEADER 2 O EL NAV*/
 nav a {
     text-decoration: none;
     font-size: 16px;
@@ -117,21 +118,14 @@ nav li {
     margin-right: auto;
 }
 
-footer li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
-}
-
 nav {
     text-align: center;
     background: linear-gradient(to bottom, var(--color_menu_inferior), rgba(0, 0, 0, 1), transparent);
     z-index: 2;
 }
 
-/* PRIMERA SECCION (ANUNCIO)*/
 #linksdenav {
-    padding: 10px 0px 20px 0px;
+    padding: 10px 0px 30px 0px;
     margin: 0px 50px;
 }
 
@@ -259,70 +253,4 @@ nav {
 
 #massobrex h2 {
     font-size: 30px;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 70px;
-    text-align: center;
-}
-
-#redes_sociales {
-    background-color: var(--color_menu_inferior);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#redes_sociales li {
-    list-style: none;
-}
-
-#redes_sociales li a {
-    color: var(--color_letras_header);
-    font-size: 20px;
-}
-
-#redes_sociales li a:hover  {
-    color: var(--color_hover_footer);
-}
-
-#mandarcorreo {
-    background-color: var(--color_menu_superior);
-}
-
-#mandarcorreo form {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
-#mandarcorreo form label {
-    font-size: 20px;
-    color: var(--color_letras_header);
-}
-
-#correo {
-    height: 20px;
-    width: 200px;
-    font-size: 18px;
-    margin-left: 20px;
-}
-
-#correo:hover {
-    background-color: var(--color_hover_footer);
-}
-
-#botonfooter {
-    height: 40px;
-    width: 80px;
-    margin-top: 20px;
-    font-size: 18px;
-    border: 2px solid var(--color_letras_header);
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--color_letras_header);
-}
-
-#botonfooter:hover {
-    color: var(--color_negro);
-    border: 2px solid var(--color_negro);
 }

@@ -9,7 +9,6 @@
 
     /*CONTENEDOR_IMAGENES*/
     --color_tela: #0000004d;
-    --color_tela_hover: #ffffff4d;
 }
 
 *{
@@ -82,7 +81,7 @@ header {
 }
 
 #linksdenav {
-    padding: 0px 0px 20px;
+    padding: 0px 0px 30px 0px;
 }
 
 /*HEADER 2 O EL NAV*/
@@ -93,7 +92,7 @@ nav a {
     color: var(--color_letras_header);
 }
 
-nav li, footer li {
+nav li{
     display: inline-block;
     margin-left: 20px;
     margin-right: auto;
@@ -101,72 +100,9 @@ nav li, footer li {
 
 nav {
     text-align: center;
+    padding: 10px 0px 0px 0px;
     background: linear-gradient(to bottom, var(--color_header2), rgba(0, 0, 0, 1), transparent);
     z-index: 2;
-}
-
-/* FOOTER */
-footer {
-    margin-top: 70px;
-    text-align: center;
-}
-
-#redes_sociales {
-    background-color: var(--color_header2);
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-#redes_sociales li {
-    list-style: none;
-}
-
-#redes_sociales li a {
-    color: var(--color_letras_header);
-    font-size: 20px;
-}
-
-#redes_sociales li a:hover  {
-    color: var(--color_hover_footer);
-}
-
-#mandarcorreo {
-    background-color: var(--color_header1);
-}
-
-#mandarcorreo form {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-#mandarcorreo form label {
-    font-size: 20px;
-    color: var(--color_letras_header);
-}
-
-#correo {
-    height: 20px;
-    width: 200px;
-    font-size: 18px;
-    margin-left: 20px;
-}
-
-#correo:hover {
-    background-color: var(--color_hover_footer);
-}
-
-#botonfooter {
-    height: 40px;
-    width: 80px;
-    margin-top: 20px;
-    font-size: 18px;
-    border: 2px solid var(--color_letras_header);
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--color_letras_header);
-}
-
-#botonfooter:hover {
-    color: var(--color_negro);
-    border: 2px solid var(--color_negro);
 }
 
 /* ETAPAS HTML */
@@ -237,44 +173,82 @@ footer {
     color: black;
 }
 
-/*  TABLA DE EQUIPOS */
-.tabladeequipos_equipos {
-    margin: 100px auto;
-    width: 60%;
-}
-
-.tabladeequipos_equipos table {
-    border-collapse: collapse;
+/* FOOTER */
+footer {
+    margin-top: 70px;
     text-align: center;
 }
 
-.tabladeequipos_equipos th {
-    border: 2px solid black;
-    background-color: rgba(255, 91, 91, 0.7);
+#redes_sociales {
+    background-color: var(--color_header2);
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.tabladeequipos_equipos td {
-    border: 1px solid black;
-    background-color: rgba(255, 195, 65, 0.7);
+#redes_sociales li {
+    list-style: none;
 }
-.tabladeequipos_equipos th, .tabladeequipos_equipos td {
-    padding: 20px 20px;
+
+#redes_sociales li a {
+    color: var(--color_letras_header);
+    font-size: 20px;
+}
+
+#redes_sociales li a:hover  {
+    color: var(--color_hover_footer);
+}
+
+#mandarcorreo {
+    background-color: var(--color_header1);
+}
+
+#mandarcorreo form {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+#mandarcorreo form label {
+    font-size: 20px;
+    color: var(--color_letras_header);
+}
+
+#correo {
+    height: 20px;
     width: 200px;
-    max-width: 200px;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+#correo:hover {
+    background-color: var(--color_hover_footer);
+}
+
+#botonfooter {
+    height: 40px;
+    width: 80px;
+    margin-top: 20px;
+    font-size: 18px;
+    border: 2px solid var(--color_letras_header);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color_letras_header);
+}
+
+#botonfooter:hover {
+    color: var(--color_negro);
+    border: 2px solid var(--color_negro);
 }
 
 /* redes sociales*/
-#redes_sociales ul {
+#redes_sociales {
     display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
     justify-content: center;
     align-items: center;
-    list-style-type: none;
-  }
-  
-#redes_sociales li {
-    margin: 0px 10px 0px 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px; /* Espaciado entre iconos */
 }
 
-/*Animaciones footer redes sociales*/
+/* Animaciones footer redes sociales */
 #redes_sociales a {
     display: flex;
     justify-content: center;
@@ -291,6 +265,7 @@ footer {
 #redes_sociales a:hover {
     background-color: #ff0000;
 }
+
 
 /*Animación instagram*/
 #animacion-instagram a {
@@ -310,7 +285,7 @@ footer {
         #bc1888 100%);
     opacity: 0.7;
     
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     
     /* Transiciones suaves */
@@ -321,6 +296,7 @@ footer {
 #animacion-instagram a:hover {
     opacity: 1;
     transform: scale(1.1);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
     
     /* Sombra con los colores del gradiente más pequeña y sutil */
     box-shadow: 0px 0px 10px 5px rgba(240, 147, 51, 0.4),   /* #f09433 */
@@ -358,6 +334,7 @@ footer {
     background-color: black;
     filter: brightness(1.3);
     opacity: 1;
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
     box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
 }
@@ -390,6 +367,7 @@ footer {
     filter: brightness(1.2); /* Aumenta el brillo */
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
     opacity: 1;
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
     /* Sombra más intensa y redondeada */
     box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
 }
@@ -419,6 +397,7 @@ footer {
 #animacion-twitter a:hover {
     background-color: #1DA1F2;
     filter: brightness(1.2);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
     box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
     opacity: 1;
@@ -450,6 +429,7 @@ footer {
 #animacion-facebook a:hover {
     background-color: #001affc0;
     filter: brightness(1.2);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
     transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
     box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
     opacity: 1;
