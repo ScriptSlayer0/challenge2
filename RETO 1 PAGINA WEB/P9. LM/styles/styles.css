@@ -5,10 +5,12 @@
 
     /*Colores barra de navegación*/
 
+    /*Colores fuentes*/
+    --color_letras_header: #ffffff;
+
     /*HEADER, MAIN*/
     --color_menu_superior: #b40000;
     --color_menu_inferior: #000000;
-    --color_letras_header: #ffffff;
     --color_negro: #000000;
     --color_subrayado: #ff0000;
     --color_hover_footer: #d3d3d3;
@@ -31,29 +33,28 @@ a {
     text-decoration: none;
 }
 
-/*Esto tiene que desaparecer*/
-header {
-    z-index: 1;
+#barra-superior {
+    z-index: 1; /* Asegura que esté encima de otros elementos */
     width: 100%;
     min-width: 300px;
     position: fixed;
     top: 0px;
-}
-
-#header1 {
     background-color: var(--color_menu_superior);
-    padding: 10px 0px 10px 0px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#header1 div {
+#barra-superior div {
     display: inline-block;
 }
 
-#header1 div ul, nav ul {
+#barra-superior div ul, nav ul {
     list-style: none;
 }
 
-#header1 div a {
+#barra-superior div a {
     text-decoration: none;
     font-size: 20px;
     color: var(--color_letras_header);
@@ -61,17 +62,16 @@ header {
 
 #idioma {
     box-sizing: border-box;
-    float: right;
     margin-right: 30px;
+    display: flex;
+    align-items: center;
 }
 
 #idioma li {
     display: inline-block;
     margin-left: 20px;
-    margin-right: auto;
 }
 
-/* MENU DESPLEGABLE DE HEADER 1*/
 .menu_desplegable {
     width: 100px;
     position: relative; /* Necesario para que z-index funcione */
@@ -83,12 +83,12 @@ header {
 .menu_desplegable ul {
     display: none; 
     position: absolute; /* Necesario para que se posicione de manera absoluta respecto al contenedor */
-    z-index: 20; /* Z-index para el menú desplegable */
+    z-index: 20; /* Z-index para el menú desplegable ajustado */
 }
 
 /*Estilos de los elementos de la lista*/
 .menu_desplegable li {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px;
 }
 
 /*Eventos menu desplegable*/
@@ -99,7 +99,7 @@ header {
     background-color: #4a4a4a;
 }
 
-.link_menu_desplegable{
+.link_menu_desplegable {
     display: inline-block;
     width: 220px;
     padding: 10px 10px 0px 10px;
@@ -110,8 +110,17 @@ header {
 }
 
 /*Elemento menu inferior*/
-.linknav:hover{
+.linknav:hover {
     border-bottom: 2px solid var(--color_subrayado);
+}
+
+nav {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--color_menu_inferior), rgba(0, 0, 0, 1), transparent);
+    z-index: 1;
 }
 
 nav a {
@@ -123,18 +132,14 @@ nav a {
 nav li {
     display: inline-block;
     margin-left: 20px;
-    margin-right: auto;
-}
-
-nav {
-    text-align: center;
-    background: linear-gradient(to bottom, var(--color_menu_inferior), rgba(0, 0, 0, 1), transparent);
-    z-index: 2;
 }
 
 #linksdenav {
     padding: 10px 0px 30px 0px;
     margin: 0px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .anuncionav {
@@ -142,6 +147,8 @@ nav {
     background-image: url('../images/foto_nav.jpg');
     height: 700px;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; 
 }
 
 .anuncionav a {
@@ -155,7 +162,7 @@ nav {
     right: 0px;
     bottom: 0px;
     text-align: center;
-    background-color: var(--color_tela);
+    background-color: var(--color_tela);  
 }
 
 .texto-anuncio{
@@ -163,7 +170,7 @@ nav {
     font-size: 50px;
     vertical-align: middle;
     position: relative;
-    top:200px
+    top: 200px;
 }
 
 .boton-anuncio {
@@ -174,11 +181,12 @@ nav {
     border: none;
     border-radius: 10px;
     background-color: var(--color_letras_header);
+    border: 3px solid var(--color_menu_inferior);
 }
 
 .boton-anuncio:hover {
-    border: 3px solid var(--color_menu_inferior);
     border-radius: 10px;
+    border: none;
 }
 
 .anuncionav button:hover h3{

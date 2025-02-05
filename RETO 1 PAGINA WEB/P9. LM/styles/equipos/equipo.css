@@ -105,51 +105,6 @@ footer {
     text-align: center;
 }
 
-#Contenedor-formulario-correo {
-    display: flex;
-    background-color: var(--color_header1);
-    flex-direction: column; /* Disposición en columna */
-    justify-content: flex-start; /* Asegura que los elementos se alineen desde el principio */
-    align-items: center; /* Alineación al centro */
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-#texto-contacto-correo {
-    font-size: 20px;
-    color: var(--color_letras_header);
-    margin-bottom: 20px; /* Margen inferior */
-    display: block; /* Asegurarse de que el label sea un bloque */
-    width: 100%; /* O ajusta según el ancho que desees */
-}
-
-#correo {
-    height: 40px;
-    width: 100%;
-    max-width: 400px; /* Ajusta el ancho máximo */
-    font-size: 18px;
-    margin-left: 20px;
-    margin-bottom: 20px; /* Espacio debajo del input */
-    padding: 10px;
-    box-sizing: border-box; /* Asegura que el padding no se agregue al ancho */
-}
-
-#boton-footer {
-    height: 40px;
-    width: 80px;
-    font-size: 18px;
-    border: 2px solid var(--color_letras_header);
-    border-radius: 5px;
-    background-color: transparent;
-    color: var(--color_letras_header);
-    margin-left: 10px;
-}
-
-#boton-footer:hover {
-    color: var(--color_negro);
-    border: 2px solid var(--color_negro);
-}
-
 /* redes sociales*/
 #redes_sociales {
     display: flex;
@@ -353,4 +308,50 @@ footer {
     box-shadow: none;
     background: grey;
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+#Contenedor-formulario-correo {
+    display: flex;
+    background-color: var(--color_header1);
+    flex-direction: column; /* Disposición en columna */
+    justify-content: flex-start; /* Asegura que los elementos se alineen desde el principio */
+    align-items: center; /* Alineación al centro */
+    padding: 40px 0px 48px 0px; /* Ajusta padding superior e inferior */
+}
+
+#texto-contacto-correo {
+    font-size: 20px;
+    color: var(--color_letras_header);
+    margin-bottom: 20px; /* Margen inferior */
+    display: block; /* Asegurarse de que el label sea un bloque */
+    width: 100%; /* O ajusta según el ancho que desees */
+    text-align: center; /* Centra el texto */
+}
+
+#correo {
+    height: 40px;
+    width: calc(100% - 40px); /* Asegura que el input se ajuste al padding lateral */
+    max-width: 400px; /* Ajusta el ancho máximo */
+    font-size: 18px;
+    margin-bottom: 20px; /* Espacio debajo del input */
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no se agregue al ancho */
+}
+
+#boton-footer {
+    height: 60px;
+    width: 100px; /* Aumenta el ancho del botón */
+    font-size: 18px;
+    border: 2px solid var(--color_letras_header);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color_letras_header);
+    margin-left: 10px;
+    cursor: pointer; /* Añade un cursor de puntero al pasar el ratón */
+}
+
+#boton-footer:hover {
+    color: var(--color_negro);
+    border: 2px solid var(--color_negro);
+    background-color: var(--color_letras_header); /* Añade un fondo al hacer hover */
 }
