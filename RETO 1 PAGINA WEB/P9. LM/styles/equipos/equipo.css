@@ -23,154 +23,80 @@ body {
 
 a {text-decoration: none;}
 
-header {
-    z-index: 1;
-    min-width: 300px;
-    position: sticky;
-    top: 0px;
+/*EQUIPOS HTML*/
+.equipos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px; /* Espacio entre los bloques */
 }
 
-#header1 {
-    background-color: var(--color_header1);
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#header1 div {
-    display: inline-block;
-}
-
-#header1 div ul, nav ul {
-    list-style: none;
-}
-
-#header1 div a {
-    text-decoration: none;
-    font-size: 20px;
-    color: var(--color_letras_header);
-}
-
-/* POSICION */
-#menudeheader{
-    margin-left: 100px;
-}
-
-#idioma {
-    box-sizing: border-box;
-    float: right;
-    margin-right: 30px;
-}
-
-#idioma li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
-}
-
-/* MENU DESPLEGABLE DE HEADER 1*/
-.menu_desplegable li {
-    display: none;
-    text-align: center;
-}
-
-.linknav:hover {
-    border-bottom: 2px solid var(--color_subrayado);
-}
-.menu_desplegable:hover li{
-    display: block;
-}
-
-#linksdenav {
-    padding: 0px 0px 30px 0px;
-}
-
-/*HEADER 2 O EL NAV*/
-
-nav a {
-    text-decoration: none;
-    font-size: 16px;
-    color: var(--color_letras_header);
-}
-
-nav li{
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
-}
-
-nav {
-    text-align: center;
-    padding: 10px 0px 0px 0px;
-    background: linear-gradient(to bottom, var(--color_header2), rgba(0, 0, 0, 1), transparent);
-    z-index: 2;
-}
-
-/* ETAPAS HTML */
-.etapa_equipos {
-    text-align: center;
-}
-
-.etapa_equipos div {
-    position: relative;
+/* Estilos generales de los bloques */
+.equipos div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 300px;
     width: 200px;
-    margin: 2px auto;
-    display: inline-block;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    overflow: hidden;
+    border: solid 1px black;
 }
 
-.etapa_equipos h1 {
-    margin-top: 190px;
-    color: white;
-}
-.tela_equipos {
-    position: absolute;
-    background-image: url(../../images/equipos/hotwheels_2_logo.webp);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(0, 0, 0, 0.3);
-}
-
-.tela_etapa:hover, .tela_equipos:hover {
-    background-color: rgb(255, 255, 255, 0.3);
-}
-
-/*EQUIPOS HTML*/
-.etapa_equipos {
-    margin-top: 50px;
-}
-
-.etapa_equipos h1 {
-    background-color: rgb(0, 0, 0, 0.8);
-    padding-bottom: 100px;
-}
-
-.etapa_equipos h1:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    padding-bottom: 100px;
-    color: white;
-}
-
-.etapa_equipos h2 {
-    text-align: left;
-    margin-left: 10px;
+/* Encabezado del equipo (arriba) */
+.encabezado-equipo {
+    position: relative;
+    top: 15px;
     background-color: red;
-    width: 120px;
     color: white;
+    text-align: center;
+    font-weight: bold;
+    width: 75%;
 }
 
-.etapa_equipos a {
+/* Nombre del equipo (abajo) */
+.Nombre-equipo {
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 205px;
+    width: 100%;
 }
 
-.etapa_equipos h1:hover a {
-    color: black;
+/* Color de los enlaces */
+.equipos a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fondos de los equipos */
+.equipo1, .equipo2, .equipo3 {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.equipo1 {
+    background-image: url(../../images/equipos/hotwheels_logo.webp);
+    padding-top: 10px;
+}
+
+.equipo2 {
+    background-image: url(../../images/equipos/picapiedra.webp);
+    padding-top: 10px;
+}
+
+.equipo3 {
+    padding-top: 10px;
+    background-image: url(../../images/equipos/hotwheels_logo.webp);
 }
 
 /* FOOTER */

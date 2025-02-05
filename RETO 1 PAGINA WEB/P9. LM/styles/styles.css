@@ -1,5 +1,11 @@
 :root {
-    /*HEADER, MAIN, FOOTER*/
+    /*COLORES FOOTER*/
+    --color_header2: #000000;
+    --color_header1: #b40000;
+
+    /*Colores barra de navegación*/
+
+    /*HEADER, MAIN*/
     --color_menu_superior: #b40000;
     --color_menu_inferior: #000000;
     --color_letras_header: #ffffff;
@@ -25,10 +31,12 @@ a {
     text-decoration: none;
 }
 
+/*Esto tiene que desaparecer*/
 header {
     z-index: 1;
+    width: 100%;
     min-width: 300px;
-    position: sticky;
+    position: fixed;
     top: 0px;
 }
 
@@ -65,9 +73,9 @@ header {
 
 /* MENU DESPLEGABLE DE HEADER 1*/
 .menu_desplegable {
-    margin-left: 100px;
-    width: 200px;
+    width: 100px;
     position: relative; /* Necesario para que z-index funcione */
+    left: 100px;
     z-index: 10; /* Z-index alto para asegurarse de que esté encima */
 }
 
@@ -93,7 +101,7 @@ header {
 
 .link_menu_desplegable{
     display: inline-block;
-    width: 280px;
+    width: 220px;
     padding: 10px 10px 0px 10px;
 }
 
@@ -130,10 +138,10 @@ nav {
 }
 
 .anuncionav {
+    position: relative;
     background-image: url('../images/foto_nav.jpg');
     height: 700px;
-    top: 0px;
-    position: relative;
+    width: 100%;
 }
 
 .anuncionav a {
@@ -158,18 +166,19 @@ nav {
     top:200px
 }
 
-.anuncionav button {
+.boton-anuncio {
     height: 70px;
     width: 140px;
     position: relative;
     top:250px;
-    border: 3px solid var(--color_menu_inferior);
+    border: none;
     border-radius: 10px;
     background-color: var(--color_letras_header);
 }
 
-.anuncionav button:hover {
-    border: none;
+.boton-anuncio:hover {
+    border: 3px solid var(--color_menu_inferior);
+    border-radius: 10px;
 }
 
 .anuncionav button:hover h3{
@@ -253,4 +262,260 @@ nav {
 
 #massobrex h2 {
     font-size: 30px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 70px;
+    text-align: center;
+}
+
+#Contenedor-formulario-correo {
+    display: flex;
+    background-color: var(--color_header1);
+    flex-direction: column; /* Disposición en columna */
+    justify-content: flex-start; /* Asegura que los elementos se alineen desde el principio */
+    align-items: center; /* Alineación al centro */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#texto-contacto-correo {
+    font-size: 20px;
+    color: var(--color_letras_header);
+    margin-bottom: 20px; /* Margen inferior */
+    display: block; /* Asegurarse de que el label sea un bloque */
+    width: 100%; /* O ajusta según el ancho que desees */
+}
+
+#correo {
+    height: 40px;
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo */
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 20px; /* Espacio debajo del input */
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no se agregue al ancho */
+}
+
+#boton-footer {
+    height: 40px;
+    width: 80px;
+    font-size: 18px;
+    border: 2px solid var(--color_letras_header);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color_letras_header);
+    margin-left: 10px;
+}
+
+#boton-footer:hover {
+    color: var(--color_negro);
+    border: 2px solid var(--color_negro);
+}
+
+/* redes sociales*/
+#redes_sociales {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    background-color: var(--color_header2);
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px; /* Espaciado entre iconos */
+}
+
+/* Animaciones footer redes sociales */
+#redes_sociales a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#redes_sociales a:hover {
+    background-color: #ff0000;
+}
+
+/*Animación instagram*/
+#animacion-instagram a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+    /* Usamos el gradiente desde el inicio pero con opacidad 0 */
+    background: linear-gradient(45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%);
+    opacity: 0.7;
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    
+    /* Transiciones suaves */
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+#animacion-instagram a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    
+    /* Sombra con los colores del gradiente más pequeña y sutil */
+    box-shadow: 0px 0px 10px 5px rgba(240, 147, 51, 0.4),   /* #f09433 */
+                0px 0px 15px 8px rgba(230, 104, 60, 0.3),   /* #e6683c */
+                0px 0px 20px 10px rgba(220, 39, 67, 0.3),    /* #dc2743 */
+                0px 0px 25px 12px rgba(204, 35, 102, 0.2),   /* #cc2366 */
+                0px 0px 30px 15px rgba(188, 24, 136, 0.1);   /* #bc1888 */
+}
+
+/* Estado normal */
+#animacion-instagram a:not(:hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación tiktok*/
+#animacion-tiktok a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    /* Transiciones suaves */
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+    
+#animacion-tiktok a:hover {
+    background-color: black;
+    filter: brightness(1.3);
+    opacity: 1;
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+}
+
+#animacion-tiktok a:not(:hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación youtube*/
+#animacion-youtube a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    transform: scale(1); /* Efecto de aumento al pasar el mouse */
+    opacity: 0.7;
+}
+    
+#animacion-youtube a:hover {
+    background-color: #ff0000; /* Color rojo de YouTube */
+    filter: brightness(1.2); /* Aumenta el brillo */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    opacity: 1;
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    /* Sombra más intensa y redondeada */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+}
+
+#animacion-youtube a:not(hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación twiter*/
+#animacion-twitter a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    opacity: 0.7;
+}
+            
+#animacion-twitter a:hover {
+    background-color: #1DA1F2;
+    filter: brightness(1.2);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+    opacity: 1;
+}
+
+#animacion-twitter a:not(:hover){
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación facebook*/
+#animacion-facebook a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    transform: scale(1); /* Efecto de aumento al pasar el mouse */
+    opacity: 0.7;
+}
+        
+#animacion-facebook a:hover {
+    background-color: #001affc0;
+    filter: brightness(1.2);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+    opacity: 1;
+}
+
+#animacion-facebook a:not(:hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
