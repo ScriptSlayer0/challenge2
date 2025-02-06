@@ -514,28 +514,32 @@
         filter: brightness(0.7); /* Esto hará que se vea grisáceo */
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-    .anuncionav {
-        height: 400px; /* Reducimos la altura para dispositivos más pequeños */
-        background-position: center;
-        background-size: cover;
+   /* Responsive */
+   @media (max-width: 768px) {
+    .menu {
+        display: none;
     }
 
-    .texto-anuncio {
-        position: relative;
-        top: 50px; /* Ajuste para centrar mejor el texto */
-        font-size: 1.8em; /* Reducimos el tamaño del texto para que encaje mejor */
+    .hamburguesa-container {
+        display: block;
+    }
+
+    #icono-hambur {
+        display: block;
         padding: 10px;
+        margin-right: 10px;
     }
 
-    .boton-anuncio {
-        height: 50px;
-        width: 120px;
-        top: 150px; /* Bajamos el botón un poco */
-        font-size: 16px; /* Ajustamos el tamaño del texto dentro del botón */
+    .barra-navegacion {
+        justify-content: right;
+        padding: 5px 10px;
     }
-}
+
+    .texto-anuncio{
+        position: relative;
+        top: 80px;
+        font-size: 2.1em;
+    }
 
 </style>
 <head>
