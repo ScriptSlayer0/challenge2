@@ -101,7 +101,6 @@
 
 .anuncionav {
     position: relative;
-    
     background-image: url('../images/foto_nav.jpg');
     height: 700px;
     width: 100%;
@@ -114,13 +113,9 @@
 }
 
 .anuncionav div {
-    position: absolute;
+    position: relative;
     top: 40px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
     text-align: center;
-    background-color: var(--color_tela);  
 }
 
 .texto-anuncio{
