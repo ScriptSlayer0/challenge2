@@ -28,11 +28,6 @@
 }
 
 /*Barra de navegación*/
-
-a {
-    text-decoration: none;
-}
-
 #barra-superior {
     z-index: 1; /* Asegura que esté encima de otros elementos */
     width: 100%;
@@ -46,31 +41,19 @@ a {
     align-items: center;
 }
 
-#barra-superior div {
-    display: inline-block;
-}
-
-#barra-superior div ul, nav ul {
-    list-style: none;
-}
-
 #barra-superior div a {
-    text-decoration: none;
     font-size: 20px;
     color: var(--color_letras_header);
 }
 
-#idioma {
-    box-sizing: border-box;
-    margin-right: 30px;
+.idioma {
     display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 10px;
     align-items: center;
 }
 
-#idioma li {
-    display: inline-block;
-    margin-left: 20px;
-}
 
 .menu_desplegable {
     width: 100px;
@@ -79,42 +62,17 @@ a {
     z-index: 10; /* Z-index alto para asegurarse de que esté encima */
 }
 
-/*Estilo de la lista desordenada*/
-.menu_desplegable ul {
-    display: none; 
-    position: absolute; /* Necesario para que se posicione de manera absoluta respecto al contenedor */
-    z-index: 20; /* Z-index para el menú desplegable ajustado */
-}
-
-/*Estilos de los elementos de la lista*/
-.menu_desplegable li {
-    margin: 10px 0px;
-}
-
-/*Eventos menu desplegable*/
-.menu_desplegable:hover ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    background-color: #4a4a4a;
-}
-
-.link_menu_desplegable {
-    display: inline-block;
-    width: 220px;
-    padding: 10px 10px 0px 10px;
-}
-
-.link_menu_desplegable:hover {
-    border-bottom: 2px solid white;
-}
-
 /*Elemento menu inferior*/
-.linknav:hover {
-    border-bottom: 2px solid var(--color_subrayado);
+.elemento-barra-inferior{
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-nav {
+.elemento-barra-inferior:hover {
+    text-decoration: underline red 2px;
+}
+
+.Barra-navegacion {
     position: fixed;
     top: 40px;
     width: 100%;
@@ -123,27 +81,27 @@ nav {
     z-index: 1;
 }
 
-nav a {
+.Barra-navegacion a {
     text-decoration: none;
     font-size: 16px;
     color: var(--color_letras_header);
 }
 
-nav li {
+/*No tocar*/
+.Barra-navegacion li {
     display: inline-block;
-    margin-left: 20px;
 }
 
-#linksdenav {
-    padding: 10px 0px 30px 0px;
-    margin: 0px 50px;
+#barra-inferior {
     display: flex;
+    padding: 20px 0px 50px 0px;
     justify-content: center;
     align-items: center;
 }
 
 .anuncionav {
     position: relative;
+    
     background-image: url('../images/foto_nav.jpg');
     height: 700px;
     width: 100%;
@@ -157,7 +115,7 @@ nav li {
 
 .anuncionav div {
     position: absolute;
-    top: 0px;
+    top: 40px;
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -180,8 +138,8 @@ nav li {
     top:250px;
     border: none;
     border-radius: 10px;
-    background-color: var(--color_letras_header);
-    border: 3px solid var(--color_menu_inferior);
+    background-color: white;
+    border: 3px solid black;
 }
 
 .boton-anuncio:hover {
@@ -196,58 +154,49 @@ nav li {
 /*SEGUNDA SECCION (BLOQUES EN LINEA)*/
 
 #bloquesenlinea {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    align-items: stretch; /* Asegura que todos los elementos tengan la misma altura */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
     position: relative;
     margin-top: 50px;
     text-align: center;
 }
 
-#bloquesenlinea_noticias {
-    position: relative;
-    margin-top: 50px;
+#bloquesenlinea div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido desde el inicio */
+    align-items: center; /* Centra el contenido horizontalmente */
+    background-image: url(../images/kanbo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+}
+/*Contenedores de texto*/
+#titulo-noticia div article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea el contenido desde el inicio */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: 100%;
+    width: 100%;
+}
+
+#bloquesenlinea div p, #titulo-noticia div p {
+    background-color: rgba(255, 255, 255, 0.745);
+    margin: 10px;
+    padding: 10px;
     text-align: center;
+    height: 150px;
 }
 
-#bloquesenlinea div {
-    border: 2px solid var(--color_negro);
-    background-image: url(../images/kanbo.jpg);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 300px;
-    width: 300px;
-    margin: auto 20px;
-    overflow: hidden;
-}
-
-#bloquesenlinea_noticias div {
-    border: 2px solid var(--color_negro);
-    background-image: url(../images/kanbo.jpg);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 300px;
-    width: 300px;
-    margin: auto 20px;
-    overflow: hidden;
-}
-
-#bloquesenlinea div p{
-    background-color: var(--color_letras_header);
-    border: 1px solid var(--color_negro);
-    margin: 20px 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-#bloquesenlinea_noticias div p {
-    background-color: var(--color_letras_header);
-    border: 1px solid var(--color_negro);
-    margin: 20px 10px;
-    padding-bottom: 100px;
-    padding-left: 30px;
-    padding-right: 30px;
+.titulo-noticia {
+    margin-top: 10px; /* Ajusta el margen superior */
+    margin-bottom: 10px;
 }
 
 /* TERCERA SECCION (VIDEO Y CANAL)*/

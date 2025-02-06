@@ -13,85 +13,74 @@
         
         <title>Itzulia</title>
     </head>
-        <!--Proximo nombre de clase .barra-navegacion-->
+
+    <body>
         <nav class="Barra-navegacion">
             <section id="barra-superior">
-                <div>
-                <ul class="lista_menu_desplegable">
-                    <li class="menu_desplegable">
-                        <a class="" href="#">Menú</a>
-                        <ul>
-                            <li><a class="link_menu_desplegable" href="#anuncionav">Sobre la carrera</a></li>
-                            <li><a class="link_menu_desplegable" href="#bloquesenlinea">Futuro de la itzulia</a></li>
-                            <li><a class="link_menu_desplegable" href="#massobrex">Más sobre Itzulia</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                </div>
-        
-                <div id="idioma">
+                <div class="idioma">
                     <ul>
-                        <li><a href="">ES</a></li>
-                        <li><a href="">EN</a></li>
-                        <li><a href="">EUS</a></li>
+                        <li class="idioma"><a href="">ES</a></li>
+                        <li class="idioma"><a href="">EN</a></li>
+                        <li class="idioma"><a href="">EUS</a></li>
                     </ul>
                 </div>
             </section>
-            <!--Proximo nombre de clase .link-barra-navegación-inferior-->
-            <div id="linksdenav">
+
+            <div id="barra-inferior">
                 <ul>
-                    <li><a class="linknav" href="etapa.html">Etapas</a></li>
-                    <li><a class="linknav" href="equipos.html">Equipos</a></li>
-                    <li><a class="linknav" href="clasificaciones.html">Clasificaciones</a></li>
+                    <li><a class="elemento-barra-inferior" href="etapa.html">Etapas</a></li>
+                    <li><a class="elemento-barra-inferior" href="equipos.html">Equipos</a></li>
+                    <li><a class="elemento-barra-inferior" href="clasificaciones.html">Clasificaciones</a></li>
                     <li><a href="index.html"><img src="images/logoitzulia.png" alt="logo" width="90px"></a></li>
-                    <li><a class="linknav" href="noticias.html">Noticias</a></li>
-                    <li><a class="linknav" href="patrocinadores.html">Patrocinadores</a></li>
-                    <li><a class="linknav" href="palmares.html">Palmarés</a></li>
+                    <li><a class="elemento-barra-inferior" href="noticias.html">Noticias</a></li>
+                    <li><a class="elemento-barra-inferior" href="patrocinadores.html">Patrocinadores</a></li>
+                    <li><a class="elemento-barra-inferior" href="palmares.html">Palmarés</a></li>
                 </ul>
             </div>
         </nav>
-<body>
-    
-    <main>
+
         <section class="anuncionav">            
             <div>
                 <h1 class="texto-anuncio">¡PEDRO PASCAL GANA LA ITZULIA 2024!</h1>
                 <button class="boton-anuncio">
-                    <a href="https://itzulia.eus/carlos-rodriguez-gana-la-sexta-etapa-y-juan-ayuso-gana-la-itzulia-2024/"><h3>VER MÁS</h3></a>
+                <a href="https://itzulia.eus/carlos-rodriguez-gana-la-sexta-etapa-y-juan-ayuso-gana-la-itzulia-2024/"><h3>VER MÁS</h3></a>
                 </button>
             </div>
         </section>
 
-        <!--Sección de noticias (Hay que meter flexbox)-->
         <section id="bloquesenlinea">
             <div>
                 <article>
-                    <h2>El pasado de Itzulia</h2>
+                    <h2 class="titulo-noticia">El pasado de Itzulia</h2>
                     <p>Nuestros origenes se remontan al siglo XX. Cuando fundamos el club de ciclismo Itzulia, el club se fué haciendo grande, colaboramos con el gobierno para hacer giras de ciclismo y así nació nuestra empresa</p>
                 </article>
             </div>
             <div>
                 <article>
-                    <h2>El presente de Itzulia</h2>
+                    <h2 class="titulo-noticia">El presente de Itzulia</h2>
                     <p>Actualmente nos dedicamos a hacer giras por el país, esta última gira terminó en 2024 con la victoria de Pedro Pascal.</p>
                 </article>
             </div>
             <div>
                 <article>
-                    <h2>El futuro de Itzulia</h2>
+                    <h2 class="titulo-noticia">El futuro de Itzulia</h2>
                     <p>Tenemos planes de mover la gira a otros países en un futuro, aunque aún es una idea. Esperamos hacer una gira que pase por los pirineos sin que se desmaye ningún ciclista</p>
                 </article>
             </div>
         </section>
 
-        <section id="massobrex">
-            <video controls src="images/videoplayback.mp4"></video>
+        <section>
             <div>
                 <h2>Grupo de ciclistas caen en la competición de 2024</h2>
-                <p>Mirad esto! Ha habido un "batacazo" en la ruta 3 de la carrera de octubre, sin duda uno de los momentos más icónicos de este año. Para ver más contenido y anecdotas ir a ver nuestro canal principal</p>
-            </div>    
+                <p>
+                    Mirad esto! Ha habido un "batacazo" en la ruta 3 de la carrera de octubre,
+                    sin duda uno de los momentos más icónicos de este año.
+                    Para ver más contenido y anecdotas ir a ver nuestro canal principal.
+                </p>
+            </div>
+            <video controls src="images/videoplayback.mp4"></video>
         </section>
-    </main>
+    </body>
 
     <footer>
         <div id="redes_sociales">
@@ -118,7 +107,6 @@
                 <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
                 <input type="submit" id="boton-footer" value="Enviar">
             </form>
-        </div>            
+        </div>     
     </footer>
-</body>
 </html>

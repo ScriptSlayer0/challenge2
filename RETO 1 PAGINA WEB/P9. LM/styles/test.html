@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <style>
+        :root {
+            --color_fondo: #000000;
+            --color_menu: #b40000;
+            --color_texto: #ffffff;
+            --color_hover: #ff0000;
+            --color_menu_superior: #333333;
+            --color_menu_inferior: #b40000; /* Añadida esta línea */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            font-family: "Arial", sans-serif;
+        }
+        
+        /* Barra superior */
+        #barra-superior {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: var(--color_menu_inferior);
+            padding: 10px 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1;
+        }
+
+        #barra-superior div a {
+            font-size: 16px;
+            color: var(--color_texto);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .idioma {
+            display: flex;
+            margin-right: 20px;
+        }
+
+        /* Barra de navegación */
+        .barra-navegacion {
+            width: 100%;
+            background: linear-gradient( var(--color_fondo), rgba(0, 0, 0, 1), transparent);
+            padding: 40px 0px 50px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 38px;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: #ffffff; 
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            border-bottom: solid 1px white;
+        }
+
+        .menu .logo img {
+            height: 40px;
+        }
+
+        /* Menú hamburguesa */
+        .hamburguesa-container {
+            position: relative;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        #icono-hambur {
+            cursor: pointer;
+            font-size: 28px;
+            padding: 10px;
+            user-select: none;
+            display: none;
+            z-index: 1001;
+            color: #ffffff;
+        }
+
+        .menu-hamburguesa {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: #ffffff;
+            width: 200px;
+            padding: 10px 0;
+            display: none;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            z-index: 1002;
+        }
+
+        .menu-hamburguesa a {
+            color: #000000;
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+
+        .menu-hamburguesa a:hover {
+            background: var(--color_hover);
+            color: #ffffff;
+        }
+
+        #check:checked ~ .menu-hamburguesa {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+            }
+
+            .hamburguesa-container {
+                display: block;
+            }
+
+            #icono-hambur {
+                display: block;
+                padding: 10px;
+                margin-right: 10px;
+            }
+
+            .barra-navegacion {
+                justify-content: right;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra superior -->
+    <section id="barra-superior">
+        <div class="idioma">
+            <a href="">ES</a>
+            <a href="">EN</a>
+            <a href="">EUS</a>
+        </div>
+    </section>
+
+    <!-- Barra de navegación -->
+    <nav class="barra-navegacion">
+        <div class="menu">
+            <a href="etapa.html">Etapas</a>
+            <a href="equipos.html">Equipos</a>
+            <a href="clasificaciones.html">Clasificaciones</a>
+            <a href="index.html" class="logo">
+                <img src="images/logoitzulia.png" alt="logo">
+            </a>
+            <a href="noticias.html">Noticias</a>
+            <a href="patrocinadores.html">Patrocinadores</a>
+            <a href="palmares.html">Palmarés</a>
+        </div>
+
+        <!-- Menú hamburguesa -->
+        <div class="hamburguesa-container">
+            <input type="checkbox" id="check">
+            <label for="check" id="icono-hambur">☰</label>
+            <div class="menu-hamburguesa">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+
+</html>
