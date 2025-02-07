@@ -299,7 +299,7 @@ footer {
 #correo {
     height: 40px;
     width: 100%;
-    max-width: 400px; /* Ajusta el ancho máximo */
+    max-width: 300px; /* Ajusta el ancho máximo */
     font-size: 18px;
     margin-left: 20px;
     margin-bottom: 20px; /* Espacio debajo del input */
@@ -572,13 +572,19 @@ footer {
         display: flex;
     }
 
-    .menu-hamburguesa a {
-        text-decoration: none;
-        color: #000; /* Cambia el color según tu preferencia */
+    .menu-hamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Cambia el color según tu preferencia */
         padding: 10px;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #ddd; /* Línea de separación entre enlaces */
+        position: absolute;
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
+        width: 90%; /* Cambiar a 90% para reducir la longitud */
+        max-width: 300px; /* Ancho máximo fijo */
+        margin: 0 auto; /* Centrar el menú */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar el menú */
+        z-index: 1000; /* Asegurarse que el menú esté por encima de otros elementos */
     }
 
     .menu-hamburguesa a:last-child {
