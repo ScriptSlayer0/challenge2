@@ -1,89 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/styles.css">
 
-        <!-- FONT PARA LA PÁGINA WEB -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/46cb5b6960.js" crossorigin="anonymous"></script>
-        
-        <title>Itzulia</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Hamburguesa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/46cb5b6960.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
 
-    <body>
-        
-        <section class="anuncionav">            
-            <div>
-                <h1 class="texto-anuncio">¡PEDRO PASCAL GANA LA ITZULIA 2024!</h1>
-                <button class="boton-anuncio">
-                <a href="https://itzulia.eus/carlos-rodriguez-gana-la-sexta-etapa-y-juan-ayuso-gana-la-itzulia-2024/"><h3>VER MÁS</h3></a>
-                </button>
-            </div>
-        </section>
+    <section id="barra-superior">
+        <div class="idioma">
+            <a href="">ES</a>
+            <a href="">EN</a>
+            <a href="">EUS</a>
+        </div>
+    </section>
 
-        <section id="bloquesenlinea">
-            <div>
-                <article>
-                    <h2 class="titulo-noticia">El pasado de Itzulia</h2>
-                    <p>Nuestros origenes se remontan al siglo XX. Cuando fundamos el club de ciclismo Itzulia, el club se fué haciendo grande, colaboramos con el gobierno para hacer giras de ciclismo y así nació nuestra empresa</p>
-                </article>
-            </div>
-            <div>
-                <article>
-                    <h2 class="titulo-noticia">El presente de Itzulia</h2>
-                    <p>Actualmente nos dedicamos a hacer giras por el país, esta última gira terminó en 2024 con la victoria de Pedro Pascal.</p>
-                </article>
-            </div>
-            <div>
-                <article>
-                    <h2 class="titulo-noticia">El futuro de Itzulia</h2>
-                    <p>Tenemos planes de mover la gira a otros países en un futuro, aunque aún es una idea. Esperamos hacer una gira que pase por los pirineos sin que se desmaye ningún ciclista</p>
-                </article>
-            </div>
-        </section>
+    <nav class="barra-navegacion">
+        <div class="menu">
+            <a href="etapa.html">Etapas</a>
+            <a href="equipos.html">Equipos</a>
+            <a href="clasificaciones.html">Clasificaciones</a>
+            <a href="index.html" class="logo">
+                <img src="../images/logoitzulia.png" alt="logo">
+            </a>
+            <a href="noticias.html">Noticias</a>
+            <a href="patrocinadores.html">Patrocinadores</a>
+            <a href="palmares.html">Palmarés</a>
+        </div>
 
-        <section>
-            <div>
-                <h2>Grupo de ciclistas caen en la competición de 2024</h2>
-                <p>
-                    Mirad esto! Ha habido un "batacazo" en la ruta 3 de la carrera de octubre,
-                    sin duda uno de los momentos más icónicos de este año.
-                    Para ver más contenido y anecdotas ir a ver nuestro canal principal.
-                </p>
-            </div>
-            <video controls src="images/videoplayback.mp4"></video>
-        </section>
-    </body>
-
-    <footer>
-        <div id="redes_sociales">
-            <div id="animacion-instagram">
-                <a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-            <div id="animacion-tiktok">
-                <a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a>
-            </div>
-            <div id="animacion-youtube">
-                <a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-            <div id="animacion-twitter">
-                <a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-            <div id="animacion-facebook">
-                <a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+        <!-- Menú hamburguesa -->
+        <div class="hamburguesa-container">
+            <input type="checkbox" id="check">
+            <label for="check" id="icono-hambur">☰</label>
+            <div class="menu-hamburguesa">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
             </div>
         </div>
-        
-        <div id="Contenedor-formulario-correo">
-            <form action="#" method="post">
-                <label id="texto-contacto-correo" for="correo">¿Quieres contactar con nosotros? ¡Mándanos un correo!</label>
-                <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
-                <input type="submit" id="boton-footer" value="Enviar">
-            </form>
-        </div>     
-    </footer>
+    </nav>
+    
+    <section class="anuncionav">            
+        <div>
+            <h1 class="texto-anuncio">¡PEDRO PASCAL GANA LA ITZULIA 2024!</h1>
+            <button class="boton-anuncio">
+            <a href="https://itzulia.eus/carlos-rodriguez-gana-la-sexta-etapa-y-juan-ayuso-gana-la-itzulia-2024/"><h3>VER MÁS</h3></a>
+            </button>
+        </div>
+    </section>
+
+    <section id="bloquesenlinea">
+        <div>
+            <article>
+                <h2 class="titulo-noticia">El pasado de Itzulia</h2>
+                <p>Nuestros origenes se remontan al siglo XX. Cuando fundamos el club de ciclismo Itzulia, el club se fué haciendo grande, colaboramos con el gobierno para hacer giras de ciclismo y así nació nuestra empresa</p>
+            </article>
+        </div>
+        <div>
+            <article>
+                <h2 class="titulo-noticia">El presente de Itzulia</h2>
+                <p>Actualmente nos dedicamos a hacer giras por el país, esta última gira terminó en 2024 con la victoria de Pedro Pascal.</p>
+            </article>
+        </div>
+        <div>
+            <article>
+                <h2 class="titulo-noticia">El futuro de Itzulia</h2>
+                <p>Tenemos planes de mover la gira a otros países en un futuro, aunque aún es una idea. Esperamos hacer una gira que pase por los pirineos sin que se desmaye ningún ciclista</p>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <h2>Grupo de ciclistas caen en la competición de 2024</h2>
+            <p>
+                Mirad esto! Ha habido un "batacazo" en la ruta 3 de la carrera de octubre,
+                sin duda uno de los momentos más icónicos de este año.
+                Para ver más contenido y anecdotas ir a ver nuestro canal principal.
+            </p>
+        </div>
+        <video controls src="images/videoplayback.mp4"></video>
+    </section>
+</body>
+
+<footer>
+    <div id="redes_sociales">
+        <div id="animacion-instagram">
+            <a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div id="animacion-tiktok">
+            <a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <div id="animacion-youtube">
+            <a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div id="animacion-twitter">
+            <a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div id="animacion-facebook">
+            <a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+    
+    <div id="Contenedor-formulario-correo">
+        <form action="#" method="post">
+            <label id="texto-contacto-correo" for="correo">¿Quieres contactar con nosotros? ¡Mándanos un correo!</label>
+            <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+            <input type="submit" id="boton-footer" value="Enviar">
+        </form>
+    </div>     
+</footer>
 </html>

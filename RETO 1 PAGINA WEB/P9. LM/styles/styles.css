@@ -20,11 +20,121 @@
     --color_tela_hover: #ffffff4d;
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    font-family: "Work Sans", sans-serif;
+    font-family: "Arial", sans-serif;
+}
+
+/* Barra superior */
+#barra-superior {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--color_header1);
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+}
+
+#barra-superior div a {
+    font-size: 16px;
+    color: var(--color_texto);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.idioma {
+    display: flex;
+    margin-right: 20px;
+    color: white;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    width: 100%;
+    background: linear-gradient( black, rgba(0, 0, 0, 1), transparent);
+    padding: 40px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    border-bottom: solid 1px white;
+}
+
+.menu .logo img {
+    height: 40px;
+}
+
+/* Menú hamburguesa */
+.hamburguesa-container {
+    position: relative;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#icono-hambur {
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    user-select: none;
+    display: none;
+    z-index: 1001;
+    color: #ffffff;
+}
+
+.menu-hamburguesa {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1002;
+}
+
+.menu-hamburguesa a {
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu-hamburguesa a:hover {
+    color: #000000;
+}
+
+#check:checked ~ .menu-hamburguesa {
+    display: block;
 }
 
 .anuncionav {
@@ -78,7 +188,7 @@
 
 #bloquesenlinea {
     display: flex;
-    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    justify-content: space-evenly; /* Distribuye los elementos uniformemente */
     align-items: stretch; /* Asegura que todos los elementos tengan la misma altura */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
     position: relative;
@@ -398,4 +508,32 @@ footer {
     box-shadow: none;
     background: grey;
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.menu {
+    display: none;
+}
+
+.hamburguesa-container {
+    display: block;
+}
+
+#icono-hambur {
+    display: block;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.barra-navegacion {
+    justify-content: right;
+    padding: 5px 10px;
+}
+
+.texto-anuncio {
+    position: relative;
+    top: 80px;
+    font-size: 2.1em;
+}
 }
