@@ -133,10 +133,6 @@
         text-decoration: none;
     }
 
-    .menu-hamburguesa a:hover {
-        color: #000000;
-    }
-
     #check:checked ~ .menu-hamburguesa {
         display: block;
     }
@@ -211,7 +207,6 @@
         background-repeat: no-repeat;
         height: 300px;
         width: 300px;
-        margin: 20px;
     }
     /*Contenedores de texto*/
     #titulo-noticia div article {
@@ -241,17 +236,23 @@
     #massobrex {
         position: relative;
         margin-top: 100px;
-        margin-left: 10px;
+        display: flex; /* Activa Flexbox */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Centra verticalmente los elementos */
+        gap: 40px; /* Espaciado entre el video y el texto */
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
     }
     
     #massobrex video {
-        display: inline-block;
+        width: 600px;
+        height: 600px;
+        flex: 1; /* Permite que el video se ajuste al espacio disponible */
     }
     
     #massobrex div {
-        display: inline-block;
         width: 400px;
-        margin-left: 40px;
+        flex: 1; /* Permite que el texto se ajuste al espacio */
     }
     
     #massobrex h2 {
@@ -516,6 +517,47 @@
 
    /* Responsive */
    @media (max-width: 768px) {
+    /*Media query footer*/
+    footer {
+        margin-top: 50px; /* Reducimos el margen superior */
+    }
+
+    #Contenedor-formulario-correo {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    #texto-contacto-correo {
+        font-size: 18px; /* Reducimos el tamaño del texto */
+        text-align: center; /* Centramos el texto */
+        width: 90%; /* Ajustamos el ancho */
+    }
+
+    #correo {
+        max-width: 250px; /* Reducimos aún más en móviles */
+        font-size: 14px;
+    }
+
+    #boton-footer {
+        width: 70%; /* Botón ocupa todo el ancho disponible */
+        max-width: 200px; /* Limitamos el ancho máximo */
+        margin-left: 0px; /* Quitamos el margen izquierdo */
+        font-size: 16px; /* Reducimos el tamaño del texto */
+        height: 45px; /* Ajustamos la altura */
+        margin-top: 0px; /* Añadimos margen superior para separación */
+    }
+
+    /*Boton anuncio*/
+    .boton-anuncio {
+        position: relative;
+        top:130px;
+        border: none;
+        border-radius: 10px;
+        background-color: white;
+        border: 3px solid black;
+    }
+
+    /*Menu*/
     .menu {
         display: none;
     }
@@ -540,7 +582,18 @@
         top: 80px;
         font-size: 2.1em;
     }
+    /*Noticias*/
+    #massobrex {
+        flex-direction: column; /* Apila los elementos en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+        gap: 20px;
+    }
 
+    #massobrex div {
+        width: 90%; /* Reduce el ancho en móviles */
+    }
+
+   }
 </style>
 <head>
     <meta charset="UTF-8">
@@ -551,7 +604,6 @@
 </head>
 <body>
 
-    <!-- Barra superior -->
     <section id="barra-superior">
         <div class="idioma">
             <a href="">ES</a>
@@ -619,7 +671,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="massobrex">
         <div>
             <h2>Grupo de ciclistas caen en la competición de 2024</h2>
             <p>
@@ -628,7 +680,7 @@
                 Para ver más contenido y anecdotas ir a ver nuestro canal principal.
             </p>
         </div>
-        <video controls src="images/videoplayback.mp4"></video>
+        <video controls src="../images/videoplayback.mp4"></video>
     </section>
 </body>
 
