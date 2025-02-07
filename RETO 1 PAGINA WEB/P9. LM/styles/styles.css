@@ -528,33 +528,66 @@ footer {
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
 
-/* Responsive */
+/* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
-.menu {
-    display: none;
-}
+    .hamburguesa-container {
+        display: block;
+    }
 
-.hamburguesa-container {
-    display: block;
-}
+    .idioma{
+        display: block;
+        margin: auto auto;
+        padding-right: 30px;
+        text-align: center;
+    }
 
-#icono-hambur {
-    display: block;
-    padding: 10px;
-    margin-right: 10px;
-}
+    .menu{
+        display: none;
+    }
 
-.barra-navegacion {
-    justify-content: right;
-    padding: 5px 10px;
-}
+    #check {
+        display: none;
+    }
 
-.texto-anuncio {
-    position: relative;
-    top: 80px;
-    font-size: 2.1em;
-}
-#correo{
-    width: 70%;
-}
+    #icono-hambur {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
+
+    .menu-hamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Cambia el color según tu preferencia */
+        padding: 10px;
+        position: absolute;
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
+        width: 100%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar el menú */
+        z-index: 1000; /* Asegurarse que el menú esté por encima de otros elementos */
+    }
+
+    #check:checked ~ .menu-hamburguesa {
+        display: flex;
+    }
+
+    .menu-hamburguesa a {
+        text-decoration: none;
+        color: #000; /* Cambia el color según tu preferencia */
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Línea de separación entre enlaces */
+    }
+
+    .menu-hamburguesa a:last-child {
+        border-bottom: none;
+    }
+
+    .texto-anuncio{
+        position: relative;
+        top: 120px;
+        font-size: 2.1em;
+    }
 }
