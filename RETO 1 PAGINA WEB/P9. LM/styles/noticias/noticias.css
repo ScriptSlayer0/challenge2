@@ -74,16 +74,22 @@ body {
     color: #ffffff; 
     text-decoration: none;
     font-size: 16px;
-    padding: 5px;
-    transition: 0.3s;
+    padding: 5px;    
 }
 
-.menu a:hover {
-    border-bottom: solid 1px white;
+.menu a:hover{
+    border-bottom: #ff0000 solid 1px;
+    transition: 1.2s ease;
 }
 
-.menu .logo img {
+/*Logo itzulia*/
+.logo img {
+    display: flex;
     height: 50px;
+}
+
+.menu .logo:hover {
+    border-bottom: none;
 }
 
 /* Menú hamburguesa */
