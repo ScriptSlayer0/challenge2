@@ -207,17 +207,16 @@ footer {
 #texto-contacto-correo {
     font-size: 20px;
     color: var(--color_letras_header);
-    margin-bottom: 20px;
-    display: block;
-    width: 100%;
+    margin-bottom: 18px; /* Margen inferior */
+    display: block; /* Asegurarse de que el label sea un bloque */
+    width: 100%; /* O ajusta según el ancho que desees */
 }
 
 #correo {
     height: 40px;
-    max-width: 300px;
+    max-width: 300px; /* Ajusta el ancho máximo */
     font-size: 18px;
     padding: 10px;
-    box-sizing: border-box;
 }
 
 #boton-footer {

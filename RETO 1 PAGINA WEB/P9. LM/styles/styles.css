@@ -87,7 +87,8 @@
 }
 
 /*Logo itzulia*/
-.menu .logo img {
+.logo img {
+    display: flex;
     height: 50px;
 }
 
@@ -312,7 +313,6 @@ footer {
     max-width: 300px; /* Ajusta el ancho máximo */
     font-size: 18px;
     padding: 10px;
-    box-sizing: border-box; /* Asegura que el padding no se agregue al ancho */
 }
 
 #boton-footer {
@@ -542,40 +542,19 @@ footer {
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
 
-    #texto-contacto-correo{
-        font-size: 15px;
+    /*Selección de idioma barra superior*/
+    .idioma {
+        display: block;
+        padding-right: 30px;
+        text-align: center;
     }
 
+    /*Barra navegación*/
     .barra-navegacion{
         display: flex;
         justify-content: flex-start;
     }
 
-    footer{
-        margin-top: 50px;
-    }
-    /*Video*/
-    .video-impactante {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; /* Añade esto para centrar horizontalmente */
-        height: auto; /* Ajusta la altura automáticamente según el contenido */
-        width: 50%; /* Ajusta el ancho al 100% del contenedor */
-        margin: 30px auto; /* Centra horizontalmente en el contenedor padre */
-    }
-
-    .video-impactante video {
-        width: 310px; /* Asegura que el video ocupe todo el ancho disponible */
-        margin-top: 30px;
-    }
-
-    /*Funciona sin problemas*/
-    .idioma {
-        display: block;
-        text-align: center;
-    }
-    /*No tocar*/
     .menu {
         display: none;
     }
@@ -625,9 +604,35 @@ footer {
         display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
     }
 
+    /*Anuncio*/
     .texto-anuncio {
         position: relative;
         top: 120px;
         font-size: 2.1em;
+    }
+
+    /*Video*/
+    .video-impactante {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Añade esto para centrar horizontalmente */
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        width: 50%; /* Ajusta el ancho al 100% del contenedor */
+        margin: 30px auto; /* Centra horizontalmente en el contenedor padre */
+    }
+
+    .video-impactante video {
+        width: 310px; /* Asegura que el video ocupe todo el ancho disponible */
+        margin-top: 30px;
+    }
+
+    /*Footer*/
+    footer{
+        margin-top: 50px;
+    }
+
+    #texto-contacto-correo{
+        font-size: 15px;
     }
 }

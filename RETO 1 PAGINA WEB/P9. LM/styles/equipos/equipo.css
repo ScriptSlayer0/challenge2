@@ -478,7 +478,18 @@ footer {
         align-items: center;
         justify-content: center;
         margin-top: 180px;
-        gap: 20px; /* Espacio entre los bloques */
+        gap: 20px;
+    }
+    .tabladeequipos_equipos table {
+        min-width: 300px; /* Asegura un ancho mínimo para la tabla */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        border-collapse: collapse;
+    }
+    .tabladeequipos_equipos th, 
+    .tabladeequipos_equipos td {
+        white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es muy largo */
     }
 
     #texto-contacto-correo{

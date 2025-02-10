@@ -5,10 +5,10 @@
     --color_letras_header: #ffffff;
     --color_negro: #000000;
     --color_subrayado: #ff0000;
-    --color_hover_footer: #d3d3d3;
+    --color_hover_footer: #d3d3d3d1;
 
     /*CONTENEDOR_IMAGENES*/
-    --color_tela: #0000004d;
+    --color_tela: #0000005a;
     --color_tela_hover: #0000002d;
 
     /*COLOR_TABLAS*/
@@ -81,7 +81,7 @@
 }
 
 .menu .logo img {
-    height: 40px;
+    height: 50px;
 }
 
 /* Menú hamburguesa */
@@ -233,12 +233,17 @@ footer {
 }
 
 .tela_etapa {
-    background-color: rgba(0, 0, 0, 0.3); /* Usamos la notación estándar de opacidad rgba() */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color_tela);
+    transition: background-color 0.3s ease;
 }
 
 .tela_etapa:hover {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.3); /* Usamos la notación estándar de opacidad rgba() */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #linea1_etapa {
@@ -527,62 +532,19 @@ footer {
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
 
-    /*Experimento*/
-    .etapas_etapa div {
-        position: relative;
-        height: 300px;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+    /*Selección de idioma en la barra superior*/
+    .idioma {
+        display: block;
+        padding-right: 30px;
+        text-align: center;
     }
 
+    /*Barra de navegación*/
     .barra-navegacion{
         display: flex;
         justify-content: flex-start;
     }
 
-    footer{
-        margin-top: 50px;
-    }
-
-    .etapas_etapa, .etapa_equipos {
-        flex-direction: column; /* Cambiamos a columna para que las tarjetas se apilen verticalmente */
-        align-items: center; /* Centramos las tarjetas en la columna */
-        gap: 20px; /* Espaciado más grande entre las tarjetas en pantallas pequeñas */
-        padding: 10px; /* Añadimos un poco de espacio alrededor del contenedor */
-    }
-
-    .etapas_etapa div, .etapa_equipos div {
-        width: 90%; /* Las tarjetas ocuparán el 90% del ancho del contenedor para ajustarse mejor a pantallas pequeñas */
-        height: auto; /* Ajustamos la altura automáticamente para mantener proporciones correctas si es necesario */
-        max-height: 600px;
-        margin: 15px 0px;
-        padding-bottom: 10px;
-    }
-
-    .etapas_etapa h2 {
-        font-size: 16px; /* Reducimos el tamaño del texto para pantallas pequeñas */
-        margin-left: auto; 
-        margin-right:auto
-   }
-
-    footer{
-        margin-top: 50px;
-    }
-
-    /*Funciona sin problemas*/
-    .idioma {
-        display: block;
-        margin: auto auto;
-        padding-right: 30px;
-        text-align: center;
-        background-color: red;
-    }
-    /*No tocar*/
     .menu {
         display: none;
     }
@@ -631,4 +593,40 @@ footer {
         border-bottom: 1px solid #ddd; /* Línea de separación entre enlaces */
         display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
     }
+
+    /*Etapas*/
+    .etapas_etapa div {
+        position: relative;
+        height: 300px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .etapas_etapa, .etapa_equipos {
+        flex-direction: column; /* Cambiamos a columna para que las tarjetas se apilen verticalmente */
+        align-items: center; /* Centramos las tarjetas en la columna */
+        gap: 20px; /* Espaciado más grande entre las tarjetas en pantallas pequeñas */
+        padding: 10px; /* Añadimos un poco de espacio alrededor del contenedor */
+    }
+
+    .etapas_etapa div, .etapa_equipos div {
+        max-height: 600px;
+        padding-bottom: 10px;
+    }
+
+    .etapas_etapa h2 {
+        font-size: 16px; /* Reducimos el tamaño del texto para pantallas pequeñas */
+        margin-left: auto; 
+        margin-right:auto
+   }
+
+   /*Footer*/
+    footer{
+        margin-top: 50px;
+    }    
 }

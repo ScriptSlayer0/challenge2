@@ -83,7 +83,7 @@ body {
 }
 
 .menu .logo img {
-    height: 40px;
+    height: 50px;
 }
 
 /* Menú hamburguesa */
@@ -466,7 +466,6 @@ footer {
     /*Funciona sin problemas*/
     .idioma {
         display: block;
-        margin: auto auto;
         padding-right: 30px;
         text-align: center;
     }

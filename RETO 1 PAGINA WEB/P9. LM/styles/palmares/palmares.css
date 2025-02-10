@@ -437,10 +437,10 @@ footer {
     /*Funciona sin problemas*/
     .idioma {
         display: block;
-        margin: auto auto;
         padding-right: 30px;
         text-align: center;
     }
+
     /*No tocar*/
     .menu {
         display: none;
