@@ -12,43 +12,44 @@
     </head>
 
     <body>
-        <header>
-            <section id="header1">
-      
-              <div id="menudeheader">
-              <ul>
-                  <li class="menu_desplegable">
-                      <a class="linknav" href="#">Menú</a>
-                      <ul>
-                          <li><a class="linknav" href="#linea1_etapa">Sobre las etapas</a></li>
-                      </ul>
-                  </li>
-              </ul>
-              </div>
-      
-              <div id="idioma">
-                  <ul>
-                      <li class="linknav"><a href="">ES</a></li>
-                      <li class="linknav"><a href="">EN</a></li>
-                      <li class="linknav"><a href="">EUS</a></li>
-                  </ul>
-              </div>
-            </section>
-      
-              <nav>
-                  <div id="linksdenav">
-                      <ul>
-                          <li><a class="linknav" href="etapa.html">Etapas</a></li>
-                          <li><a class="linknav" href="equipos.html">Equipos</a></li>
-                          <li><a class="linknav" href="clasificaciones.html">Clasificaciones</a></li>
-                          <li><a href="index.html"><img src="images/logoitzulia.png" alt="logo" width="90px"></a></li>
-                          <li><a class="linknav" href="noticias.html">Noticias</a></li>
-                          <li><a class="linknav" href="patrocinadores.html">Patrocinadores</a></li>
-                          <li><a class="linknav" href="palmares.html">Palmarés</a></li>
-                      </ul>
-                  </div>
-              </nav>
-          </header>
+        <section id="barra-superior">
+            <div class="idioma">
+                <a href="">ES</a>
+                <a href="">EN</a>
+                <a href="">EUS</a>
+            </div>
+        </section>
+
+        <nav class="barra-navegacion">
+            <div class="menu">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="index.html" class="logo">
+                    <img src="./images/logoitzulia.png" alt="logo">
+                </a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
+                <a href="#">Challenge</a>
+            </div>
+    
+            <!-- Menú hamburguesa -->
+            <div class="hamburguesa-container">
+                <input type="checkbox" id="check">
+                <label for="check" id="icono-hambur">☰</label>
+                <div class="menu-hamburguesa">
+                    <a href="index.html">Inicio</a>
+                    <a href="etapa.html">Etapas</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="clasificaciones.html">Clasificaciones</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="patrocinadores.html">Patrocinadores</a>
+                    <a href="palmares.html">Palmarés</a>
+                    <a href="#">Challenge</a>
+                </div>
+            </div>
+        </nav>
 
           <main>
             <section id="linea1_etapa" class="etapas_etapa">

@@ -9,7 +9,7 @@
 
     /*CONTENEDOR_IMAGENES*/
     --color_tela: #0000004d;
-    --color_tela_hover: #ffffff4d;
+    --color_tela_hover: #0000002d;
 
     /*COLOR_TABLAS*/
     --color_th: #ff5b5bb3;
@@ -19,93 +19,117 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: "Arial", sans-serif;
 }
 
-body { 
-    font-family: "Work Sans", sans-serif;
-}
-
-a {text-decoration: none;}
-
-header {
-    z-index: 1;
-    min-width: 300px;
-    position: sticky;
+/* Barra superior */
+#barra-superior {
+    width: 100%;
+    position: fixed;
     top: 0;
-}
-
-#header1 {
     background-color: var(--color_header1);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
 }
 
-#header1 div {
-    display: inline-block;
-}
-
-#header1 div ul, nav ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style: none;
-}
-
-#header1 div a {
+#barra-superior div a {
+    font-size: 16px;
+    color: var(--color_texto);
     text-decoration: none;
-    font-size: 20px;
-    color: var(--color_letras_header);
+    margin: 0px 10px;
 }
 
-/* POSICION */
-#menudeheader{
-    margin-left: 100px;
+.idioma {
+    display: flex;
+    margin-right: 20px;
+    color: white;
 }
 
-#idioma {
-    box-sizing: border-box;
-    float: right;
-    margin-right: 30px;
+/* Barra de navegación */
+.barra-navegacion {
+    width: 100%;
+    background: linear-gradient( black, rgba(0, 0, 0, 1), transparent);
+    padding: 40px 0px 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    z-index: 1000;
 }
 
-#idioma li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* MENU DESPLEGABLE DE HEADER 1*/
-.menu_desplegable li {
-    display: none;
-    text-align: center;
-}
-
-.linknav:hover {
-    border-bottom: 2px solid var(--color_subrayado);
-}
-.menu_desplegable:hover li{
-    display: block;
-}
-
-/*HEADER 2 O EL NAV*/
-
-nav a {
+.menu a {
+    color: #ffffff; 
     text-decoration: none;
     font-size: 16px;
-    color: var(--color_letras_header);
+    padding: 5px;
+    transition: 0.3s;
 }
 
-nav li, footer li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
+.menu a:hover {
+    border-bottom: solid 1px white;
 }
 
-nav {
-    text-align: center;
-    background: linear-gradient(to bottom, var(--color_header2), rgba(0, 0, 0, 1), transparent);
-    z-index: 2;
-    min-width: 900px;
+.menu .logo img {
+    height: 40px;
+}
+
+/* Menú hamburguesa */
+.hamburguesa-container {
+    position: relative;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#icono-hambur {
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    user-select: none;
+    display: none;
+    z-index: 1001;
+    color: #ffffff;
+}
+
+.menu-hamburguesa {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1002;
+}
+
+.menu-hamburguesa a {
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu-hamburguesa a:hover {
+    color: #000000;
+}
+
+#check:checked ~ .menu-hamburguesa {
+    display: block;
 }
 
 /* FOOTER */
@@ -174,48 +198,49 @@ footer {
 
 /* ETAPAS HTML */
 .etapas_etapa, .etapa_equipos {
+    display: flex; /* Activamos Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
     text-align: center;
+    gap: 10px; /* Espaciado entre los elementos */
 }
 
 .etapas_etapa div, .etapa_equipos div {
     position: relative;
     height: 300px;
     width: 200px;
-    margin: 2px auto;
-    display: inline-block;
+    margin: 2px; /* Ajustamos márgenes */
+    display: flex; /* Usamos Flexbox también dentro de cada tarjeta */
+    flex-direction: column; /* Alineamos el contenido en columna */
+    justify-content: flex-end; /* Posicionamos el contenido al final del contenedor */
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    overflow: hidden;
 }
 
 .etapas_etapa h2 {
     text-align: left;
     margin-left: 10px;
     background-color: red;
-    width: 100px;
+    width: fit-content; /* Ajusta el ancho al contenido */
     color: white;
 }
 
 .etapas_etapa h1, .etapa_equipos h1 {
-    margin-top: 190px;
+    margin-top: auto; /* Empuja el texto hacia la parte inferior del contenedor */
     color: white;
 }
 .tela_etapa, .tela_equipos {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgb(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3); /* Usamos la notación estándar de opacidad rgba() */
 }
 
 .tela_etapa:hover, .tela_equipos:hover {
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3); /* Usamos la notación estándar de opacidad rgba() */
 }
 
 #linea1_etapa {
-    margin-top: 100px;
+    margin-top: 165px;
 }
 
 /*Se cambiará de ruta más adelante (ETAPAS)*/
@@ -241,39 +266,6 @@ footer {
 
 .f_etapa{
     background-image: url(../../images/kanbo.jpg);
-}
-
-/*EQUIPOS HTML*/
-.etapa_equipos {
-    margin-top: 50px;
-}
-
-.etapa_equipos h2 {
-    text-align: left;
-    margin-left: 10px;
-    background-color: red;
-    width: 120px;
-    color: white;
-}
-
-.etapa_equipos h1 {
-    background-color: rgb(0, 0, 0, 0.8);
-    padding-bottom: 100px;
-}
-
-.etapa_equipos h1:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    padding-bottom: 100px;
-    color: white;
-}
-
-.etapa_equipos a {
-    color: white;
-}
-
-.etapa_equipos h1:hover a {
-    color: black;
 }
 
 /*FOOTER*/
@@ -302,7 +294,6 @@ footer {
 
 #correo {
     height: 40px;
-    width: 100%;
     max-width: 400px; /* Ajusta el ancho máximo */
     font-size: 18px;
     margin-left: 20px;
@@ -530,4 +521,100 @@ footer {
     box-shadow: none;
     background: grey;
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/* Estilos para el menú hamburguesa en dispositivos móviles */
+@media (max-width: 768px) {
+
+    .barra-navegacion{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    footer{
+        margin-top: 50px;
+    }
+
+    .etapas_etapa, .etapa_equipos {
+        flex-direction: column; /* Cambiamos a columna para que las tarjetas se apilen verticalmente */
+        align-items: center; /* Centramos las tarjetas en la columna */
+        gap: 20px; /* Espaciado más grande entre las tarjetas en pantallas pequeñas */
+        padding: 10px; /* Añadimos un poco de espacio alrededor del contenedor */
+    }
+
+    .etapas_etapa div, .etapa_equipos div {
+        width: 90%; /* Las tarjetas ocuparán el 90% del ancho del contenedor para ajustarse mejor a pantallas pequeñas */
+        height: auto; /* Ajustamos la altura automáticamente para mantener proporciones correctas si es necesario */
+        max-height: 600px;
+        margin: 15px 0px;
+        padding-bottom: 10px;
+    }
+
+    .etapas_etapa h2 {
+        font-size: 16px; /* Reducimos el tamaño del texto para pantallas pequeñas */
+        margin-left: auto; 
+        margin-right:auto
+   }
+
+    footer{
+        margin-top: 50px;
+    }
+
+    /*Funciona sin problemas*/
+    .idioma {
+        display: block;
+        margin: auto auto;
+        padding-right: 30px;
+        text-align: center;
+        background-color: red;
+    }
+    /*No tocar*/
+    .menu {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+    
+    #check:checked ~ .menu-hamburguesa {
+        display: flex;
+    }
+    
+    .hamburguesa-container {
+        display: flex;
+        justify-content: flex-end; /* Alinea el icono a la derecha */
+        padding-right: 10px; /* Ajusta el espacio a la derecha según sea necesario */
+    }
+    #icono-hambur {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        right: 0px; /* Alinea a la derecha */
+        top: -10px; /* Ajusta según sea necesario */
+    }
+    
+    .menu-hamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Cambia el color según tu preferencia */
+        position: absolute;
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
+        left: 5px;
+        max-width: 240px; /* Ancho máximo fijo */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar el menú */
+        z-index: 1000; /* Asegurarse que el menú esté por encima de otros elementos */
+    }
+
+    .menu-hamburguesa a {
+        text-decoration: none;
+        color: #000; /* Cambia el color según tu preferencia */
+        padding: 10px;
+        width: 100%; /* Asegura que el enlace ocupe toda la anchura */
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Línea de separación entre enlaces */
+        display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
+    }
 }

@@ -1,44 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Hamburguesa</title>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/46cb5b6960.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Menú</title>
+    <link rel="stylesheet" href="./check2.css">
 </head>
 <body>
-
+    <!-- Barra superior -->
     <section id="barra-superior">
         <div class="idioma">
-            <a href="">ES</a>
-            <a href="">EN</a>
-            <a href="">EUS</a>
+            <a href="#" aria-label="Cambiar idioma a Español">ES</a>
+            <a href="#" aria-label="Cambiar idioma a Inglés">EN</a>
+            <a href="#" aria-label="Cambiar idioma a Euskera">EUS</a>
         </div>
     </section>
 
-    <nav class="barra-navegacion">
-        <div class="menu">
-            <a href="etapa.html">Etapas</a>
-            <a href="equipos.html">Equipos</a>
-            <a href="clasificaciones.html">Clasificaciones</a>
-            <a href="index.html" class="logo">
-                <img src="./images/logoitzulia.png" alt="logo">
-            </a>
-            <a href="noticias.html">Noticias</a>
-            <a href="patrocinadores.html">Patrocinadores</a>
-            <a href="palmares.html">Palmarés</a>
-            <a href="#">Challenge</a>
-        </div>
-
-        <!-- Menú hamburguesa -->
+    <!-- Menú de navegación -->
+    <nav>
+        <!-- Ícono del menú hamburguesa -->
         <div class="hamburguesa-container">
             <input type="checkbox" id="check">
-            <label for="check" id="icono-hambur">☰</label>
+            <label for="check" id="icono-hambur" aria-label="Abrir menú">☰</label>
+            
+            <!-- Menú hamburguesa (para móviles) -->
             <div class="menu-hamburguesa">
-                <a href="index.html">Inicio</a>
                 <a href="etapa.html">Etapas</a>
                 <a href="equipos.html">Equipos</a>
                 <a href="clasificaciones.html">Clasificaciones</a>
@@ -48,8 +36,20 @@
                 <a href="#">Challenge</a>
             </div>
         </div>
+
+        <!-- Menú horizontal (para pantallas grandes) -->
+        <ul class="menu-horizontal">
+            <li><a href="etapa.html">Etapas</a></li>
+            <li><a href="equipos.html">Equipos</a></li>
+            <li><a href="clasificaciones.html">Clasificaciones</a></li>
+            <li class="logo"><img src="../images/logoitzulia.png" alt="Logo Itzulia"></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="patrocinadores.html">Patrocinadores</a></li>
+            <li><a href="palmares.html">Palmarés</a></li>
+            <li><a href="#">Challenge</a></li>
+        </ul>
     </nav>
-    
+
     <section class="anuncionav">            
         <div>
             <h1 class="texto-anuncio">¡PEDRO PASCAL GANA LA ITZULIA 2024!</h1>
@@ -91,7 +91,6 @@
         </div>
         <video controls src="images/videoplayback.mp4" style="flex: 1;"></video>
     </section>
-    
 </body>
 
 <footer>

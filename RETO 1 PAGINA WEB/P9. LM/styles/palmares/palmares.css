@@ -16,6 +16,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    font-family: "Arial", sans-serif;
 }
 
 body {
@@ -24,116 +25,146 @@ body {
 
 a {text-decoration: none;}
 
-header {
-    z-index: 1;
-    min-width: 300px;
-    position: sticky;
-    top: 0px;
-}
-
-#header1 {
+/* Barra superior */
+#barra-superior {
+    width: 100%;
+    position: fixed;
+    top: 0;
     background-color: var(--color_header1);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
 }
 
-#header1 div {
-    display: inline-block;
-}
-
-#header1 div ul, nav ul {
-    margin-bottom: 10px;
-    padding: 0;
-    border: 0;
-    list-style: none;
-}
-
-#header1 div a {
+#barra-superior div a {
+    font-size: 16px;
+    color: var(--color_texto);
     text-decoration: none;
-    font-size: 20px;
-    color: var(--color_letras_header);
+    margin: 0 10px;
 }
 
-/* POSICION */
-#menudeheader{
-    margin-left: 100px;
+.idioma {
+    display: flex;
+    margin-right: 20px;
+    color: white;
 }
 
-#idioma {
-    box-sizing: border-box;
-    float: right;
-    margin-right: 30px;
+/* Barra de navegación */
+.barra-navegacion {
+    width: 100%;
+    background: linear-gradient( black, rgba(0, 0, 0, 1), transparent);
+    padding: 40px 0px 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    z-index: 1000;
 }
 
-#idioma li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* MENU DESPLEGABLE DE HEADER 1*/
-.menu_desplegable li {
-    display: none;
-    text-align: center;
-}
-
-.linknav:hover {
-    border-bottom: 2px solid var(--color_subrayado);
-}
-.menu_desplegable:hover li{
-    display: block;
-}
-
-/*HEADER 2 O EL NAV*/
-
-nav a {
+.menu a {
+    color: #ffffff; 
     text-decoration: none;
     font-size: 16px;
-    color: var(--color_letras_header);
+    padding: 5px;
+    transition: 0.3s;
 }
 
-nav li, footer li {
-    display: inline-block;
-    margin-left: 20px;
-    margin-right: auto;
+.menu a:hover {
+    border-bottom: solid 1px white;
 }
 
-nav {
-    text-align: center;
-    background: linear-gradient(to bottom, var(--color_header2), rgba(0, 0, 0, 1), transparent);
-    z-index: 2;
-    min-width: 900px;
+.menu .logo img {
+    height: 40px;
+}
+
+/* Menú hamburguesa */
+.hamburguesa-container {
+    position: relative;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#icono-hambur {
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    user-select: none;
+    display: none;
+    z-index: 1001;
+    color: #ffffff;
+}
+
+.menu-hamburguesa {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1002;
+}
+
+.menu-hamburguesa a {
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu-hamburguesa a:hover {
+    color: #000000;
+}
+
+#check:checked ~ .menu-hamburguesa {
+    display: block;
 }
 
 /*  TABLA DE EQUIPOS  (Palmares)*/ 
 .tabladeequipos_equipos {
-    margin: 100px auto;
-    width: 60%;
+    display: flex;
+    margin: 200px auto;
+    width: 95%;
+    max-width: 1200px;
+    overflow-x: auto; /* Añadido para evitar desbordamiento horizontal */
 }
 
 .tabladeequipos_equipos table {
-    border-collapse: collapse;
-    text-align: center;
+    width: 100%;
+    border-collapse: collapse; /* Añadido para evitar bordes dobles */
+    text-align: left; /* Alineación a la izquierda para mejor legibilidad en móvil */
+}
+
+.tabladeequipos_equipos th,
+.tabladeequipos_equipos td {
+    padding: 12px;
+    border: 1px solid #dddddd; /* Color de borde más suave */
+    white-space: nowrap; /* Evita que el texto se rompa en líneas */
 }
 
 .tabladeequipos_equipos th {
-    border: 2px solid black;
     background-color: rgba(255, 91, 91, 0.7);
-}
-.tabladeequipos_equipos td {
-    border: 1px solid black;
-    background-color: rgba(255, 195, 65, 0.7);
-}
-.tabladeequipos_equipos th{
-    padding: 20px 20px;
-    width: 200px;
-    max-width: 200px;
+    font-weight: bold;
+    text-align: center; /* Centrar los encabezados */
 }
 
 .tabladeequipos_equipos td {
-    padding: 20px 20px;
-    width: 200px;
-    max-width: 200px;
+    background-color: rgba(255, 195, 65, 0.7);
 }
 
 footer {
@@ -389,4 +420,92 @@ footer {
     box-shadow: none;
     background: grey;
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/* Estilos para el menú hamburguesa en dispositivos móviles */
+@media (max-width: 768px) {
+
+    .barra-navegacion{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    footer{
+        margin-top: 50px;
+    }
+    
+    /*Funciona sin problemas*/
+    .idioma {
+        display: block;
+        margin: auto auto;
+        padding-right: 30px;
+        text-align: center;
+    }
+    /*No tocar*/
+    .menu {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+    
+    #check:checked ~ .menu-hamburguesa {
+        display: flex;
+    }
+    
+    .hamburguesa-container {
+        display: flex;
+        justify-content: flex-end; /* Alinea el icono a la derecha */
+        padding-right: 10px; /* Ajusta el espacio a la derecha según sea necesario */
+    }
+    
+    #icono-hambur {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        right: 0px; /* Alinea a la derecha */
+        top: -10px; /* Ajusta según sea necesario */
+    }
+    
+    .menu-hamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Cambia el color según tu preferencia */
+        position: absolute;
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
+        left: 5px;
+        max-width: 240px; /* Ancho máximo fijo */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar el menú */
+        z-index: 1000; /* Asegurarse que el menú esté por encima de otros elementos */
+    }
+
+    .menu-hamburguesa a {
+        text-decoration: none;
+        color: #000; /* Cambia el color según tu preferencia */
+        padding: 10px;
+        width: 100%; /* Asegura que el enlace ocupe toda la anchura */
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Línea de separación entre enlaces */
+        display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
+    }
+  
+      .tabladeequipos_equipos td:nth-child(2)::after {
+        content: " (1st)"; /* Add (2nd) to the second player */
+        font-size: 0.8em;
+        color: #000000; /* Use a distinct color */
+      }
+  
+      .tabladeequipos_equipos td:nth-child(3)::after {
+        content: " (2nd)"; /* Add (3rd) to the third player */
+        font-size: 0.8em;
+        color: #000000; /* Use a distinct color */
+      }
+      .tabladeequipos_equipos td:nth-child(4)::after {
+        content: " (3rd)"; /* Add (3rd) to the third player */
+        font-size: 0.8em;
+        color: #000000; /* Use a distinct color */
+      }
 }

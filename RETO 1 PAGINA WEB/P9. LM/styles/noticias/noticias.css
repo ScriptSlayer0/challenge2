@@ -16,6 +16,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: "Arial", sans-serif;
 }
 
 body {  
@@ -23,109 +24,169 @@ body {
 }
 
 /*Barra de navegación*/
+/* Barra superior */
 #barra-superior {
-    z-index: 1; /* Asegura que esté encima de otros elementos */
     width: 100%;
-    min-width: 300px;
     position: fixed;
-    top: 0px;
+    top: 0;
     background-color: var(--color_menu_superior);
-    padding: 10px 0px;
+    padding: 10px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    z-index: 100;
 }
 
 #barra-superior div a {
-    font-size: 20px;
-    color: var(--color_letras_header);
+    font-size: 16px;
+    color: var(--color_texto);
+    text-decoration: none;
+    margin: 0 10px;
 }
 
 .idioma {
     display: flex;
-    justify-content: flex-end;
-    margin-left: auto;
-    margin-right: 10px;
-    align-items: center;
+    margin-right: 20px;
+    color: white;
 }
 
-
-.menu_desplegable {
-    width: 100px;
-    position: relative; /* Necesario para que z-index funcione */
-    left: 100px;
-    z-index: 10; /* Z-index alto para asegurarse de que esté encima */
-}
-
-/*Elemento menu inferior*/
-.elemento-barra-inferior{
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.elemento-barra-inferior:hover {
-    text-decoration: underline red 2px;
-}
-
-.Barra-navegacion {
-    position: sticky;
-    position: relative;
-    top: 40px;
+/* Barra de navegación */
+.barra-navegacion {
     width: 100%;
-    text-align: center;
-    background: linear-gradient(to bottom, var(--color_menu_inferior), rgba(0, 0, 0, 1), transparent);
-    z-index: 1;
-}
-
-.Barra-navegacion a {
-    text-decoration: none;
-    font-size: 16px;
-    color: var(--color_letras_header);
-}
-
-/*No tocar*/
-.Barra-navegacion li {
-    display: inline-block;
-}
-
-#barra-inferior {
+    background: linear-gradient( black, rgba(0, 0, 0, 1), transparent);
+    padding: 40px 0px 40px 0px;
     display: flex;
-    padding: 20px 0px 50px 0px;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    border-bottom: solid 1px white;
+}
+
+.menu .logo img {
+    height: 40px;
+}
+
+/* Menú hamburguesa */
+.hamburguesa-container {
+    position: relative;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#icono-hambur {
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    user-select: none;
+    display: none;
+    z-index: 1001;
+    color: #ffffff;
+}
+
+.menu-hamburguesa {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1002;
+}
+
+.menu-hamburguesa a {
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu-hamburguesa a:hover {
+    color: #000000;
+}
+
+#check:checked ~ .menu-hamburguesa {
+    display: block;
 }
 
 /*SEGUNDA SECCION (BLOQUES EN LINEA)*/
 
-#bloquesenlinea, #bloquesenlinea_noticias {
+#bloquesenlinea {
+    display: flex;
+    justify-content: space-evenly; /* Distribuye los elementos uniformemente */
+    align-items: stretch; /* Asegura que todos los elementos tengan la misma altura */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
     position: relative;
-    margin-top: 50px;
+    margin-top: 150px;
     text-align: center;
 }
-#bloquesenlinea div, #bloquesenlinea_noticias div {
-    border: 2px solid var(--color_negro);
+
+#bloquesenlinea div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido desde el inicio */
+    align-items: center; /* Centra el contenido horizontalmente */
     background-image: url(../../images/kanbo.jpg);
-    background-size: cover; 
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    display: inline-block;
     height: 300px;
     width: 300px;
-    margin: auto 20px;
-    overflow: hidden;
+    margin: 20px;
+}
+/*Contenedores de texto*/
+#titulo-noticia div article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinea el contenido desde el inicio */
+    align-items: center; /* Centra el contenido horizontalmente */
+    height: 100%;
+    width: 100%;
 }
 
-#bloquesenlinea div p, #bloquesenlinea_noticias div p {
-    background-color: var(--color_letras_header);
-    border: 1px solid var(--color_negro);
-    margin: 0 10px;
-    padding-left: 30px;
-    padding-right: 30px;
+#bloquesenlinea div p, #titulo-noticia div p {
+    background-color: rgba(255, 255, 255, 0.745);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    height: 150px;
+}
+
+.titulo-noticia {
+    margin-top: 10px; /* Ajusta el margen superior */
+    margin-bottom: 10px;
 }
 
 footer {
     margin-top: 70px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #Contenedor-formulario-correo {
@@ -149,7 +210,7 @@ footer {
 #correo {
     height: 40px;
     width: 100%;
-    max-width: 400px; /* Ajusta el ancho máximo */
+    max-width: 300px; /* Ajusta el ancho máximo */
     font-size: 18px;
     margin-left: 20px;
     margin-bottom: 20px; /* Espacio debajo del input */
@@ -376,4 +437,92 @@ footer {
     box-shadow: none;
     background: grey;
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/* Estilos para el menú hamburguesa en dispositivos móviles */
+@media (max-width: 768px) {
+
+    .barra-navegacion{
+        display: flex;
+        justify-content: flex-start;
+    }
+    /*Video*/
+    .video-impactante {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Añade esto para centrar horizontalmente */
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        width: 50%; /* Ajusta el ancho al 100% del contenedor */
+        margin: 30px auto; /* Centra horizontalmente en el contenedor padre */
+    }
+
+    .video-impactante video {
+        width: 100%; /* Asegura que el video ocupe todo el ancho disponible */
+        height: auto; /* Mantiene la proporción del video */
+        margin-top: 20px;
+    }
+
+    /*Funciona sin problemas*/
+    .idioma {
+        display: block;
+        margin: auto auto;
+        padding-right: 30px;
+        text-align: center;
+    }
+    /*No tocar*/
+    .menu {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+    
+    #check:checked ~ .menu-hamburguesa {
+        display: flex;
+    }
+    
+    .hamburguesa-container {
+        display: flex;
+        justify-content: flex-end; /* Alinea el icono a la derecha */
+        padding-right: 10px; /* Ajusta el espacio a la derecha según sea necesario */
+    }
+    #icono-hambur {
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        right: 0px; /* Alinea a la derecha */
+        top: -10px; /* Ajusta según sea necesario */
+    }
+    
+    .menu-hamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff; /* Cambia el color según tu preferencia */
+        position: absolute;
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
+        left: 5px;
+        max-width: 240px; /* Ancho máximo fijo */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar el menú */
+        z-index: 1000; /* Asegurarse que el menú esté por encima de otros elementos */
+    }
+
+    .menu-hamburguesa a {
+        text-decoration: none;
+        color: #000; /* Cambia el color según tu preferencia */
+        padding: 10px;
+        width: 100%; /* Asegura que el enlace ocupe toda la anchura */
+        text-align: center;
+        border-bottom: 1px solid #ddd; /* Línea de separación entre enlaces */
+        display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
+    }
+
+    .texto-anuncio {
+        position: relative;
+        top: 120px;
+        font-size: 2.1em;
+    }
 }
