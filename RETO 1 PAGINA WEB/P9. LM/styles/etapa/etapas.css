@@ -197,20 +197,20 @@ footer {
 }
 
 /* ETAPAS HTML */
-.etapas_etapa, .etapa_equipos {
+.etapas_etapa {
     display: flex; /* Activamos Flexbox */
     flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
     justify-content: center; /* Centra los elementos horizontalmente */
     align-items: center; /* Centra los elementos verticalmente */
     text-align: center;
     gap: 10px; /* Espaciado entre los elementos */
+    margin-top: 10px;
 }
 
-.etapas_etapa div, .etapa_equipos div {
+.etapas_etapa div {
     position: relative;
     height: 300px;
     width: 200px;
-    margin: 2px; /* Ajustamos márgenes */
     display: flex; /* Usamos Flexbox también dentro de cada tarjeta */
     flex-direction: column; /* Alineamos el contenido en columna */
     justify-content: flex-end; /* Posicionamos el contenido al final del contenedor */
@@ -227,20 +227,22 @@ footer {
     color: white;
 }
 
-.etapas_etapa h1, .etapa_equipos h1 {
+.etapas_etapa h1 {
     margin-top: auto; /* Empuja el texto hacia la parte inferior del contenedor */
     color: white;
 }
-.tela_etapa, .tela_equipos {
+
+.tela_etapa {
     background-color: rgba(0, 0, 0, 0.3); /* Usamos la notación estándar de opacidad rgba() */
 }
 
-.tela_etapa:hover, .tela_equipos:hover {
+.tela_etapa:hover {
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.3); /* Usamos la notación estándar de opacidad rgba() */
 }
 
 #linea1_etapa {
-    margin-top: 165px;
+    margin-top: 170px;
 }
 
 /*Se cambiará de ruta más adelante (ETAPAS)*/
@@ -341,7 +343,6 @@ footer {
     background-color: gray;
     color: #333;
     text-decoration: none;
-    transition: background-color 0.3s ease;
 }
 
 #redes_sociales a:hover {
@@ -525,6 +526,19 @@ footer {
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
+
+    /*Experimento*/
+    .etapas_etapa div {
+        position: relative;
+        height: 300px;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
     .barra-navegacion{
         display: flex;
