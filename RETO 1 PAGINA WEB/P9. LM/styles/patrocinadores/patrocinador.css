@@ -27,6 +27,122 @@ body {
     font-family: "Work Sans", sans-serif;
 }
 
+/* Barra superior */
+#barra-superior {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: var(--color_header1);
+    padding: 10px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 100;
+}
+
+#barra-superior div a {
+    font-size: 16px;
+    color: var(--color_texto);
+    text-decoration: none;
+    margin: 0px 10px;
+}
+
+.idioma {
+    display: flex;
+    margin-right: 20px;
+    color: white;
+}
+
+/* Barra de navegación */
+.barra-navegacion {
+    width: 100%;
+    background: linear-gradient( black, rgba(0, 0, 0, 1), transparent);
+    padding: 40px 0px 40px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 38px;
+    left: 0;
+    z-index: 1000;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px;
+    
+}
+
+.menu a:hover{
+    border-bottom: #ff0000 solid 1px;
+    transition: 1.2s ease;
+}
+
+/*Logo itzulia*/
+.menu .logo img {
+    height: 50px;
+}
+
+.menu .logo:hover {
+    border-bottom: none;
+}
+
+/* Menú hamburguesa */
+.hamburguesa-container {
+    position: relative;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#icono-hambur {
+    cursor: pointer;
+    font-size: 28px;
+    padding: 10px;
+    user-select: none;
+    display: none;
+    z-index: 1001;
+    color: #ffffff;
+}
+
+.menu-hamburguesa {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #ffffff;
+    width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    z-index: 1002;
+}
+
+.menu-hamburguesa a {
+    color: #000000;
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.menu-hamburguesa a:hover {
+    color: #000000;
+}
+
+#check:checked ~ .menu-hamburguesa {
+    display: block;
+}
+
 /* General styles for the entire section */
 #patrocinio_patr {
     display: flex;
@@ -34,6 +150,7 @@ body {
     align-items: center;      /* Center content horizontally */
     padding: 20px;
     text-align: center;
+    margin-top: 180px;
 }
 
 #patrocinio_patr h1 {
@@ -66,8 +183,269 @@ body {
     vertical-align: middle; /* Align images vertically */
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+
+/* FOOTER */
+footer {
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#Contenedor-formulario-correo {
+    display: flex;
+    background-color: var(--color_header1);
+    flex-direction: column; /* Disposición en columna */
+    justify-content: flex-start; /* Asegura que los elementos se alineen desde el principio */
+    align-items: center; /* Alineación al centro */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#texto-contacto-correo {
+    font-size: 20px;
+    color: var(--color_letras_header);
+    margin-bottom: 20px; /* Margen inferior */
+    display: block; /* Asegurarse de que el label sea un bloque */
+    width: 100%; /* O ajusta según el ancho que desees */
+}
+
+#correo {
+    height: 40px;
+    max-width: 300px; /* Ajusta el ancho máximo */
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding no se agregue al ancho */
+}
+
+#boton-footer {
+    height: 40px;
+    width: 80px;
+    font-size: 18px;
+    border: 2px solid var(--color_letras_header);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--color_letras_header);
+    margin-left: 10px;
+    transition: all 0.3s ease; /* Añadir transición suave */
+    position: relative; /* Necesario para el desplazamiento lateral */
+}
+
+#boton-footer:hover {
+    background-color: white;
+    color: var(--color_negro);
+    transform: translateX(10px); /* Desplazamiento lateral */
+}
+
+/* redes sociales*/
+#redes_sociales {
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en fila */
+    background-color: var(--color_header2);
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 20px; /* Espaciado entre iconos */
+}
+
+/* Animaciones footer redes sociales */
+#redes_sociales a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#redes_sociales a:hover {
+    background-color: #ff0000;
+}
+
+/*Animación instagram*/
+#animacion-instagram a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+    /* Usamos el gradiente desde el inicio pero con opacidad 0 */
+    background: linear-gradient(45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%);
+    opacity: 0.7;
+    
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    
+    /* Transiciones suaves */
+    transition: all 1.5s ease;
+}
+
+/* Efecto al pasar el mouse */
+#animacion-instagram a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    
+    /* Sombra con los colores del gradiente más pequeña y sutil */
+    box-shadow: 0px 0px 10px 5px rgba(240, 147, 51, 0.4),   /* #f09433 */
+                0px 0px 15px 8px rgba(230, 104, 60, 0.3),   /* #e6683c */
+                0px 0px 20px 10px rgba(220, 39, 67, 0.3),    /* #dc2743 */
+                0px 0px 25px 12px rgba(204, 35, 102, 0.2),   /* #cc2366 */
+                0px 0px 30px 15px rgba(188, 24, 136, 0.1);   /* #bc1888 */
+}
+
+/* Estado normal */
+#animacion-instagram a:not(:hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación tiktok*/
+#animacion-tiktok a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    /* Transiciones suaves */
+    /*aumentalo a un segundo mañana*/
+    transition: all 1s ease;
+    opacity: 0.7;
+}
+    
+#animacion-tiktok a:hover {
+    background-color: black;
+    filter: brightness(1.3);
+    opacity: 1;
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+}
+
+#animacion-tiktok a:not(:hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación youtube*/
+#animacion-youtube a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: all 1s ease;
+    transform: scale(1); /* Efecto de aumento al pasar el mouse */
+    opacity: 0.7;
+}
+    
+#animacion-youtube a:hover {
+    background-color: #ff0000; /* Color rojo de YouTube */
+    filter: brightness(1.2); /* Aumenta el brillo */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    opacity: 1;
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    /* Sombra más intensa y redondeada */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+}
+
+#animacion-youtube a:not(hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación twiter*/
+#animacion-twitter a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: All 1s ease;
+    opacity: 0.7;
+}
+            
+#animacion-twitter a:hover {
+    background-color: #1DA1F2;
+    filter: brightness(1.2);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+    opacity: 1;
+}
+
+#animacion-twitter a:not(:hover){
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/*Animación facebook*/
+#animacion-facebook a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: gray;
+    color: #333;
+    text-decoration: none;
+    transition: all 1s ease;
+    transform: scale(1); /* Efecto de aumento al pasar el mouse */
+    opacity: 0.7;
+}
+        
+#animacion-facebook a:hover {
+    background-color: #001affc0;
+    filter: brightness(1.2);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
+    opacity: 1;
+}
+
+#animacion-facebook a:not(:hover) {
+    transform: scale(1);
+    box-shadow: none;
+    background: grey;
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
+}
+
+/* Estilos para el menú hamburguesa en dispositivos móviles */
+@media (max-width: 768px) {
+
     #patrocinio_patr {
         padding: 10px; /* Reduce padding on smaller screens */
     }
@@ -81,6 +459,58 @@ body {
         max-height: 60px;
     }
 
+    #texto-contacto-correo{
+        font-size: 15px;
+    }
+
+    .barra-navegacion{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    footer{
+        margin-top: 50px;
+    }
+    /*Video*/
+    .video-impactante {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Añade esto para centrar horizontalmente */
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        width: 50%; /* Ajusta el ancho al 100% del contenedor */
+        margin: 30px auto; /* Centra horizontalmente en el contenedor padre */
+    }
+
+    .video-impactante video {
+        width: 310px; /* Asegura que el video ocupe todo el ancho disponible */
+        margin-top: 30px;
+    }
+
+    /*Funciona sin problemas*/
+    .idioma {
+        display: block;
+        text-align: center;
+    }
+    /*No tocar*/
+    .menu {
+        display: none;
+    }
+
+    #check {
+        display: none;
+    }
+    
+    #check:checked ~ .menu-hamburguesa {
+        display: flex;
+    }
+    
+    .hamburguesa-container {
+        display: flex;
+        justify-content: flex-end; /* Alinea el icono a la derecha */
+        padding-right: 10px; /* Ajusta el espacio a la derecha según sea necesario */
+    }
+    
     #icono-hambur {
         font-size: 30px;
         cursor: pointer;
@@ -88,5 +518,33 @@ body {
         position: relative;
         right: 0px; /* Alinea a la derecha */
         top: -10px; /* Ajusta según sea necesario */
+    }
+    
+    .menu-hamburguesa {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff; /* Cambia el color según tu preferencia */
+        position: absolute;
+        top: 50px; /* Ajusta según la altura de la barra de navegación */
+        left: 5px;
+        max-width: 240px; /* Ancho máximo fijo */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir sombra para destacar el menú */
+        z-index: 1000; /* Asegurarse que el menú esté por encima de otros elementos */
+    }
+
+    .menu-hamburguesa a {
+        text-decoration: none;
+        color: #000; /* Cambia el color según tu preferencia */
+        padding: 10px;
+        width: 100%; /* Asegura que el enlace ocupe toda la anchura */
+        text-align: center;
+        display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
+    }
+
+    .texto-anuncio {
+        position: relative;
+        top: 120px;
+        font-size: 2.1em;
     }
 }
