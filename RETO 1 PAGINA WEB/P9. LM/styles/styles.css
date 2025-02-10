@@ -144,6 +144,7 @@
     display: block;
 }
 
+/*Anuncio*/
 .anuncionav {
     position: relative;
     background-image: url('../images/foto_nav.jpg');
@@ -194,7 +195,7 @@
     color: var(--color_negro);
 }
 
-/*SEGUNDA SECCION (BLOQUES EN LINEA)*/
+/*Noticias en linea*/
 
 #bloquesenlinea {
     display: flex;
@@ -219,7 +220,8 @@
     width: 300px;
     margin: 20px;
 }
-/*Contenedores de texto*/
+
+/*Contenedores de texto de las noticias*/
 #titulo-noticia div article {
     display: flex;
     flex-direction: column;
@@ -242,7 +244,7 @@
     margin-bottom: 10px;
 }
 
-/* TERCERA SECCION (VIDEO Y CANAL)*/
+/*Video*/
 
 .video-impactante {
     display: flex;
@@ -258,30 +260,6 @@
     margin-top: 30px;
 }
 
-#massobrex {
-    position: relative;
-    margin-top: 10vh;
-    margin-left: 2vw;
-    display: flex;
-    align-items: center; /* Cambia esto para centrar verticalmente */
-    justify-content: center; /* Cambia esto para centrar horizontalmente */
-}
-
-#massobrex video {
-    width: 50vw; /* Ajusta el tamaño del video proporcionalmente a la anchura de la ventana */
-    height: auto; /* Mantén la proporción del video */
-}
-
-#massobrex div {
-    width: 40vw; /* Ajusta el tamaño del contenedor proporcionalmente a la anchura de la ventana */
-    margin-left: 2vw;
-    flex: 1; /* Ocupará proporcionalmente el espacio disponible */
-}
-
-#massobrex h2 {
-    font-size: 3vw; /* Ajusta el tamaño de la fuente proporcionalmente a la anchura de la ventana */
-}
-
 /* FOOTER */
 footer {
     margin-top: 70px;
@@ -289,6 +267,12 @@ footer {
     display: flex;
     flex-direction: column;
 }
+
+.video-impacto {
+    width: 50vw; /* Ajusta el tamaño del video proporcionalmente a la anchura de la ventana */
+    height: auto; /* Mantén la proporción del video */
+}
+
 
 #Contenedor-formulario-correo {
     display: flex;
