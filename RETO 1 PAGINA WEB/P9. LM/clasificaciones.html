@@ -12,6 +12,45 @@
     </head>
     
     <body>
+        <section id="barra-superior">
+            <div class="idioma">
+                <a href="">ES</a>
+                <a href="">EN</a>
+                <a href="">EUS</a>
+            </div>
+        </section>
+
+        <nav class="barra-navegacion">
+            <div class="menu">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="index.html" class="logo">
+                    <img src="./images/logoitzulia.png" alt="logo">
+                </a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
+                <a href="#">Challenge</a>
+            </div>
+
+            <!-- Menú hamburguesa -->
+            <div class="hamburguesa-container">
+                <input type="checkbox" id="check">
+                <label for="check" id="icono-hambur">☰</label>
+                <div class="menu-hamburguesa">
+                    <a href="index.html">Inicio</a>
+                    <a href="etapa.html">Etapas</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="clasificaciones.html">Clasificaciones</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="patrocinadores.html">Patrocinadores</a>
+                    <a href="palmares.html">Palmarés</a>
+                    <a href="#">Challenge</a>
+                </div>
+            </div>
+        </nav>
+
         <section class="tabladeequipos_equipos">
             <table>
                 <tr>
@@ -53,4 +92,32 @@
             </table>
         </section>
     </body>
+
+    <footer>
+        <div id="redes_sociales">
+            <div id="animacion-instagram">
+                <a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div id="animacion-tiktok">
+                <a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div id="animacion-youtube">
+                <a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div id="animacion-twitter">
+                <a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div id="animacion-facebook">
+                <a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        
+        <div id="Contenedor-formulario-correo">
+            <form action="#" method="post">
+                <label id="texto-contacto-correo" for="correo">¿Quieres contactar con nosotros? ¡Mándanos un correo!</label>
+                <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                <input type="submit" id="boton-footer" value="Enviar">
+            </form>
+        </div>     
+    </footer>
 </html>

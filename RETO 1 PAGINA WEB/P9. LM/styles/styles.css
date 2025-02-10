@@ -423,7 +423,6 @@ footer {
     color: #333;
     text-decoration: none;
     /* Transiciones suaves */
-    /*aumentalo a un segundo mañana*/
     transition: all 1s ease;
     opacity: 0.7;
 }
