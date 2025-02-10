@@ -541,7 +541,6 @@ footer {
     /*Selección de idioma en la barra superior*/
     .idioma {
         display: block;
-        padding-right: 30px;
         text-align: center;
     }
 
