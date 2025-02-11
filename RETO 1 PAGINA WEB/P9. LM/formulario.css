@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0;
+  margin: 0px;
 }
 
 /* Estilos de los botones */
@@ -77,7 +77,6 @@
   border: 1px solid #ccc;
   font-size: 14px;
   box-sizing: border-box;
-  margin-bottom: 15px;
 }
 
 /* Estilo para los inputs de texto y select */
@@ -166,7 +165,7 @@
 }
 
 .form-group label, .pregunta-recorrido, .pregunta-federado, .pregunta-club {
-  width: 45%;
+  margin-right: 90px;
   font-weight: bold;
 }
 
@@ -226,7 +225,7 @@
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 /* Estilos del bloque email */
@@ -263,18 +262,33 @@
 }
 
 .alert-text {
+  display: flex;
+  width: 18%;
   font-size: 12px;
   color: #333;
   background-color: #f9f9f9;
   margin-top: 5px;
   border-radius: 3px;
-  line-height: 1.5;
-  padding-left: 188px;
 }
 
 /* Ajustes para campos y etiquetas de texto */
 .tamano-ingrese {
   width: 75%;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 20px 20px 0px 20px;
+}
+
+.impuestos{
+  color: grey;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 80px 0px 0px;
 }
 
 /* Estilo de los fieldsets */

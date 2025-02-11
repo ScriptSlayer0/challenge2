@@ -11,8 +11,8 @@
   <form action="procesardatos.php">
     
    <!-- Bloque Challenge -->
-<fieldset class="border border-gray-300 p-6 rounded-lg shadow-md bg-white">
-    <legend class="text-lg font-semibold text-gray-800 px-2">Bloque Challenge:</legend>
+<fieldset>
+    <legend>Bloque Challenge:</legend>
 
     <div>
         <!-- Bloque Recorrido -->
@@ -50,12 +50,13 @@
             <p class="font-medium text-gray-700">¿Perteneces a algún club?*</p>
             <div>
                 <label>
-                    <input type="radio" id="clubNo" name="club" value="1" class="accent-blue-500">
-                    <span>No (Independiente)</span>
-                </label>
-                <label>
                     <input type="radio" id="clubSi" name="club" value="2" class="accent-blue-500">
                     <span>Sí</span>
+                </label>
+
+                <label>
+                    <input type="radio" id="clubNo" name="club" value="1" class="accent-blue-500">
+                    <span>No (Independiente)</span>
                 </label>
             </div>
         </div>
@@ -316,7 +317,6 @@
         <select id="pais_movil" name="pais_movil"> <!-- Cambié el ID y el name -->
             <option value="">Albania (+355)</option>
             <option value="">Alemania (+49)</option>
-            <!-- Otras opciones -->
         </select>
     </div>
 
@@ -541,8 +541,7 @@
         <button class="botones-2" type="button">Añadir a otra persona</button>
         <button class="boton-rojo" type="submit">Continuar</button>
     </div>
-
-    <p>Impuestos con importes incluidos</p>
+    <p class="impuestos">*Impuestos con importes incluidos</p>
 </form>
 
 </body>
