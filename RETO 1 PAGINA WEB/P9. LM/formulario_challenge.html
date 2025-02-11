@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <form action="procesardatos.php">
+  <form>
     
    <!-- Bloque Challenge -->
 <fieldset class="bloque-challenge">
@@ -109,6 +109,7 @@
         <div class="fila">
             <label for="Genero" class="etiqueta">Género*</label>
             <select id="Genero" name="Genero" required>
+                <option value="" disabled selected>Genero</option>
                 <option value="Hombre">Hombre</option>
                 <option value="Mujer">Mujer</option>
             </select>
@@ -305,8 +306,8 @@
 </fieldset>
 
  <!-- Bloque localización -->
-<legend class="bloque-localización">Bloque localización:</legend>
-<fieldset>
+<fieldset class="bloque-localización">
+    <legend>Localización:</legend>
         <div class="campos">
 
     <!-- Teléfono móvil -->
@@ -317,13 +318,55 @@
         <select id="pais_movil" name="pais_movil"> <!-- Cambié el ID y el name -->
             <option value="">Albania (+355)</option>
             <option value="">Alemania (+49)</option>
+            <option value="">Andorra (+376)</option>
+            <option value="">Austria (+43)</option>
+            <option value="">Bélgica (+32)</option>
+            <option value="">Bosnia y Herzegovina (+387)</option>
+            <option value="">Bulgaria (+359)</option>
+            <option value="">Chipre (+357)</option>
+            <option value="">Croacia (+385)</option>
+            <option value="">Dinamarca (+45)</option>
+            <option value="">Eslovaquia (+421)</option>
+            <option value="">Eslovenia (+386)</option>
+            <option value="">España (+34)</option>
+            <option value="">Estonia (+372)</option>
+            <option value="">Finlandia (+358)</option>
+            <option value="">Francia (+33)</option>
+            <option value="">Grecia (+30)</option>
+            <option value="">Hungría (+36)</option>
+            <option value="">Irlanda (+353)</option>
+            <option value="">Islandia (+354)</option>
+            <option value="">Italia (+39)</option>
+            <option value="">Kosovo (+383)</option>
+            <option value="">Letonia (+371)</option>
+            <option value="">Liechtenstein (+423)</option>
+            <option value="">Lituania (+370)</option>
+            <option value="">Luxemburgo (+352)</option>
+            <option value="">Malta (+356)</option>
+            <option value="">Moldavia (+373)</option>
+            <option value="">Mónaco (+377)</option>
+            <option value="">Montenegro (+382)</option>
+            <option value="">Noruega (+47)</option>
+            <option value="">Países Bajos (+31)</option>
+            <option value="">Polonia (+48)</option>
+            <option value="">Portugal (+351)</option>
+            <option value="">Reino Unido (+44)</option>
+            <option value="">República Checa (+420)</option>
+            <option value="">Rumanía (+40)</option>
+            <option value="">Rusia (+7)</option>
+            <option value="">San Marino (+378)</option>
+            <option value="">Serbia (+381)</option>
+            <option value="">Suecia (+46)</option>
+            <option value="">Suiza (+41)</option>
+            <option value="">Ucrania (+380)</option>
+
         </select>
     </div>
 
     <!-- Teléfono de emergencia -->
     <div class="form-group">
         <div class="etiqueta">
-            <label for="emergencia">Teléfono de emergencia*</label>
+            <label for="emergencia">Nº Teléfono*</label>
         </div>
         <input type="text" id="emergencia" name="emergencia" required> <!-- Añadí required -->
     </div>
@@ -424,8 +467,9 @@
 </fieldset>
 
 <!-- Bloque mail -->
-<legend>Bloque mail</legend>
+
 <fieldset class="bloque-mail">
+    <legend>Email</legend>
     <div class="form-group">
         <label for="email" class="etiqueta">Email*</label>
         <input type="text" id="email" class="text-field">
@@ -441,14 +485,12 @@
 
 
 <!-- Bloque Maillot -->
-<legend class="bloque-maillot">Bloque maillot:</legend>
-<fieldset>
-    <div>
-        <h2>Maillot oficial Guía de tallas</h2>
-    </div>
+
+<fieldset class="bloque-maillot">
+    <legend>Talla maillot:</legend>
 
     <label for="Talla">Talla maillot oficial*</label>
-
+    
     <div class="mover-talla-container">
         <img class="imagen"  src="./images/maillot_tallas.jpg" alt="" width="120px" height="100px">
 
@@ -517,24 +559,25 @@
 
 <!-- Bloque Términos -->
 <form>
-    <legend>Bloque términos</legend>
     <fieldset class="bloque-terminos">
-        <label for="terminos">Acepto los términos y condiciones de contratación para el tratamiento de mis datos y confirmo haber leído y aceptado la Política de Privacidad de NUONET GESTION, S.L.,*</label>
-        <br><br>
-
-        <input type="radio" id="aceptoTerminos" name="terminos" value="1" required>
-        <label for="aceptoTerminos">Sí acepto</label>
-        <br><br>
-
-        <input type="radio" id="noAceptoTerminos" name="terminos" value="2" required>
-        <label for="noAceptoTerminos">No, gracias</label>
-        <br><br>
-
-        <label for="informacion">Deseo recibir información de eventos deportivos, ofertas y novedades de marcas colaboradoras.*</label>
-        <br><br>
-
-        <input type="checkbox" id="aceptoInformacion" name="informacion" value="1">
-        <label for="aceptoInformacion">Acepto</label>
+        <legend>Términos</legend>
+        
+        <div class="Terminos">
+            <label for="terminos">Acepto los términos y condiciones de contratación para el tratamiento de mis datos y confirmo <br> haber leído y aceptado la Política de Privacidad de NUONET GESTION, S.L.,*</label>
+            <div class="terminos-aviso">
+                <input type="radio" id="aceptoTerminos" name="terminos" value="1" required>
+            <label for="aceptoTerminos">Sí acepto</label>
+            </div>
+            <div class="terminos-aviso">
+                <input type="radio" id="noAceptoTerminos" name="terminos" value="2" required>
+                <label for="noAceptoTerminos">No, gracias</label>
+            </div>
+            <div class="terminos-aviso">
+                <label for="informacion">Deseo recibir información de eventos deportivos, ofertas y novedades de marcas colaboradoras.*<br></label>
+                <input class="aceptar_termino" type="checkbox" id="aceptoInformacion" name="informacion" value="1">
+                <label  for="aceptoInformacion">Acepto</label>
+            </div>
+        </div>   
     </fieldset>
 
     <!-- Otros campos y botones -->

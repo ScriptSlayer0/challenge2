@@ -59,6 +59,27 @@
   height: auto;
 }
 
+.Terminos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: solid 1px black;
+  margin: auto;
+  /*margin: 0px 0px 0px 30px;*/
+  padding: 12px;
+  max-width: 60%; /* Añadido para limitar el ancho */
+}
+
+.terminos-aviso{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.aceptar_termino{
+  margin-top: 20px;
+}
+
 .Tallas {
   display: flex;
   flex-direction: column;
@@ -140,11 +161,6 @@
   border: 1px solid #ccc;
 }
 
-/* Ajuste de formularios de datos personales */
-.datos-personales {
-  margin: 0 auto;
-}
-
 .fila {
   display: flex;
   margin-bottom: 15px;
@@ -187,11 +203,6 @@
   display: inline-block;
   width: auto;
   margin-right: 10px;
-}
-
-/* Bloque Recorrido */
-.bloque-recorrido .pregunta-recorrido {
-  width: 45%;
 }
 
 /* Bloque Federado */
@@ -287,11 +298,17 @@
 }
 
 .impuestos{
-  color: grey;
+  color: black;
   font-size: 0.8em;
   display: flex;
   justify-content: flex-end;
   margin: 10px 80px 0px 0px;
+}
+
+.bloque-challenge, .datos-personales, .bloque-localización,
+.bloque-mail,.bloque-maillot, .bloque-terminos {
+  margin: 50px 150px 30px 150px;
+  padding: 20px;
 }
 
 /* Estilo de los fieldsets */
@@ -301,4 +318,175 @@ fieldset {
 
 legend {
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  /* Ajustes generales de márgenes y padding */
+  .bloque-challenge, 
+  .datos-personales, 
+  .bloque-localización,
+  .bloque-mail,
+  .bloque-maillot, 
+  .bloque-terminos {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  /* Ajuste de contenedores flexibles */
+  .fila {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+
+  .etiqueta {
+    flex: none;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .campos {
+    width: 100%;
+  }
+
+  /* Ajustes de inputs y selects */
+  .campos input, 
+  .campos select {
+    width: 100%;
+  }
+
+  /* Ajustes para grupos de fecha y documento */
+  .grupo-fecha,
+  .grupo-documento {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grupo-documento select {
+    width: 100%;
+    flex: none;
+  }
+
+  /* Ajustes para formularios de challenge, federado, club y recorrido */
+  .form-group,
+  .bloque-recorrido,
+  .bloque-federado,
+  .bloque-club {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .bloque-recorrido div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bloque-recorrido div label{
+    margin-top: 10px;
+  }
+
+  .bloque-federado div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bloque-federado div{
+    margin-top: 10px;
+  }
+
+  .bloque-club div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bloque-club div label{
+    margin-top: 10px;
+  }
+
+  .form-group label,
+  .pregunta-recorrido,
+  .pregunta-federado,
+  .pregunta-club {
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .opciones-recorrido,
+  .opciones-federado,
+  .opciones-club {
+    width: 100%;
+  }
+
+  /* Ajustes para el contenedor de país y provincia */
+  .contenedor-pais-provincia {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contenedor-pais-provincia select {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  /* Ajustes para el bloque de email */
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .text-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .text-field {
+    max-width: 100%;
+  }
+
+  .alert-text {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Ajustes para el contenedor de tallas */
+  .mover-talla-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .Tallas{
+    margin: 30px auto 0px auto;
+    max-width: 100%;
+  }
+
+  .Terminos {
+    margin: 20px 0;
+    max-width: 100%;
+  }
+
+  .imagen {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Ajustes para impuestos y container */
+  .container {
+    margin: 10px;
+  }
+
+  .impuestos {
+    margin: 10px 100px 10px 0px;
+    text-align: right;
+  }
+
+  /* Ajustes de botones */
+  .botones-1,
+  .botones-2,
+  .boton-rojo {
+    width: 30%;
+    margin: 5px auto;
+  }
 }
