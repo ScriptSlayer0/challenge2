@@ -1,0 +1,390 @@
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.botones-1 {
+  background-color: white;
+  border: 2px solid rgb(225, 0, 255);
+  color: rgb(255, 0, 157);
+  padding: 12px 12px 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: background-color 0.9s, transform 0.9s;
+  cursor: pointer;
+}
+
+  .botones-1:hover {
+  background-color:rgb(223, 191, 220);
+}
+
+.botones-2 {
+background-color: white;
+border: 2px solid rgb(255, 102, 0);
+color: rgb(255, 51, 0);
+padding: 12px 12px 12px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+margin: 4px 2px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+transition: background-color 0.9s, transform 0.9s;
+cursor: pointer;
+}
+
+.botones-2:hover {
+background-color:rgb(226, 210, 204);
+}
+
+.boton-rojo {
+background-color: red;
+border: 2px solid red;
+color: white;
+padding: 12px 12px 12px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+margin: 4px 2px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+transition: background-color 0.9s, transform 0.9s;
+cursor: pointer;
+}
+
+.boton-rojo:hover {
+background-color: rgb(221, 84, 84);
+}
+
+.mover-talla-container {
+  display: flex;
+  align-items: flex-start; /* Cambiado de center a flex-start */
+  justify-content: space-between; /* Cambiado de space-evenly a space-between */
+  position: relative; /* Añadido */
+  padding: 20px; /* Añadido para dar espacio interno */
+}
+
+.formulario {
+  flex: 1; /* Añadido para que ocupe el espacio disponible */
+  margin-right: 20px;
+}
+
+.imagen {
+  width: 200px; /* Reducido de 300px */
+  height: auto; /* Cambiado para mantener la proporción */
+  position: absolute; /* Cambiado de relative a absolute */
+  top: 20px; /* Ajustado */
+  left: 20px; /* Ajustado */
+}
+
+.Tallas {
+  position: relative;
+  left: 220px; /* Ajustado para dejar espacio a la imagen */
+  border: solid 1px black;
+  margin: 0;
+  padding: 12px;
+  max-width: 60%; /* Añadido para limitar el ancho */
+}
+
+/* bloque de datos personales*/
+
+.datos-personales {
+  margin: 0 auto;
+}
+
+.fila {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.etiqueta {
+  flex: 0 0 200px; /* Ancho fijo para etiquetas */
+  text-align: right;
+  padding-right: 20px;
+}
+
+.grupo-documento {
+  display: flex;
+  gap: 10px;
+}
+
+.grupo-fecha {
+  display: flex;
+  width: 68%;
+}
+
+.grupo-fecha select,
+.grupo-documento select,
+.grupo-documento input,
+select {
+  padding: 5px;
+  
+}
+
+.grupo-fecha select {
+  flex: 1;
+}
+
+.grupo-documento select {
+  flex: 0 0 100px;
+}
+
+.grupo-documento input {
+  flex: 1;
+}
+
+.campos{
+  width: 55%;
+}
+
+/* bloque challenge*/
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.form-group p {
+  margin-right: 20px;
+  width: 210px;
+  text-align: right;
+  text-decoration: solid;
+}
+
+/* Clase general para los campos de entrada */
+.campos input, .campos select {
+  width: 67%; /* Asegura que los campos ocupen todo el ancho disponible */
+  padding: 5px; /* Espaciado dentro del campo */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris claro */
+  font-size: 14px; /* Tamaño de la fuente */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total */
+  margin-bottom: 15px; /* Espacio debajo de los campos */
+}
+
+/* Estilo específico para los inputs de texto */
+.campos input[type="text"] {
+  background-color: #f9f9f9; /* Color de fondo */
+}
+
+/* Estilo específico para los campos de selección (select) */
+.campos select {
+  background-color: #f9f9f9; /* Color de fondo */
+}
+
+/* Estilo para el archivo (input de tipo file) */
+.campos input[type="file"] {
+  padding: 5px; /* Ajusta el espaciado */
+  font-size: 12px; /* Tamaño de la fuente */
+}
+
+/* Asegura que las fechas estén alineadas en una misma línea */
+.grupo-fecha select {
+  display: inline-block;
+  width: auto;
+  margin-right: 5px;
+}
+
+/* Estilo para los labels de los campos */
+.etiqueta label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  display: block; /* Asegura que el label esté en su propia línea */
+  margin-bottom: 5px; /* Espacio entre el label y el campo */
+}
+
+/* Ajustes para la foto (input de tipo file) */
+.campos input[type="file"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Asegura que el grupo de campos de fecha esté alineado */
+.grupo-fecha select {
+  display: inline-block;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Estilo de los campos cuando están enfocados */
+.campos input:focus, .campos select:focus {
+  border-color: #4d90fe; /* Borde azul cuando está enfocado */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5); /* Sombra azul */
+}
+
+fieldset {
+  padding: 20px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 76%;
+}
+
+.form-group label {
+    width: 180px;
+    font-weight: bold;
+}
+
+.form-group select,
+.form-group input {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 49%;
+}
+.contenedor-pais-provincia {
+  display: flex;
+  align-items: center;
+  width: 56%;
+}
+
+.contenedor-pais-provincia label {
+    width: 100%;
+}
+
+
+.contenedor-pais-provincia select {
+  width: 105%; /* Cada select ocupa la mitad del contenedor */
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*email*/ 
+.box-form {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.box-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.text-label {
+  width: 160px;
+  font-weight: bold;
+}
+
+.text-field {
+  width: calc(100% - 130px);
+  padding: 7px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.alert-text {
+  font-size: 12px; /* Tamaño de la fuente */
+  color: #333; /* Color del texto en gris oscuro */
+  background-color: #f9f9f9; /* Fondo gris claro */
+  margin-top: 5px; /* Espaciado superior */
+  border-radius: 3px; /* Bordes sutilmente redondeados */
+  line-height: 1.5; /* Espaciado entre líneas */
+  padding-left: 188px;
+}
+
+/* bloque challenge*/
+.contenedor-formulario {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Bloque Recorrido */
+.bloque-recorrido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.pregunta-recorrido {
+  font-weight: bold;
+  width: 45%;
+}
+
+.opciones-recorrido {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.opciones-recorrido label {
+  margin-left: 5px;
+}
+
+/* Bloque Federado */
+.bloque-federado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.pregunta-federado {
+  font-weight: bold;
+  width: 45%;
+}
+
+.opciones-federado {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.opciones-federado label {
+  margin-left: 5px;
+}
+
+/* Bloque Club */
+.bloque-club {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.pregunta-club {
+  font-weight: bold;
+  width: 45%;
+}
+
+.opciones-club {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.opciones-club label {
+  margin-left: 5px;
+}
+
+.tamano-ingrese{
+  width: 75%;
+}
