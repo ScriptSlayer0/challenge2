@@ -1,0 +1,287 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilos de los botones */
+  .botones-1, .botones-2, .boton-rojo {
+    background-color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.9s, transform 0.9s;
+    cursor: pointer;
+  }
+  
+  .botones-1 {
+    border: 2px solid rgb(225, 0, 255);
+    color: rgb(255, 0, 157);
+  }
+  
+  .botones-1:hover {
+    background-color: rgb(223, 191, 220);
+  }
+  
+  .botones-2 {
+    border: 2px solid rgb(255, 102, 0);
+    color: rgb(255, 51, 0);
+  }
+  
+  .botones-2:hover {
+    background-color: rgb(226, 210, 204);
+  }
+  
+  .boton-rojo {
+    border: 2px solid red;
+    color: white;
+    background-color: red;
+  }
+  
+  .boton-rojo:hover {
+    background-color: rgb(221, 84, 84);
+  }
+  
+  /* Contenedor de las tallas */
+  .mover-talla-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .imagen {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .Tallas {
+    margin: 0;
+    padding: 12px;
+    max-width: 60%;
+    position: relative;
+    left: 220px;
+    border: solid 1px black;
+  }
+  
+  /* Estilos de los campos de entrada */
+  .campos input, .campos select {
+    width: 67%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para los inputs de texto y select */
+  .campos input[type="text"], .campos select {
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo para los inputs de archivo */
+  .campos input[type="file"] {
+    padding: 5px;
+    font-size: 12px;
+  }
+  
+  /* Estilo para los campos cuando están enfocados */
+  .campos input:focus, .campos select:focus {
+    border-color: #4d90fe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+  }
+  
+  /* Etiquetas */
+  .etiqueta label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Estilos de fecha y documento */
+  .grupo-fecha, .grupo-documento {
+    display: flex;
+    width: 68%;
+  }
+  
+  .grupo-fecha select, .grupo-documento select, .grupo-documento input, select {
+    padding: 5px;
+  }
+  
+  .grupo-fecha select {
+    flex: 1;
+  }
+  
+  .grupo-documento select {
+    flex: 0 0 100px;
+  }
+  
+  .grupo-documento input {
+    flex: 1;
+  }
+  
+  /* Estilo de la foto (input de tipo file) */
+  .campos input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Ajuste de formularios de datos personales */
+  .datos-personales {
+    margin: 0 auto;
+  }
+  
+  .fila {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+  }
+  
+  .etiqueta {
+    flex: 0 0 200px;
+    text-align: -moz-right;
+    padding-right: 20px;
+  }
+  
+  .campos {
+    width: 55%;
+  }
+  
+  /* Estilos para los formularios de challenge, federado, club y recorrido */
+  .form-group, .bloque-recorrido, .bloque-federado, .bloque-club {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label, .pregunta-recorrido, .pregunta-federado, .pregunta-club {
+    width: 45%;
+    font-weight: bold;
+  }
+  
+  .opciones-recorrido, .opciones-federado, .opciones-club {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+  }
+  
+  .opciones-recorrido label, .opciones-federado label, .opciones-club label {
+    margin-left: 5px;
+  }
+  
+  /* Estilo de los campos de fecha */
+  .grupo-fecha select {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  /* Bloque Recorrido */
+  .bloque-recorrido .pregunta-recorrido {
+    width: 45%;
+  }
+  
+  /* Bloque Federado */
+  .bloque-federado .pregunta-federado {
+    width: 45%;
+  }
+  
+  /* Bloque Club */
+  .bloque-club .pregunta-club {
+    width: 45%;
+  }
+  
+  /* Contenedor general */
+  .contenedor-formulario {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .contenedor-pais-provincia {
+    display: flex;
+    align-items: center;
+    width: 56%;
+  }
+  
+  .contenedor-pais-provincia label {
+    width: 100%;
+  }
+  
+  .contenedor-pais-provincia select {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Estilos del bloque email */
+  .box-form {
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .box-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  
+  .text-label {
+    width: 160px;
+    font-weight: bold;
+  }
+  
+  .text-field {
+    width: 20%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  .alert-text {
+    font-size: 12px;
+    color: #333;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    border-radius: 3px;
+    line-height: 1.5;
+    padding-left: 188px;
+  }
+  
+  /* Ajustes para campos y etiquetas de texto */
+  .tamano-ingrese {
+    width: 75%;
+  }
+  
+  /* Estilo de los fieldsets */
+  fieldset {
+    padding: 20px;
+  }
+  
+  legend {
+    font-weight: bold;
+  }
