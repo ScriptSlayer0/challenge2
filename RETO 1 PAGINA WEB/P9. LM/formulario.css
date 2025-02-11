@@ -51,25 +51,22 @@
 .mover-talla-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
   padding: 20px;
 }
 
 .imagen {
   width: 200px;
   height: auto;
-  position: absolute;
   top: 20px;
   left: 20px;
 }
 
 .Tallas {
-  margin: 0;
-  padding: 12px;
-  max-width: 60%;
   position: relative;
-  left: 220px;
   border: solid 1px black;
+  margin: 0px 0px 0px 20px;
+  padding: 12px;
+  max-width: 60%; /* Añadido para limitar el ancho */
 }
 
 /* Estilos de los campos de entrada */
@@ -114,6 +111,7 @@
 .grupo-fecha, .grupo-documento {
   display: flex;
   width: 68%;
+  gap: 20px;
 }
 
 .grupo-fecha select, .grupo-documento select, .grupo-documento input, select {
@@ -162,6 +160,7 @@
 /* Estilos para los formularios de challenge, federado, club y recorrido */
 .form-group, .bloque-recorrido, .bloque-federado, .bloque-club {
   display: flex;
+  gap:20px;
   align-items: center;
   margin-bottom: 15px;
 }
@@ -214,7 +213,7 @@
 .contenedor-pais-provincia {
   display: flex;
   align-items: center;
-  width: 56%;
+  width: 100%;
 }
 
 .contenedor-pais-provincia label {
@@ -227,6 +226,7 @@
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-right: 20px;
 }
 
 /* Estilos del bloque email */

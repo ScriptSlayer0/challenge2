@@ -214,7 +214,7 @@
   .contenedor-pais-provincia {
     display: flex;
     align-items: center;
-    width: 56%;
+    width: 100%;
   }
   
   .contenedor-pais-provincia label {
@@ -227,6 +227,7 @@
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
+    margin-right: 20px;
   }
   
   /* Estilos del bloque email */

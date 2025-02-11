@@ -14,16 +14,16 @@
 <fieldset class="border border-gray-300 p-6 rounded-lg shadow-md bg-white">
     <legend class="text-lg font-semibold text-gray-800 px-2">Bloque Challenge:</legend>
 
-    <div class="space-y-6 mt-4">
+    <div>
         <!-- Bloque Recorrido -->
         <div class="bloque-recorrido">
-            <p class="font-medium text-gray-700">¿En qué recorrido participas?*</p>
-            <div class="flex flex-col space-y-2 mt-2">
-                <label class="flex items-center space-x-2">
+            <p>¿En qué recorrido participas?*</p>
+            <div>
+                <label>
                     <input type="radio" id="medioFondo" name="recorrido" value="1" class="accent-blue-500">
                     <span>Medio Fondo 80,6 km</span>
                 </label>
-                <label class="flex items-center space-x-2">
+                <label>
                     <input type="radio" id="worldTour" name="recorrido" value="2" class="accent-blue-500">
                     <span>World Tour 137,8 km</span>
                 </label>
@@ -32,13 +32,13 @@
 
         <!-- Bloque Federado -->
         <div class="bloque-federado">
-            <p class="font-medium text-gray-700">¿Estás federad@ en la RFEC?*</p>
-            <div class="flex flex-col space-y-2 mt-2">
-                <label class="flex items-center space-x-2">
+            <p>¿Estás federad@ en la RFEC?*</p>
+            <div>
+                <label>
                     <input type="radio" id="rfecSi" name="federado" value="1" class="accent-blue-500">
                     <span>Sí</span>
                 </label>
-                <label class="flex items-center space-x-2">
+                <label>
                     <input type="radio" id="rfecNo" name="federado" value="2" class="accent-blue-500">
                     <span>No (13,00 €)</span>
                 </label>
@@ -48,12 +48,12 @@
         <!-- Bloque Club -->
         <div class="bloque-club">
             <p class="font-medium text-gray-700">¿Perteneces a algún club?*</p>
-            <div class="flex flex-col space-y-2 mt-2">
-                <label class="flex items-center space-x-2">
+            <div>
+                <label>
                     <input type="radio" id="clubNo" name="club" value="1" class="accent-blue-500">
                     <span>No (Independiente)</span>
                 </label>
-                <label class="flex items-center space-x-2">
+                <label>
                     <input type="radio" id="clubSi" name="club" value="2" class="accent-blue-500">
                     <span>Sí</span>
                 </label>
@@ -107,13 +107,10 @@
         <!-- Género -->
         <div class="fila">
             <label for="Genero" class="etiqueta">Género*</label>
-            <div class="campos">
-                <select id="Genero" name="Genero" required>
-                    <option value="" disabled selected>Seleccione</option>
-                    <option value="Hombre">Hombre</option>
-                    <option value="Mujer">Mujer</option>
-                </select>
-            </div>
+            <select id="Genero" name="Genero" required>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select>
         </div>
     
         <!-- Nombre y Apellidos -->
@@ -367,10 +364,7 @@
                 <option value="">Portugal</option>
                 <option value="">Italia</option>
             </select>
-        </div>
-        <div class="etiqueta">
-            <label for="provincia"></label>
-        </div>
+
             <select id="provincia">
                 <option value="">Álava</option>
                 <option value="">Albacete</option>
@@ -423,9 +417,11 @@
                 <option value="">Zaragoza</option>
             </select>
         </div>
-    </div>
+        
+        <div class="etiqueta">
+            <label for="provincia"></label>
+        </div>
 </fieldset>
-
 
 <!-- Bloque mail -->
 <legend class="box-title">Bloque mail</legend>
