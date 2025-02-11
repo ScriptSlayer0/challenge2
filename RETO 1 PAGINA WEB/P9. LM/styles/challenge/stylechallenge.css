@@ -20,40 +20,39 @@
     --color_tela_hover: #ffffff4d;
 }
 
-*{
+/* General Styles */
+* {
     box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-family: 'Arial', sans-serif;
 }
 
-/* Barra superior */
+
+/* Top Bar Styles */
 #barra-superior {
     display: flex;
-    position: fixed;
     justify-content: flex-end;
     align-items: center;
-    top: 0px;
+    position: fixed;
+    top:0px;
     width: 100%;
     background-color: var(--color_header1);
-    padding: 10px 0px;
-    z-index: 100;
-}
-
-#barra-superior div a {
-    font-size: 16px;
-    color: var(--color_texto);
-    text-decoration: none;
-    margin: 0px 10px;
+    padding: 10px 20px;
 }
 
 .idioma {
     display: flex;
-    margin-right: 20px;
     color: white;
 }
 
-/* Barra de navegación */
+.idioma a {
+    font-size: 16px;
+    color: var(--color_letras_header);
+    margin: 0 10px;
+}
+
+/* Navigation Bar Styles */
 .barra-navegacion {
     width: 100%;
     background: linear-gradient( black, rgba(0, 0, 0, 1), transparent);
@@ -73,30 +72,33 @@
 }
 
 .menu a {
-    color: #ffffff; 
-    text-decoration: none;
+    color: #ffffff;
     font-size: 16px;
     padding: 5px;
+    transition: border-bottom 0.3s ease;
+    text-decoration: none;
 }
 
-.menu a:hover{
-    border-bottom: #ff0000 solid 1px;
-    transition: 1.2s ease;
+.menu a:hover {
+    border-bottom: #ff0000 solid 2px;
 }
 
-/*Logo itzulia*/
+/* Logo Styles */
 .logo img {
-    display: flex;
     height: 50px;
+    vertical-align: middle;
 }
 
 .menu .logo:hover {
     border-bottom: none;
 }
 
-/* Menú hamburguesa */
+/* Hamburger Menu Styles */
 .hamburguesa-container {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
     display: none;
 }
 
@@ -109,8 +111,6 @@
     font-size: 28px;
     padding: 10px;
     user-select: none;
-    display: none;
-    z-index: 1001;
     color: #ffffff;
 }
 
@@ -131,116 +131,90 @@
     color: #000000;
     display: block;
     padding: 10px 15px;
-    text-decoration: none;
 }
 
-.menu-hamburguesa a:hover {
-    color: #000000;
-}
-
-#check:checked ~ .menu-hamburguesa {
-    display: block;
-}
-
-
-p{
-    text-align: justify;
-    margin-bottom: 20px;
-    color: #54595F;
-}
-h1,h3{
-    margin:0px 0px 20px 0px;
-    color: red;
-}
-
-/*parrafo*/
+/* Main Content Styles */
 .content-wrapper {
     margin-top: 180px;
-    color: #333;
+    padding: 20px;
 }
 
-/* Sección de introducción */
+/* Intro Section Styles */
 .intro-section {
-    color: #333;
+    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-title {
     font-size: 2em;
     color: #2c3e50;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .paragraph {
     line-height: 1.6;
     margin-bottom: 15px;
+    text-align: justify;
+    color: #54595F;
+    margin: 0px 20px 0px 20px;
 }
 
 .paragraph-with-spacing {
     line-height: 1.8;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
-/* Sección de recorridos */
+/* Recorrido Section Styles */
 .recorrido-section {
     background-color: #fafafa;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin: 20px 20px 20px 20px;
 }
 
 .subsection-title {
-    font-size: 1.5em;
     color: #ff0000;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-left: 20px;
 }
 
-.paragraph {
-    margin-bottom: 15px;
+.recorrido-section p.paragraph {
     padding: 10px;
+    margin: 10px 20px 20px 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-/* Estilos para recorrido largo y medio */
-h3.subsection-title {
+.recorrido-section h3.subsection-title {
     font-size: 1.3em;
 }
 
-p.paragraph {
-    padding: inherit;
-    background-color: #fff;
-    border: 2px solid;
-    border-radius: 5px;
+.recorrido-section p.paragraph {
     border-color: rgb(192, 36, 8);
-    font-family: sans-serif;
 }
 
-p.paragraph br {
+.recorrido-section p.paragraph br {
     display: block;
     margin-bottom: 5px;
 }
 
-/* otros */
-
-
-.cont-boton{
+/* Otros */
+.cont-boton {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
-    margin: 10px;
-
+    padding: 20px;
 }
 
-.inscribite{
+.inscribite {
     background-color: #a71f15;
     color: #FFFFFF;
     padding: 10px 20px;
-    border-radius: 0px 0px 0px 0px;
+    border: none;
+    border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;
     text-align: center;
@@ -248,55 +222,63 @@ p.paragraph br {
     max-width: 200px;
     font-size: 18px;
     letter-spacing: 0.9px;
-    font-family:cursive; 
+    font-family: cursive;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.inscribite:hover{
-background-color: rgb(214, 126, 126);
-transition: background-color 0.9s, transform 0.9s;
-cursor: pointer;
+.inscribite:hover {
+    background-color: rgb(214, 126, 126);
+    transform: scale(1.05);
 }
 
-/*  */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
+/* Recorridos Section */
 .container {
-    width: 100%;
+    width: 80%;
+    margin: 0px auto;
     padding: 20px;
-    box-sizing: border-box;
 }
+
+.titulo {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.74);
+    font-size: 31px;
+    margin-bottom: 40px;
+    font-family: sans-serif;
+}
+
 .recorridos {
     display: flex;
     justify-content: space-between;
-    margin-top: -20px;
-    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
+
 .recorrido {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 37%;
+    width: calc(50% - 10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .recorrido h3 {
     margin: 0;
     font-size: 19px;
     color: #ff0000;
     text-align: center;
 }
+
 .recorrido p {
     font-size: 15px;
     margin: 10px 0;
     text-align: center;
 }
+
 .ver-mas {
-    background-color:  #ff0000;
+    background-color: #ff0000;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -305,75 +287,60 @@ body {
     cursor: pointer;
     text-align: center;
     width: 100%;
+    transition: background-color 0.3s, transform 0.3s;
 }
+
 .ver-mas:hover {
     background-color: rgb(214, 126, 126);
-    transition: background-color 0.9s, transform 0.9s;
-    cursor: pointer;
-}
-.titulo{
-    text-align: center;
-     color:rgba(0, 0, 0, 0.74);
-     font-size: 31px;
-     text-align: center;
-     margin-bottom: 40px;
-     font-family: sans-serif;
+    transform: scale(1.05);
 }
 
-/* news */
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 20px;
-}
-
+/* News Section */
 .news {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
 }
+
 .news-item {
     background-color: white;
-    width: 46%;
+    width: calc(50% - 10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 15px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
+
 .news-item img {
-    width: 68%;
-    border-radius: 2px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
+
 .news-item h3 {
     margin: 10px 0;
     font-size: 18px;
     color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.news-item span {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
 .news-item p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.1;
-    margin-bottom: 15px;
+    font-size: 1em;
 }
+
 .leer-mas {
-    color: #e63946;
-    text-decoration: none;
-    font-weight: bold;
+    color: #ff0000;
+    margin-top: 10px;
+    display: inline-block;
 }
-.leer-mas:hover {
-    text-decoration: underline;
-}
-
-span{
-    color: #e63946;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
-}
-
 
 /* FOOTER */
 footer {
@@ -639,6 +606,44 @@ footer {
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
+
+    .container{
+        padding: 0px;
+        margin-top: 20px;
+    }
+
+    .news{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .news-item{
+        width: 95%;
+        margin-bottom: 0px;
+    }
+
+    .intro-section{
+        margin: auto;
+        width: 90%;
+    }
+
+    .content-wrapper{
+        margin-top: 100px;
+    }
+
+    .recorridos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .recorrido{
+        
+        width: 100%;
+        margin: 0px auto 20px auto;
+    }
+
     /*Selección de idioma barra superior*/
     .idioma {
         display: block;
@@ -752,3 +757,4 @@ footer {
         font-size: 15px;
     }
 }
+
