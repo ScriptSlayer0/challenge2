@@ -1,492 +1,488 @@
 /* Estilos generales */
 * {
-  box-sizing: border-box;
-  padding: 0px;
-  margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
 
 /* Estilos de los botones */
 .botones-1, .botones-2, .boton-rojo {
-  background-color: white;
-  padding: 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 4px 2px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  transition: background-color 0.9s, transform 0.9s;
-  cursor: pointer;
+    background-color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    font-family: "Arial", sans-serif;
+    transition: background-color 0.9s, transform 0.9s;
+    cursor: pointer;
 }
 
 .botones-1 {
-  border: 2px solid rgb(225, 0, 255);
-  color: rgb(255, 0, 157);
+    border: 2px solid rgb(225, 0, 255);
+    color: rgb(255, 0, 157);
 }
 
 .botones-1:hover {
-  background-color: rgb(223, 191, 220);
+    background-color: rgb(223, 191, 220);
 }
 
 .botones-2 {
-  border: 2px solid rgb(255, 102, 0);
-  color: rgb(255, 51, 0);
+    border: 2px solid rgb(255, 102, 0);
+    color: rgb(255, 51, 0);
 }
 
 .botones-2:hover {
-  background-color: rgb(226, 210, 204);
+    background-color: rgb(226, 210, 204);
 }
 
 .boton-rojo {
-  border: 2px solid red;
-  color: white;
-  background-color: red;
+    border: 2px solid red;
+    color: white;
+    background-color: red;
 }
 
 .boton-rojo:hover {
-  background-color: rgb(221, 84, 84);
+    background-color: rgb(221, 84, 84);
 }
 
 /* Contenedor de las tallas */
 .mover-talla-container {
-  display: flex;
-  align-items: flex-start;
-  padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
 }
 
 .imagen {
-  width: 200px;
-  height: auto;
+    width: 200px;
+    height: auto;
 }
 
 .Terminos {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border: solid 1px black;
-  margin: auto;
-  /*margin: 0px 0px 0px 30px;*/
-  padding: 12px;
-  max-width: 60%; /* Añadido para limitar el ancho */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: solid 1px black;
+    margin: auto;
+    /*margin: 0px 0px 0px 30px;*/
+    padding: 12px;
+    max-width: 60%; /* Añadido para limitar el ancho */
 }
 
 .terminos-aviso{
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 .aceptar_termino{
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .Tallas {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  border: solid 1px black;
-  margin: 0px 0px 0px 30px;
-  padding: 12px;
-  max-width: 60%; /* Añadido para limitar el ancho */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: solid 1px black;
+    margin: 0px 0px 0px 30px;
+    padding: 12px;
+    max-width: 60%; /* Añadido para limitar el ancho */
 }
 
 .size-maillot{
-  margin-bottom: 10px;
-  margin-right: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
 }
 
 /* Estilos de los campos de entrada */
 .campos input, .campos select {
-  width: 67%;
-  padding: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  box-sizing: border-box;
+    width: 67%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
 }
 
 /* Estilo para los inputs de texto y select */
 .campos input[type="text"], .campos select {
-  background-color: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 /* Estilo para los inputs de archivo */
 .campos input[type="file"] {
-  padding: 5px;
-  font-size: 12px;
+    padding: 5px;
+    font-size: 12px;
 }
 
 /* Estilo para los campos cuando están enfocados */
 .campos input:focus, .campos select:focus {
-  border-color: #4d90fe;
-  outline: none;
-  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+    border-color: #4d90fe;
+    outline: none;
+    box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
 }
 
 /* Etiquetas */
 .etiqueta label {
-  font-weight: bold;
-  font-size: 14px;
-  color: #333;
-  display: block;
-  margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Estilos de fecha y documento */
 .grupo-fecha, .grupo-documento {
-  display: flex;
-  width: 68%;
-  gap: 20px;
+    display: flex;
+    width: 68%;
+    gap: 20px;
 }
 
 .grupo-fecha select, .grupo-documento select, .grupo-documento input, select {
-  padding: 5px;
+    padding: 5px;
 }
 
 .grupo-fecha select {
-  flex: 1;
+    flex: 1;
 }
 
 .grupo-documento select {
-  flex: 0 0 100px;
+    flex: 0 0 100px;
 }
 
 .grupo-documento input {
-  flex: 1;
+    flex: 1;
 }
 
 /* Estilo de la foto (input de tipo file) */
 .campos input[type="file"] {
-  padding: 5px;
-  border: 1px solid #ccc;
+    padding: 5px;
+    border: 1px solid #ccc;
 }
 
 .fila {
-  display: flex;
-  margin-bottom: 15px;
-  align-items: center;
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
 }
 
 .etiqueta {
-  flex: 0 0 200px;
+    flex: 0 0 200px;
 }
 
 .campos {
-  width: 55%;
+    width: 55%;
 }
 
 /* Estilos para los formularios de challenge, federado, club y recorrido */
 .form-group, .bloque-recorrido, .bloque-federado, .bloque-club {
-  display: flex;
-  gap:20px;
-  align-items: center;
-  margin-bottom: 15px;
+    display: flex;
+    gap:20px;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .form-group label, .pregunta-recorrido, .pregunta-federado, .pregunta-club {
-  margin-right: 90px;
-  font-weight: bold;
+    margin-right: 90px;
+    font-weight: bold;
 }
 
 .opciones-recorrido, .opciones-federado, .opciones-club {
-  display: flex;
-  flex-direction: column;
-  width: 55%;
+    display: flex;
+    flex-direction: column;
+    width: 55%;
 }
 
 .opciones-recorrido label, .opciones-federado label, .opciones-club label {
-  margin-left: 5px;
+    margin-left: 5px;
 }
 
 /* Estilo de los campos de fecha */
 .grupo-fecha select {
-  display: inline-block;
-  width: auto;
-  margin-right: 10px;
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
 }
 
 /* Bloque Federado */
 .bloque-federado .pregunta-federado {
-  width: 45%;
+    width: 45%;
 }
 
 /* Bloque Club */
 .bloque-club .pregunta-club {
-  width: 45%;
+    width: 45%;
 }
 
 /* Contenedor general */
 .contenedor-formulario {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contenedor-pais-provincia {
-  display: flex;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .contenedor-pais-provincia label {
-  width: 100%;
+    width: 100%;
 }
 
 .contenedor-pais-provincia select {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-left: 20px;
 }
 
 /* Estilos del bloque email */
 .box-form {
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .bloque-mail {
-  font-size: 1.2em;
-  font-weight: bold;
-  padding: 0 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0 10px;
 }
 
 .row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
 }
 
 .text-label {
-  width: 160px;
-  font-weight: bold;
+    width: 160px;
+    font-weight: bold;
 }
 
 .text-field {
-  width: 100%;
-  max-width: 500px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1em;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
 }
 
 .alert-text {
-  display: flex;
-  width: 18%;
-  font-size: 12px;
-  color: #333;
-  background-color: #f9f9f9;
-  margin-top: 5px;
-  border-radius: 3px;
+    display: flex;
+    width: 18%;
+    font-size: 12px;
+    color: #333;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+    border-radius: 3px;
 }
 
 /* Ajustes para campos y etiquetas de texto */
 .tamano-ingrese {
-  width: 75%;
+    width: 75%;
 }
 
 .container{
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 20px 20px 0px 20px;
 }
 
 .impuestos{
-  color: black;
-  font-size: 0.8em;
-  display: flex;
-  justify-content: flex-end;
-  margin: 10px 80px 0px 0px;
+    color: black;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 80px 0px 0px;
 }
 
 .bloque-challenge, .datos-personales, .bloque-localización,
 .bloque-mail,.bloque-maillot, .bloque-terminos {
-  margin: 50px 150px 30px 150px;
-  padding: 20px;
+    margin: 50px 150px 30px 150px;
+    padding: 20px;
 }
 
 /* Estilo de los fieldsets */
 fieldset {
-  padding: 20px;
+    padding: 20px;
 }
 
 legend {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 @media (max-width: 768px) {
-  /* Ajustes generales de márgenes y padding */
-  .bloque-challenge, 
-  .datos-personales, 
-  .bloque-localización,
-  .bloque-mail,
-  .bloque-maillot, 
-  .bloque-terminos {
-    margin: 20px;
-    padding: 10px;
-  }
+    /* Ajustes generales de márgenes y padding */
+    .bloque-challenge, .datos-personales, .bloque-localización,
+    .bloque-mail, .bloque-maillot, .bloque-terminos {
+        margin: 20px;
+        padding: 10px;
+    }
 
-  /* Ajuste de contenedores flexibles */
-  .fila {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 15px;
-  }
+    /* Ajuste de contenedores flexibles */
+    .fila {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 15px;
+    }
 
-  .etiqueta {
-    flex: none;
-    width: 100%;
-    margin-bottom: 5px;
-  }
+    .etiqueta {
+        flex: none;
+        width: 100%;
+        margin-bottom: 5px;
+    }
 
-  .campos {
-    width: 100%;
-  }
+    .campos {
+        width: 100%;
+    }
 
-  /* Ajustes de inputs y selects */
-  .campos input, 
-  .campos select {
-    width: 100%;
-  }
+    /* Ajustes de inputs y selects */
+    .campos input, 
+    .campos select {
+        width: 100%;
+    }
 
-  /* Ajustes para grupos de fecha y documento */
-  .grupo-fecha,
-  .grupo-documento {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-  }
+    /* Ajustes para grupos de fecha y documento */
+    .grupo-fecha,
+    .grupo-documento {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .grupo-documento select {
-    width: 100%;
-    flex: none;
-  }
+    .grupo-documento select {
+        width: 100%;
+        flex: none;
+    }
 
-  /* Ajustes para formularios de challenge, federado, club y recorrido */
-  .form-group,
-  .bloque-recorrido,
-  .bloque-federado,
-  .bloque-club {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-  }
+    /* Ajustes para formularios de challenge, federado, club y recorrido */
+    .form-group,
+    .bloque-recorrido,
+    .bloque-federado,
+    .bloque-club {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 
-  .bloque-recorrido div{
-    display: flex;
-    flex-direction: column;
-  }
+    .bloque-recorrido div{
+        display: flex;
+        flex-direction: column;
+    }
 
-  .bloque-recorrido div label{
-    margin-top: 10px;
-  }
+    .bloque-recorrido div label{
+        margin-top: 10px;
+    }
 
-  .bloque-federado div{
-    display: flex;
-    flex-direction: column;
-  }
+    .bloque-federado div{
+        display: flex;
+        flex-direction: column;
+    }
 
-  .bloque-federado div label{
-    margin-top: 10px;
-  }
+    .bloque-federado div label{
+        margin-top: 10px;
+    }
 
-  .bloque-club div{
-    display: flex;
-    flex-direction: column;
-  }
+    .bloque-club div{
+        display: flex;
+        flex-direction: column;
+    }
 
-  .bloque-club div label{
-    margin-top: 10px;
-  }
+    .bloque-club div label{
+        margin-top: 10px;
+    }
 
-  .form-group label,
-  .pregunta-recorrido,
-  .pregunta-federado,
-  .pregunta-club {
-    margin-right: 0px;
-    width: 100%;
-  }
+    .form-group label,
+    .pregunta-recorrido,
+    .pregunta-federado,
+    .pregunta-club {
+        margin-right: 0px;
+        width: 100%;
+    }
 
-  .opciones-recorrido,
-  .opciones-federado,
-  .opciones-club {
-    width: 100%;
-  }
+    .opciones-recorrido,
+    .opciones-federado,
+    .opciones-club {
+        width: 100%;
+    }
 
-  /* Ajustes para el contenedor de país y provincia */
-  .contenedor-pais-provincia {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    /* Ajustes para el contenedor de país y provincia */
+    .contenedor-pais-provincia {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .contenedor-pais-provincia select {
-    margin-left: 0;
-    margin-top: 15px;
-  }
+    .contenedor-pais-provincia select {
+        margin-left: 0;
+        margin-top: 15px;
+    }
 
-  /* Ajustes para el bloque de email */
-  .row {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    /* Ajustes para el bloque de email */
+    .row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  .text-label {
-    width: 100%;
-    margin-bottom: 5px;
-  }
+    .text-label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 
-  .text-field {
-    max-width: 100%;
-  }
+    .text-field {
+        max-width: 100%;
+    }
 
-  .alert-text {
-    width: 100%;
-    margin-top: 10px;
-  }
+    .alert-text {
+        width: 100%;
+        margin-top: 10px;
+    }
 
-  /* Ajustes para el contenedor de tallas */
-  .mover-talla-container {
-    flex-direction: column;
-    padding: 10px;
-  }
+    /* Ajustes para el contenedor de tallas */
+    .mover-talla-container {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-  .Tallas{
-    margin: 30px auto 0px auto;
-    max-width: 100%;
-  }
+    .Tallas{
+        margin: 30px auto 0px auto;
+        max-width: 100%;
+    }
 
-  .Terminos {
-    margin: 20px 0;
-    max-width: 100%;
-  }
+    .Terminos {
+        margin: 20px 0;
+        max-width: 100%;
+    }
 
-  .imagen {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
-  }
+    .imagen {
+        width: 100%;
+        max-width: 200px;
+        margin: 0px auto;
+    }
 
-  /* Ajustes para impuestos y container */
-  .container {
-    margin: 10px;
-  }
+    /* Ajustes para impuestos y container */
+    .container {
+        margin: 10px;
+    }
 
-  .impuestos {
-    margin: 10px 100px 10px 0px;
-    text-align: right;
-  }
+    .impuestos {
+        margin: 10px 100px 10px 0px;
+        text-align: right;
+    }
 
-  /* Ajustes de botones */
-  .botones-1,
-  .botones-2,
-  .boton-rojo {
-    width: 30%;
-    margin: 5px auto;
-  }
+    /* Ajustes de botones */
+    .botones-1,
+    .botones-2,
+    .boton-rojo {
+        width: 30%;
+        margin: 5px auto;
+    }
 }

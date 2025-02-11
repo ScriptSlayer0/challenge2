@@ -28,7 +28,6 @@
     font-family: 'Arial', sans-serif;
 }
 
-
 /* Top Bar Styles */
 #barra-superior {
     display: flex;
@@ -142,6 +141,7 @@
 .intro-section {
     background-color: #fff;
     padding: 20px;
+    margin-bottom: 50px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -198,6 +198,15 @@
 .recorrido-section p.paragraph br {
     display: block;
     margin-bottom: 5px;
+}
+
+/*Video challenge*/
+.video-challenge{
+    display: flex;
+    margin: auto;
+    margin-bottom: 50px;
+    justify-content: center;
+    width: 600px;
 }
 
 /* Otros */
@@ -606,6 +615,14 @@ footer {
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
 
+    /*Video challenge*/
+    .video-challenge{
+        display: flex;
+        margin: 30px auto 30px auto;
+        justify-content: center;
+        width: 280px;
+    }
+
     .container{
         padding: 0px;
         margin-top: 20px;
@@ -624,7 +641,7 @@ footer {
     }
 
     .intro-section{
-        margin: auto;
+        margin: 90px auto 50px auto;
         width: 90%;
     }
 
@@ -704,49 +721,6 @@ footer {
         display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
     }
 
-    /*Anuncio*/
-    .texto-anuncio {
-        position: relative;
-        top: 120px;
-        font-size: 1.5em;
-        background-color: rgba(255, 255, 255, 0.636);
-        width: 70%;
-        left: 60px;
-        border-radius: 10px;
-        padding: 20px;
-    }
-
-    .boton-anuncio {
-        height: 70px;
-        width: 140px;
-        position: relative;
-        top: 200px;
-        left: 130px;
-        border-radius: 10px;
-        background-color: white;
-        display: flex;           /* Añadido para centrar el contenido */
-        justify-content: center; /* Centrado horizontal */
-        align-items: center;     /* Centrado vertical */
-        text-decoration: none;   /* Elimina el subrayado del enlace */
-        transition: all 0.3s ease;
-    }
-
-    /*Video*/
-    .video-impactante {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; /* Añade esto para centrar horizontalmente */
-        height: auto; /* Ajusta la altura automáticamente según el contenido */
-        width: 50%; /* Ajusta el ancho al 100% del contenedor */
-        margin: 30px auto; /* Centra horizontalmente en el contenedor padre */
-    }
-
-    .video-impactante video {
-        width: 310px; /* Asegura que el video ocupe todo el ancho disponible */
-        margin-top: 30px;
-    }
-
     /*Footer*/
     footer{
         margin-top: 50px;
@@ -756,4 +730,3 @@ footer {
         font-size: 15px;
     }
 }
-

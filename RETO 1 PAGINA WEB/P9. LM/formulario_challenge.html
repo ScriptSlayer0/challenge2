@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Inscripción</title>
-    <link rel="stylesheet" href="formulario.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de Inscripción</title>
+        <link rel="stylesheet" href="formulario.css">
+    </head>
 
-  <form>
-    
-   <!-- Bloque Challenge -->
-<fieldset class="bloque-challenge">
-    <legend>Bloque Challenge:</legend>
+    <body>
+        <form>
+        <!-- Bloque Challenge -->
+        <fieldset class="bloque-challenge">
+        <legend>Bloque Challenge:</legend>
 
-    <div>
+        <div>
         <!-- Bloque Recorrido -->
         <div class="bloque-recorrido">
             <p>¿En qué recorrido participas?*</p>
@@ -60,15 +59,15 @@
                 </label>
             </div>
         </div>
-    </div>
-</fieldset>
+        </div>
+        </fieldset>
 
 
-    <!-- secion -->
- 
-    <fieldset class="datos-personales">
+        <!-- secion -->
+
+        <fieldset class="datos-personales">
         <legend>Datos Personales</legend>
-    
+
         <!-- Documento -->
         <div class="fila">
             <label for="Letra" class="etiqueta">Documento*</label>
@@ -104,7 +103,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Género -->
         <div class="fila">
             <label for="Genero" class="etiqueta">Género*</label>
@@ -114,7 +113,7 @@
                 <option value="Mujer">Mujer</option>
             </select>
         </div>
-    
+
         <!-- Nombre y Apellidos -->
         <div class="fila">
             <label for="nombre" class="etiqueta">Nombre*</label>
@@ -122,14 +121,14 @@
                 <input type="text" id="nombre" name="nombre" required>
             </div>
         </div>
-    
+
         <div class="fila">
             <label for="primer" class="etiqueta">Primer apellido*</label>
             <div class="campos">
                 <input type="text" id="primer" name="primer" required>
             </div>
         </div>
-    
+
         <div class="fila">
             <label for="segundo" class="etiqueta">Segundo apellido*</label>
             <div class="campos">
@@ -178,7 +177,7 @@
                         <option value="30">30</option>
                         <option value="31">31</option>
                     </select>
-        
+
                     <!-- Mes -->
                     <select name="Mes" id="Mes" required>
                         <option value="" disabled selected>Mes</option>
@@ -195,7 +194,7 @@
                         <option value="11">Noviembre</option>
                         <option value="12">Diciembre</option>
                     </select>
-        
+
                     <!-- Año -->
                     <select name="Año" id="Año" required>
                         <option value="" disabled selected>Año</option>
@@ -294,24 +293,24 @@
                 </div>
             </div>
         </div>        
-        
-   <!-- Subir Foto -->
-    <div class="fila">
+
+        <!-- Subir Foto -->
+        <div class="fila">
         <label for="archivo" class="etiqueta">Sube tu foto (tamaño carnet)*</label>
         <div class="campos">
             <input type="file" id="archivo" name="archivo" accept="image/*" required>
         </div>
-    </div>
+        </div>
 
-</fieldset>
+        </fieldset>
 
- <!-- Bloque localización -->
-<fieldset class="bloque-localización">
-    <legend>Localización:</legend>
+        <!-- Bloque localización -->
+        <fieldset class="bloque-localización">
+        <legend>Localización:</legend>
         <div class="campos">
 
-    <!-- Teléfono móvil -->
-    <div class="form-group">
+        <!-- Teléfono móvil -->
+        <div class="form-group">
         <div class="etiqueta">
             <label for="pais_movil">Teléfono móvil*</label>
         </div>
@@ -361,42 +360,42 @@
             <option value="">Ucrania (+380)</option>
 
         </select>
-    </div>
+        </div>
 
-    <!-- Teléfono de emergencia -->
-    <div class="form-group">
+        <!-- Teléfono de emergencia -->
+        <div class="form-group">
         <div class="etiqueta">
             <label for="emergencia">Nº Teléfono*</label>
         </div>
         <input type="text" id="emergencia" name="emergencia" required> <!-- Añadí required -->
-    </div>
+        </div>
 
-    <!-- Dirección -->
-    <div class="form-group">
+        <!-- Dirección -->
+        <div class="form-group">
         <div class="etiqueta">
             <label for="direccion">Dirección*</label>
         </div>
         <input type="text" id="direccion" name="direccion" required> <!-- Añadí required -->
-    </div>
+        </div>
 
-    <!-- Código Postal -->
-    <div class="form-group">
+        <!-- Código Postal -->
+        <div class="form-group">
         <div class="etiqueta">
             <label for="codigo">Código postal*</label>
         </div>
         <input type="text" id="codigo" name="codigo" required> <!-- Añadí required -->
-    </div>
+        </div>
 
-    <!-- Población -->
-    <div class="form-group">
+        <!-- Población -->
+        <div class="form-group">
         <div class="etiqueta">
             <label for="poblacion">Población*</label>
         </div>
         <input type="text" id="poblacion" name="poblacion" required> <!-- Añadí required -->
-    </div>
+        </div>
 
-    <!-- País/Provincia -->
-    <div class="contenedor-pais-provincia">
+        <!-- País/Provincia -->
+        <div class="contenedor-pais-provincia">
         <div class="etiqueta">
             <label for="pais">País/Provincia*</label>
         </div>
@@ -460,38 +459,36 @@
                 <option value="">Zaragoza</option>
             </select>
         </div>
-        
+
         <div class="etiqueta">
             <label for="provincia"></label>
         </div>
-</fieldset>
+        </fieldset>
 
-<!-- Bloque mail -->
-
-<fieldset class="bloque-mail">
-    <legend>Email</legend>
-    <div class="form-group">
+        <!-- Bloque mail -->
+        <fieldset class="bloque-mail">
+        <legend>Email</legend>
+        <div class="form-group">
         <label for="email" class="etiqueta">Email*</label>
         <input type="text" id="email" class="text-field">
-    </div>
+        </div>
 
-    <div class="form-group">
+        <div class="form-group">
         <label for="bucle" class="etiqueta">Repite tu Correo Electrónico*</label>
         <input type="text" id="bucle" class="text-field">
-    </div>
-    
+        </div>
+
         <p class="alert-text">⚠ ATENCIÓN: Recibirás el justificante de inscripción y las comunicaciones del evento en este email.</p>
-</fieldset>
+        </fieldset>
 
 
-<!-- Bloque Maillot -->
+        <!-- Bloque Maillot -->
+        <fieldset class="bloque-maillot">
+        <legend>Talla maillot:</legend>
 
-<fieldset class="bloque-maillot">
-    <legend>Talla maillot:</legend>
+        <label for="Talla">Talla maillot oficial*</label>
 
-    <label for="Talla">Talla maillot oficial*</label>
-    
-    <div class="mover-talla-container">
+        <div class="mover-talla-container">
         <img class="imagen"  src="./images/maillot_tallas.jpg" alt="" width="120px" height="100px">
 
         <div class="Tallas">
@@ -554,40 +551,46 @@
                 <label for="hombre2xl">Hombre 2XL</label>
             </div>
         </div>
-    </div>
-</fieldset>
+        </div>
+        </fieldset>
+    </form>
 
-<!-- Bloque Términos -->
-<form>
-    <fieldset class="bloque-terminos">
+    <!-- Bloque Términos -->
+    <form>
+        <fieldset class="bloque-terminos">
         <legend>Términos</legend>
-        
+
         <div class="Terminos">
-            <label for="terminos">Acepto los términos y condiciones de contratación para el tratamiento de mis datos y confirmo <br> haber leído y aceptado la Política de Privacidad de NUONET GESTION, S.L.,*</label>
+            <label for="terminos">
+                Acepto los términos y condiciones de contratación para el tratamiento de mis datos y confirmo
+                <br> haber leído y aceptado la Política de Privacidad de NUONET GESTION, S.L.,*
+            </label>
+
             <div class="terminos-aviso">
                 <input type="radio" id="aceptoTerminos" name="terminos" value="1" required>
             <label for="aceptoTerminos">Sí acepto</label>
             </div>
+
             <div class="terminos-aviso">
                 <input type="radio" id="noAceptoTerminos" name="terminos" value="2" required>
                 <label for="noAceptoTerminos">No, gracias</label>
             </div>
+
             <div class="terminos-aviso">
                 <label for="informacion">Deseo recibir información de eventos deportivos, ofertas y novedades de marcas colaboradoras.*<br></label>
                 <input class="aceptar_termino" type="checkbox" id="aceptoInformacion" name="informacion" value="1">
                 <label  for="aceptoInformacion">Acepto</label>
             </div>
         </div>   
-    </fieldset>
+        </fieldset>
 
-    <!-- Otros campos y botones -->
-    <div class="container">
-        <button class="botones-1" type="reset">Cancelar</button>
-        <button class="botones-2" type="button">Añadir a otra persona</button>
-        <button class="boton-rojo" type="submit">Continuar</button>
-    </div>
-    <p class="impuestos">*Impuestos con importes incluidos</p>
-</form>
-
-</body>
+        <!-- Otros campos y botones -->
+        <div class="container">
+            <button class="botones-1" type="reset">Cancelar</button>
+            <button class="botones-2" type="button">Añadir a otra persona</button>
+            <button class="boton-rojo" type="submit">Continuar</button>
+        </div>
+        <p class="impuestos">*Impuestos con importes incluidos</p>
+    </form>
+    </body>
 </html>
