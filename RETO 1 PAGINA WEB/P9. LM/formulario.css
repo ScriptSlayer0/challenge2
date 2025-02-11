@@ -238,7 +238,7 @@
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.box-title {
+.bloque-mail {
   font-size: 1.2em;
   font-weight: bold;
   padding: 0 10px;
@@ -257,8 +257,8 @@
 }
 
 .text-field {
-  width: 20%;
-  padding: 7px;
+  width: 100%;
+  max-width: 500px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
