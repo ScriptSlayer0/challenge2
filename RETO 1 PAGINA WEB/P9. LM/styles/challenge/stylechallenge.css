@@ -20,20 +20,20 @@
     --color_tela_hover: #ffffff4d;
 }
 
-* {
+*{
     box-sizing: border-box;
-    margin: 0px;
     padding: 0px;
-    font-family: "Arial", sans-serif;
+    margin: 0px;
+    font-family: 'Arial', sans-serif;
 }
 
 /* Barra superior */
 #barra-superior {
     display: flex;
     position: fixed;
-    top: 0px;
     justify-content: flex-end;
     align-items: center;
+    top: 0px;
     width: 100%;
     background-color: var(--color_header1);
     padding: 10px 0px;
@@ -76,7 +76,7 @@
     color: #ffffff; 
     text-decoration: none;
     font-size: 16px;
-    padding: 5px;    
+    padding: 5px;
 }
 
 .menu a:hover{
@@ -141,6 +141,239 @@
 #check:checked ~ .menu-hamburguesa {
     display: block;
 }
+
+
+p{
+    text-align: justify;
+    margin-bottom: 20px;
+    color: #54595F;
+}
+h1,h3{
+    margin:0px 0px 20px 0px;
+    color: red;
+}
+
+/*parrafo*/
+.content-wrapper {
+    margin-top: 180px;
+    color: #333;
+}
+
+/* Sección de introducción */
+.intro-section {
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.section-title {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.paragraph {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.paragraph-with-spacing {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Sección de recorridos */
+.recorrido-section {
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.subsection-title {
+    font-size: 1.5em;
+    color: #ff0000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.paragraph {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Estilos para recorrido largo y medio */
+h3.subsection-title {
+    font-size: 1.3em;
+}
+
+p.paragraph {
+    padding: inherit;
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 5px;
+    border-color: rgb(192, 36, 8);
+    font-family: sans-serif;
+}
+
+p.paragraph br {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* otros */
+
+
+.cont-boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    margin: 10px;
+
+}
+
+.inscribite{
+    background-color: #a71f15;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 0px 0px 0px 0px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    font-family:cursive; 
+}
+
+.inscribite:hover{
+background-color: rgb(214, 126, 126);
+transition: background-color 0.9s, transform 0.9s;
+cursor: pointer;
+}
+
+/*  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.recorridos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -20px;
+    flex-direction: row;
+}
+.recorrido {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 37%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.recorrido h3 {
+    margin: 0;
+    font-size: 19px;
+    color: #ff0000;
+    text-align: center;
+}
+.recorrido p {
+    font-size: 15px;
+    margin: 10px 0;
+    text-align: center;
+}
+.ver-mas {
+    background-color:  #ff0000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+.ver-mas:hover {
+    background-color: rgb(214, 126, 126);
+    transition: background-color 0.9s, transform 0.9s;
+    cursor: pointer;
+}
+.titulo{
+    text-align: center;
+     color:rgba(0, 0, 0, 0.74);
+     font-size: 31px;
+     text-align: center;
+     margin-bottom: 40px;
+     font-family: sans-serif;
+}
+
+/* news */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.news {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.news-item {
+    background-color: white;
+    width: 46%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.news-item img {
+    width: 68%;
+    border-radius: 2px;
+}
+.news-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.news-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+.leer-mas {
+    color: #e63946;
+    text-decoration: none;
+    font-weight: bold;
+}
+.leer-mas:hover {
+    text-decoration: underline;
+}
+
+span{
+    color: #e63946;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
 
 /* FOOTER */
 footer {
@@ -406,7 +639,6 @@ footer {
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
-
     /*Selección de idioma barra superior*/
     .idioma {
         display: block;
@@ -466,6 +698,49 @@ footer {
         width: 100%; /* Asegura que el enlace ocupe toda la anchura */
         text-align: center;
         display: inline-block; /* Asegura que cada enlace se comporte como un bloque */
+    }
+
+    /*Anuncio*/
+    .texto-anuncio {
+        position: relative;
+        top: 120px;
+        font-size: 1.5em;
+        background-color: rgba(255, 255, 255, 0.636);
+        width: 70%;
+        left: 60px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .boton-anuncio {
+        height: 70px;
+        width: 140px;
+        position: relative;
+        top: 200px;
+        left: 130px;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;           /* Añadido para centrar el contenido */
+        justify-content: center; /* Centrado horizontal */
+        align-items: center;     /* Centrado vertical */
+        text-decoration: none;   /* Elimina el subrayado del enlace */
+        transition: all 0.3s ease;
+    }
+
+    /*Video*/
+    .video-impactante {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Añade esto para centrar horizontalmente */
+        height: auto; /* Ajusta la altura automáticamente según el contenido */
+        width: 50%; /* Ajusta el ancho al 100% del contenedor */
+        margin: 30px auto; /* Centra horizontalmente en el contenedor padre */
+    }
+
+    .video-impactante video {
+        width: 310px; /* Asegura que el video ocupe todo el ancho disponible */
+        margin-top: 30px;
     }
 
     /*Footer*/
