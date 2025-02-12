@@ -10,84 +10,98 @@
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/46cb5b6960.js" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <header>
-            <section id="header1">
-              <div id="menudeheader">
-              <ul>
-                  <li class="menu_desplegable">
-                      <a class="linknav" href="#">Menú</a>
-                      <ul>
-                          <li><a class=".etapa_equipos" href="">Sobre los equipos</a></li>
-                      </ul>
-                  </li>
-              </ul>
-              </div>
-      
-              <div id="idioma">
-                  <ul>
-                      <li class="linknav"><a href="">ES</a></li>
-                      <li class="linknav"><a href="">EN</a></li>
-                      <li class="linknav"><a href="">EUS</a></li>
-                  </ul>
-              </div>
-            </section>
-      
-              <nav>
-                  <div id="linksdenav">
-                      <ul>
-                          <li><a class="linknav" href="etapa.html">Etapas</a></li>
-                          <li><a class="linknav" href="equipos.html">Equipos</a></li>
-                          <li><a class="linknav" href="clasificaciones.html">Clasificaciones</a></li>
-                          <li><a href="index.html"><img src="images/logoitzulia.png" alt="logo" width="90px"></a></li>
-                          <li><a class="linknav" href="noticias.html">Noticias</a></li>
-                          <li><a class="linknav" href="patrocinadores.html">Patrocinadores</a></li>
-                          <li><a class="linknav" href="palmares.html">Palmarés</a></li>
-                      </ul>
-                  </div>
-              </nav>
-          </header>
+    <!--La barra de navegación ha sido eliminada temporalmente-->
 
-        <main>
-            <section class="etapa_equipos">
-                <div class="a_etapa">
-                    <div class="tela_equipos">
-                        <h2>EQUIPO 1</h2>
-                        <h1><a href="equipo1.html">LOS HOTWHEELS</a></h1>
-                    </div>
-                </div>
-                <div class="b_etapa">
-                    <div class="tela_equipos">
-                        <h2>EQUIPO 2</h2>
-                        <h1><a href="equipo2.html">LOS PICAPIEDRA</a></h1>
-                    </div>
-                </div >
-                <div class="c_etapa">
-                    <div class="tela_equipos">
-                        <h2>EQUIPO 3</h2>
-                        <h1><a href="equipo3.html">LOS TERRENEITORS</a></h1>
-                    </div>
-                </div>
-            </section>
-        </main>
-          <footer>
-            <footer>
-            <div id="redes_sociales">
-                <ul>
-                    <div id="animacion-instagram"> <li><a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a></li></div>
-                    <div id="animacion-tiktok"><li><a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a></li></div>
-                   <div id="animacion-youtube"><li><a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a></li></div>
-                   <div id="animacion-twitter"><li><a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a></li></div>
-                  <div id="animacion-facebook"><li><a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a></li></div>
-                </ul>    
+    <body>
+        <section id="barra-superior">
+            <div class="idioma">
+                <a href="">ES</a>
+                <a href="">EN</a>
+                <a href="">EUS</a>
             </div>
-            <div id="mandarcorreo">
-                <form action="#" method="post">
-                    <label for="correo">¿Quieres contactar con nosotros? ¡Mandanos un correo!</label>
-                    <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
-                    <br>
-                    <input type="submit" id="botonfooter" value="Enviar">
+        </section>
+    
+        <nav class="barra-navegacion">
+            <div class="menu">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="index.html" class="logo">
+                    <img src="./images/logoitzulia.png" alt="logo">
+                </a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
+                <a href="challenge.html">Challenge</a>
             </div>
-        </footer>
+    
+            <!-- Menú hamburguesa -->
+            <div class="hamburguesa-container">
+                <input type="checkbox" id="check">
+                <label for="check" id="icono-hambur">☰</label>
+                <div class="menu-hamburguesa">
+                    <a href="index.html">Inicio</a>
+                    <a href="etapa.html">Etapas</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="clasificaciones.html">Clasificaciones</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="patrocinadores.html">Patrocinadores</a>
+                    <a href="palmares.html">Palmarés</a>
+                    <a href="challenge.html">Challenge</a>
+                </div>
+            </div>
+        </nav>
+        
+        <section class="equipos">
+            <div class="equipo1">
+                <a href="equipo1.html">
+                    <h2 class="encabezado-equipo">EQUIPO 1</h2>
+                    <h1 class="Nombre-equipo">LOS HOTWHEELS</h1>
+                </a>
+            </div>
+        
+            <div class="equipo2">
+                <a href="equipo2.html">
+                    <h2 class="encabezado-equipo">EQUIPO 2</h2>
+                    <h1 class="Nombre-equipo">LOS PICAPIEDRA</h1>
+                </a>
+            </div>
+        
+            <div class="equipo3">
+                <a href="equipo3.html">
+                    <h2 class="encabezado-equipo">EQUIPO 3</h2>
+                    <h1 class="Nombre-equipo">LOS TERRENEITORS</h1>
+                </a>
+            </div>
+        </section>
+        
     </body>
+
+    <footer>
+        <div id="redes_sociales">
+            <div id="animacion-instagram">
+                <a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div id="animacion-tiktok">
+                <a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div id="animacion-youtube">
+                <a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div id="animacion-twitter">
+                <a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div id="animacion-facebook">
+                <a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        
+        <div id="Contenedor-formulario-correo">
+            <form action="#" method="post">
+                <label id="texto-contacto-correo" for="correo">¿Quieres contactar con nosotros?<br>¡Mándanos un correo!</label>
+                <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                <input type="submit" id="boton-footer" value="Enviar">
+            </form>
+        </div>            
+    </footer>
 </html>

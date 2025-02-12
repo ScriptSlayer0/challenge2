@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Itzulia Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/challenge/stylechallenge.css">
+</head>
+
+<body>
+    <header>
+        <section id="barra-superior">
+            <div class="idioma">
+                <a href="#">ES</a>
+                <a href="#">EN</a>
+                <a href="#">EUS</a>
+            </div>
+        </section>
+
+        <nav class="barra-navegacion">
+            <div class="menu">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="index.html" class="logo">
+                    <img src="./images/logoitzulia.png" alt="Itzulia Logo">
+                </a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
+                <a href="challenge.html">Challenge</a>
+            </div>
+
+            <!-- Menú hamburguesa -->
+            <div class="hamburguesa-container">
+                <input type="checkbox" id="check">
+                <label for="check" id="icono-hambur" aria-label="Menú">☰</label>
+                <div class="menu-hamburguesa">
+                    <a href="index.html">Inicio</a>
+                    <a href="etapa.html">Etapas</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="clasificaciones.html">Clasificaciones</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="patrocinadores.html">Patrocinadores</a>
+                    <a href="palmares.html">Palmarés</a>
+                    <a href="challenge.html">Challenge</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-wrapper">
+        <!-- Primera sección -->
+        <section class="intro-section">
+            <h1 class="section-title">¿Qué es la Itzulia Challenge?</h1>
+            <p class="paragraph paragraph-with-spacing">
+                La Itzulia Challenge es un evento ciclista que se celebra en el País Vasco, España, y es considerado
+                una de las pruebas de ciclismo de montaña más importantes de la región. Forma parte de la Itzulia
+                Basque Country, que es una carrera de ciclismo profesional por etapas, pero la Itzulia Challenge es
+                una versión dirigida a aficionados, que permite a los ciclistas de todos los niveles disfrutar de un
+                recorrido similar al de los profesionales.
+            </p>
+
+            <p class="paragraph">El evento suele realizarse antes o al mismo tiempo que la Itzulia profesional y
+                presenta varios desafíos en forma de rutas de diferentes distancias y dificultades, atravesando los
+                hermosos paisajes del País Vasco, con sus empinadas colinas y su terreno montañoso. Participar en la
+                Itzulia Challenge ofrece la oportunidad de sentir la emoción de las grandes competiciones ciclistas en
+                un ambiente mucho más accesible para los ciclistas amateurs.</p>
+        </section>
+
+        <video class="video-challenge" src="./images/segunda_edición_itzulia_basque_challenge.mp4" controls></video>
+
+        <!-- Segunda sección -->
+        <section class="recorrido-section">
+            <h2 class="subsection-title">¿Qué recorridos tiene?</h2>
+            <p class="paragraph">
+                La Itzulia Challenge tiene varios recorridos diseñados para adaptarse a diferentes
+                niveles de habilidad y experiencia de los ciclistas. Cada año pueden variar un poco,
+                pero generalmente ofrecen opciones con diferentes distancias y desniveles para que todos
+                los participantes puedan encontrar un desafío adecuado. Aquí te doy una idea de los tipos
+                de recorridos que suelen estar disponibles:
+            </p>
+
+            <!-- Recorrido largo -->
+            <h3 class="subsection-title">Recorrido largo (Gran Fondo):</h3>
+            <p class="paragraph">
+                Distancia: Unos 100-120 km. <br>
+                Desnivel: Alrededor de 2.000-3.000 metros de desnivel positivo. <br>
+                Este recorrido está dirigido a ciclistas con una preparación intermedia, que buscan un reto más
+                accesible pero igualmente desafiante. Incluye algunas subidas duras, pero de menor longitud.
+            </p>
+
+            <!-- Recorrido medio -->
+            <h3 class="subsection-title">Recorrido medio (Medio Fondo):</h3>
+            <p class="paragraph">
+                Distancia: Entre 60 y 80 km. <br>
+                Desnivel: Alrededor de 1.000-2.000 metros de desnivel positivo. <br>
+                Este recorrido está dirigido a ciclistas con una preparación intermedia,
+                que buscan un reto más accesible pero igualmente desafiante.
+                Incluye algunas subidas duras, pero de menor longitud.
+            </p>
+        </section>
+
+        <div class="cont-boton">
+            <!-- boton de inscribirse -->
+             <a class="inscribite" href="./formulario_challenge.html">Inscríbete</a>
+        </div>
+
+        <section class="container">
+            <h2 class="titulo">ELIGE ENTRE 2</h2>
+            <div class="recorridos">
+                <!-- Recorrido World Tour -->
+                <article class="recorrido">
+                    <h3>Recorrido World Tour</h3>
+                    <p>Distancia: 153.5 km</p>
+                    <p>Desnivel acumulado: +3,825 metros</p>
+                    <button class="ver-mas">Ver Más</button>
+                </article>
+                <!-- Recorrido Medio Fondo -->
+                <article class="recorrido">
+                    <h3>Recorrido Medio Fondo</h3>
+                    <p>Distancia: 82.2 km</p>
+                    <p>Desnivel acumulado: +2,120 metros</p>
+                    <button class="ver-mas">Ver Más</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- news -->
+        <section class="container">
+            <h2 class="titulo">ÚLTIMAS NOTICIAS</h2>
+            <div class="news">
+                <!-- Noticia 1 -->
+                <article class="news-item">
+                    <img src="./images/Itzulia-Basque-Challenge-1920x1080-1-1024x576.jpg"
+                        alt="Maillot Itzulia Basque Challenge">
+                    <h3>¡YA ESTÁ AQUÍ EL MAILLOT OFICIAL DE LA ITZULIA BASQUE CHALLENGE 2025!</h3>
+                    <span>febrero 3, 2025</span>
+                    <p>¡Por fin podemos enseñaros el maillot que luciréis todos los inscritos en la edición 2025 de la
+                        Itzulia Basque Challenge! Este año hemos subido el nivel del diseño para ofreceros un maillot
+                        que estará a la altura de tan importante evento.</p>
+                    <a href="#" class="leer-mas">LEER MÁS »</a>
+                </article>
+
+                <!-- Noticia 2 -->
+                <article class="news-item">
+                    <img src="./images/itzulia-y-toteemi-1024x576.jpg" alt="Digitalización Itzulia Basque Challenge">
+                    <h3>ITZULIA BASQUE CHALLENGE APUESTA POR LA DIGITALIZACIÓN DEL DEPORTE JUNTO A TOTEEMI</h3>
+                    <span>enero 29, 2025</span>
+                    <p>El mundo del deporte evoluciona, y ahora los eventos buscan ofrecer nuevas formas de
+                        participación más accesibles e innovadoras. Gracias a esta colaboración, Itzulia Basque
+                        Challenge ahora integra tecnología para llevar el deporte a nuevos horizontes.</p>
+                    <a href="#" class="leer-mas">LEER MÁS »</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    </body>
+
+    <footer>
+        <div id="redes_sociales">
+            <div id="animacion-instagram">
+                <a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div id="animacion-tiktok">
+                <a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div id="animacion-youtube">
+                <a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div id="animacion-twitter">
+                <a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div id="animacion-facebook">
+                <a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+        <div id="Contenedor-formulario-correo">
+            <form action="#" method="post">
+                <label id="texto-contacto-correo" for="correo">¿Quieres contactar con nosotros?<br> ¡Mándanos un
+                    correo!</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                <input type="submit" id="boton-footer" value="Enviar">
+            </form>
+        </div>
+    </footer>
+</html>

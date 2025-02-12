@@ -12,104 +12,111 @@
     </head>
 
     <body>
-        <header>
-            <section id="header1">
-      
-              <div id="menudeheader">
-              <ul>
-                  <li class="menu_desplegable">
-                      <a class="linknav" href="#">Menú</a>
-                      <ul>
-                          <li><a class="linknav" href="#linea1_etapa">Sobre las etapas</a></li>
-                      </ul>
-                  </li>
-              </ul>
-              </div>
-      
-              <div id="idioma">
-                  <ul>
-                      <li class="linknav"><a href="">ES</a></li>
-                      <li class="linknav"><a href="">EN</a></li>
-                      <li class="linknav"><a href="">EUS</a></li>
-                  </ul>
-              </div>
-            </section>
-      
-              <nav>
-                  <div id="linksdenav">
-                      <ul>
-                          <li><a class="linknav" href="etapa.html">Etapas</a></li>
-                          <li><a class="linknav" href="equipos.html">Equipos</a></li>
-                          <li><a class="linknav" href="clasificaciones.html">Clasificaciones</a></li>
-                          <li><a href="index.html"><img src="images/logoitzulia.png" alt="logo" width="90px"></a></li>
-                          <li><a class="linknav" href="noticias.html">Noticias</a></li>
-                          <li><a class="linknav" href="patrocinadores.html">Patrocinadores</a></li>
-                          <li><a class="linknav" href="palmares.html">Palmarés</a></li>
-                      </ul>
-                  </div>
-              </nav>
-          </header>
-
-          <main>
-            <section id="linea1_etapa" class="etapas_etapa">
-                <div class="a_etapa">
-                    <div class="tela_etapa">
-                        <h2>ETAPA 1</h2>
-                        <h1>IRUN - IRUN</h1>
-                    </div>
-                </div>
-                <div class="b_etapa">
-                    <div class="tela_etapa">
-                        <h2>ETAPA 2</h2>
-                        <h1>IRUN - KANBO</h1>
-                    </div>
-                </div >
-                <div class="c_etapa">
-                    <div class="tela_etapa">
-                        <h2>ETAPA 3</h2>
-                        <h1>EZPELETA - ALTSASU</h1>
-                    </div>
-                </div>
-            </section>
-            <section id="linea2_etapa" class="etapas_etapa">
-                <div class="d_etapa">
-                    <div class="tela_etapa">
-                        <h2>ETAPA 4</h2>
-                        <h1>ANARATZ - LEGUTIO</h1>
-                    </div>
-                </div>
-                <div class="e_etapa">
-                    <div class="tela_etapa">
-                        <h2>ETAPA 5</h2>
-                        <h1>GASTEIZ - AMOREBIETA</h1>
-                    </div>
-                </div>
-                <div class="f_etapa">
-                    <div class="tela_etapa">
-                        <h2>ETAPA 6</h2>
-                        <h1>EIBAR - EIBAR</h1>
-                    </div>
-                </div>
-            </section>
-          </main>
-
-          <footer>
-            <div id="redes_sociales">
-                <ul>
-                    <li><a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a></li>
-                </ul>    
+        <section id="barra-superior">
+            <div class="idioma">
+                <a href="">ES</a>
+                <a href="">EN</a>
+                <a href="">EUS</a>
             </div>
-            <div id="mandarcorreo">
-                <form action="#" method="post">
-                    <label for="correo">¿Quieres contactar con nosotros? ¡Mandanos un correo!</label>
-                    <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
-                    <br>
-                    <input type="submit" id="botonfooter" value="Enviar">
+        </section>
+
+        <nav class="barra-navegacion">
+            <div class="menu">
+                <a href="etapa.html">Etapas</a>
+                <a href="equipos.html">Equipos</a>
+                <a href="clasificaciones.html">Clasificaciones</a>
+                <a href="index.html" class="logo">
+                    <img src="./images/logoitzulia.png" alt="logo">
+                </a>
+                <a href="noticias.html">Noticias</a>
+                <a href="patrocinadores.html">Patrocinadores</a>
+                <a href="palmares.html">Palmarés</a>
+                <a href="challenge.html">Challenge</a>
             </div>
-        </footer>
+    
+            <!-- Menú hamburguesa -->
+            <div class="hamburguesa-container">
+                <input type="checkbox" id="check">
+                <label for="check" id="icono-hambur">☰</label>
+                <div class="menu-hamburguesa">
+                    <a href="index.html">Inicio</a>
+                    <a href="etapa.html">Etapas</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="clasificaciones.html">Clasificaciones</a>
+                    <a href="noticias.html">Noticias</a>
+                    <a href="patrocinadores.html">Patrocinadores</a>
+                    <a href="palmares.html">Palmarés</a>
+                    <a href="challenge.html">Challenge</a>
+                </div>
+            </div>
+        </nav>
+
+        <section id="linea1_etapa" class="etapas_etapa">
+            <div class="a_etapa">
+                <div class="tela_etapa">
+                    <h2>ETAPA 1</h2>
+                    <h1>IRUN - IRUN</h1>
+                </div>
+            </div>
+            <div class="b_etapa">
+                <div class="tela_etapa">
+                    <h2>ETAPA 2</h2>
+                    <h1>IRUN - KANBO</h1>
+                </div>
+            </div >
+            <div class="c_etapa">
+                <div class="tela_etapa">
+                    <h2>ETAPA 3</h2>
+                    <h1>EZPELETA - ALTSASU</h1>
+                </div>
+            </div>
+        </section>
+        <section class="etapas_etapa">
+            <div class="d_etapa">
+                <div class="tela_etapa">
+                    <h2>ETAPA 4</h2>
+                    <h1>ANARATZ - LEGUTIO</h1>
+                </div>
+            </div>
+            <div class="e_etapa">
+                <div class="tela_etapa">
+                    <h2>ETAPA 5</h2>
+                    <h1>GASTEIZ - AMOREBIETA</h1>
+                </div>
+            </div>
+            <div class="f_etapa">
+                <div class="tela_etapa">
+                    <h2>ETAPA 6</h2>
+                    <h1>EIBAR - EIBAR</h1>
+                </div>
+            </div>
+        </section>
     </body>
+    <footer>
+        <div id="redes_sociales">
+            <div id="animacion-instagram">
+                <a href="https://www.instagram.com/ehitzulia/?hl=es"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div id="animacion-tiktok">
+                <a href="https://www.tiktok.com/@ehitzulia"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <div id="animacion-youtube">
+                <a href="https://www.youtube.com/channel/UCGxcS9Lz3VvYD1WJciBgR0w"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div id="animacion-twitter">
+                <a href="https://x.com/ehitzulia?lang=es"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <div id="animacion-facebook">
+                <a href="https://www.facebook.com/ehitzulia/?locale=es_ES"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+        
+        <div id="Contenedor-formulario-correo">
+            <form action="#" method="post">
+                <label id="texto-contacto-correo" for="correo">¿Quieres contactar con nosotros?<br>¡Mándanos un correo!</label>
+                <input type="text" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                <input type="submit" id="boton-footer" value="Enviar">
+            </form>
+        </div>     
+    </footer>
 </html>
