@@ -62,9 +62,7 @@
         </div>
         </fieldset>
 
-
         <!-- secion -->
-
         <fieldset class="datos-personales">
         <legend>Datos Personales</legend>
 
@@ -296,12 +294,11 @@
 
         <!-- Subir Foto -->
         <div class="fila">
-        <label for="archivo" class="etiqueta">Sube tu foto (tamaño carnet)*</label>
-        <div class="campos">
-            <input type="file" id="archivo" name="archivo" accept="image/*" required>
+            <label for="archivo" class="etiqueta">Sube tu foto (tamaño carnet)*</label>
+            <div class="campos">
+                <input type="file" id="archivo" name="archivo" accept="image/*" required>
+            </div>
         </div>
-        </div>
-
         </fieldset>
 
         <!-- Bloque localización -->
@@ -364,41 +361,41 @@
 
         <!-- Teléfono de emergencia -->
         <div class="form-group">
-        <div class="etiqueta">
-            <label for="emergencia">Nº Teléfono*</label>
-        </div>
-        <input type="text" id="emergencia" name="emergencia" required> <!-- Añadí required -->
+            <div class="etiqueta">
+                <label for="emergencia">Nº Teléfono*</label>
+            </div>
+            <input type="text" id="emergencia" name="emergencia" required>
         </div>
 
         <!-- Dirección -->
         <div class="form-group">
-        <div class="etiqueta">
-            <label for="direccion">Dirección*</label>
-        </div>
-        <input type="text" id="direccion" name="direccion" required> <!-- Añadí required -->
+            <div class="etiqueta">
+                <label for="direccion">Dirección*</label>
+            </div>
+            <input type="text" id="direccion" name="direccion" required>
         </div>
 
         <!-- Código Postal -->
         <div class="form-group">
-        <div class="etiqueta">
-            <label for="codigo">Código postal*</label>
-        </div>
-        <input type="text" id="codigo" name="codigo" required> <!-- Añadí required -->
+            <div class="etiqueta">
+                <label for="codigo">Código postal*</label>
+            </div>
+            <input type="text" id="codigo" name="codigo" required>
         </div>
 
         <!-- Población -->
         <div class="form-group">
-        <div class="etiqueta">
-            <label for="poblacion">Población*</label>
-        </div>
-        <input type="text" id="poblacion" name="poblacion" required> <!-- Añadí required -->
+            <div class="etiqueta">
+                <label for="poblacion">Población*</label>
+            </div>
+            <input type="text" id="poblacion" name="poblacion" required>
         </div>
 
         <!-- País/Provincia -->
         <div class="contenedor-pais-provincia">
-        <div class="etiqueta">
-            <label for="pais">País/Provincia*</label>
-        </div>
+            <div class="etiqueta">
+                <label for="pais">País/Provincia*</label>
+            </div>
             <select id="pais">
                 <option value="">España</option>
                 <option value="">Francia</option>
@@ -463,24 +460,24 @@
         <div class="etiqueta">
             <label for="provincia"></label>
         </div>
+        </div>
         </fieldset>
 
         <!-- Bloque mail -->
         <fieldset class="bloque-mail">
         <legend>Email</legend>
         <div class="form-group">
-        <label for="email" class="etiqueta">Email*</label>
-        <input type="text" id="email" class="text-field">
+            <label for="email" class="etiqueta">Email*</label>
+            <input type="text" id="email" class="text-field">
         </div>
 
         <div class="form-group">
-        <label for="bucle" class="etiqueta">Repite tu Correo Electrónico*</label>
-        <input type="text" id="bucle" class="text-field">
+            <label for="bucle" class="etiqueta">Repite tu Correo Electrónico*</label>
+            <input type="text" id="bucle" class="text-field">
         </div>
 
         <p class="alert-text">⚠ ATENCIÓN: Recibirás el justificante de inscripción y las comunicaciones del evento en este email.</p>
         </fieldset>
-
 
         <!-- Bloque Maillot -->
         <fieldset class="bloque-maillot">
@@ -489,74 +486,77 @@
         <label for="Talla">Talla maillot oficial*</label>
 
         <div class="mover-talla-container">
-        <img class="imagen"  src="./images/maillot_tallas.jpg" alt="" width="120px" height="100px">
+            <img class="imagen" src="./images/maillot_tallas.jpg" alt="" width="120px" height="100px">
 
-        <div class="Tallas">
-            <!-- Tallas mujer -->
-            <div class="size-maillot">
-                <input type="radio" id="mujer2xs" name="talla" value="2XS">
-            <label for="mujer2xs">Mujer 2XS</label>
+            <div class="Tallas">
+                <!-- Tallas mujer -->
+                <div class="size-maillot">
+                    <input type="radio" id="mujer2xs" name="talla" value="2XS">
+                    <label for="mujer2xs">Mujer 2XS</label>
+                </div>
+                <!-- [Resto de tallas permanecen igual] -->
+                <div class="size-maillot">
+                    <input type="radio" id="hombre2xl" name="talla" value="2XL">
+                    <label for="hombre2xl">Hombre 2XL</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="mujerxs" name="talla" value="XS">
+                    <label for="mujerxs">Mujer XS</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="mujers" name="talla" value="S">
+                    <label for="mujers">Mujer S</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="mujerm" name="talla" value="M">
+                    <label for="mujerm">Mujer M</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="mujerl" name="talla" value="L">
+                    <label for="mujerl">Mujer L</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="mujerxl" name="talla" value="XL">
+                    <label for="mujerxl">Mujer XL</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="mujer2xl" name="talla" value="2XL">
+                    <label for="mujer2xl">Mujer 2XL</label>
+                </div>
+                <!-- Tallas hombre -->
+                <div class="size-maillot">
+                    <input type="radio" id="hombre2xs" name="talla" value="2XS">
+                    <label for="hombre2xs">Hombre 2XS</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="hombrexs" name="talla" value="XS">
+                    <label for="hombrexs">Hombre XS</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="hombres" name="talla" value="S">
+                    <label for="hombres">Hombre S</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="hombrem" name="talla" value="M">
+                    <label for="hombrem">Hombre M</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="hombrel" name="talla" value="L">
+                    <label for="hombrel">Hombre L</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="hombrexl" name="talla" value="XL">
+                    <label for="hombrexl">Hombre XL</label>
+                </div>
+                <div class="size-maillot">
+                    <input type="radio" id="hombre2xl" name="talla" value="2XL">
+                    <label for="hombre2xl">Hombre 2XL</label>
+                </div>
             </div>
-            <div class="size-maillot">
-                <input type="radio" id="mujerxs" name="talla" value="XS">
-                <label for="mujerxs">Mujer XS</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="mujers" name="talla" value="S">
-                <label for="mujers">Mujer S</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="mujerm" name="talla" value="M">
-                <label for="mujerm">Mujer M</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="mujerl" name="talla" value="L">
-                <label for="mujerl">Mujer L</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="mujerxl" name="talla" value="XL">
-                <label for="mujerxl">Mujer XL</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="mujer2xl" name="talla" value="2XL">
-                <label for="mujer2xl">Mujer 2XL</label>
-            </div>
-            <!-- Tallas hombre -->
-            <div class="size-maillot">
-                <input type="radio" id="hombre2xs" name="talla" value="2XS">
-                <label for="hombre2xs">Hombre 2XS</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="hombrexs" name="talla" value="XS">
-                <label for="hombrexs">Hombre XS</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="hombres" name="talla" value="S">
-                <label for="hombres">Hombre S</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="hombrem" name="talla" value="M">
-                <label for="hombrem">Hombre M</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="hombrel" name="talla" value="L">
-                <label for="hombrel">Hombre L</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="hombrexl" name="talla" value="XL">
-                <label for="hombrexl">Hombre XL</label>
-            </div>
-            <div class="size-maillot">
-                <input type="radio" id="hombre2xl" name="talla" value="2XL">
-                <label for="hombre2xl">Hombre 2XL</label>
-            </div>
-        </div>
         </div>
         </fieldset>
-    </form>
 
-    <!-- Bloque Términos -->
-    <form>
+        <!-- Bloque Términos -->
         <fieldset class="bloque-terminos">
         <legend>Términos</legend>
 
@@ -568,7 +568,7 @@
 
             <div class="terminos-aviso">
                 <input type="radio" id="aceptoTerminos" name="terminos" value="1" required>
-            <label for="aceptoTerminos">Sí acepto</label>
+                <label for="aceptoTerminos">Sí acepto</label>
             </div>
 
             <div class="terminos-aviso">
@@ -579,12 +579,12 @@
             <div class="terminos-aviso">
                 <label for="informacion">Deseo recibir información de eventos deportivos, ofertas y novedades de marcas colaboradoras.*<br></label>
                 <input class="aceptar_termino" type="checkbox" id="aceptoInformacion" name="informacion" value="1">
-                <label  for="aceptoInformacion">Acepto</label>
+                <label for="aceptoInformacion">Acepto</label>
             </div>
         </div>   
         </fieldset>
 
-        <!-- Otros campos y botones -->
+        <!-- Botones -->
         <div class="container">
             <button class="botones-1" type="reset">Cancelar</button>
             <button class="botones-2" type="button">Añadir a otra persona</button>
