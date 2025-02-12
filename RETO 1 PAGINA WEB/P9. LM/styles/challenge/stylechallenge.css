@@ -38,6 +38,7 @@
     width: 100%;
     background-color: var(--color_header1);
     padding: 10px 20px;
+    z-index: 1000;
 }
 
 .idioma {
