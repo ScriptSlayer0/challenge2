@@ -341,7 +341,7 @@ footer {
     background-color: gray;
     color: #333;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 1s ease;
 }
 
 #redes_sociales a:hover {
@@ -370,7 +370,7 @@ footer {
     text-decoration: none;
     
     /* Transiciones suaves */
-    transition: all 1.5s ease;
+    transition: all 1s ease;
 }
 
 /* Efecto al pasar el mouse */
@@ -453,14 +453,14 @@ footer {
     box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
 }
 
-#animacion-youtube a:not(hover) {
+#animacion-youtube a:not(:hover) {
     transform: scale(1);
     box-shadow: none;
     background: grey;
     filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
 
-/*Animación twiter*/
+/*Animación twitter*/
 #animacion-twitter a {
     display: flex;
     justify-content: center;
@@ -471,7 +471,7 @@ footer {
     background-color: gray;
     color: #333;
     text-decoration: none;
-    transition: All 1s ease;
+    transition: all 1s ease;
     opacity: 0.7;
 }
             

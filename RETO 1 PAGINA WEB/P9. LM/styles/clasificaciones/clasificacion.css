@@ -175,14 +175,6 @@
     max-width: 200px;
 }
 
-/* Ajuste para dispositivos móviles */
-@media (max-width: 768px) {
-    .tabladeequipos_equipos {
-        margin: 180px 10px 0px 10px;
-        width: calc(100% - 20px);
-    }
-}
-
 /* FOOTER */
 footer {
     margin-top: 70px;
@@ -258,7 +250,7 @@ footer {
     background-color: gray;
     color: #333;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 1s ease;
 }
 
 #redes_sociales a:hover {
@@ -273,6 +265,8 @@ footer {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    
+    /* Usamos el gradiente desde el inicio pero con opacidad 0 */
     background: linear-gradient(45deg,
         #f09433 0%,
         #e6683c 25%,
@@ -280,27 +274,34 @@ footer {
         #cc2366 75%,
         #bc1888 100%);
     opacity: 0.7;
+    
     color: rgb(0, 0, 0);
     text-decoration: none;
-    transition: all 1.5s ease;
+    
+    /* Transiciones suaves */
+    transition: all 1s ease;
 }
 
+/* Efecto al pasar el mouse */
 #animacion-instagram a:hover {
     opacity: 1;
     transform: scale(1.1);
-    color: white;
-    box-shadow: 0px 0px 10px 5px rgba(240, 147, 51, 0.4),
-                0px 0px 15px 8px rgba(230, 104, 60, 0.3),
-                0px 0px 20px 10px rgba(220, 39, 67, 0.3),
-                0px 0px 25px 12px rgba(204, 35, 102, 0.2),
-                0px 0px 30px 15px rgba(188, 24, 136, 0.1);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    
+    /* Sombra con los colores del gradiente más pequeña y sutil */
+    box-shadow: 0px 0px 10px 5px rgba(240, 147, 51, 0.4),   /* #f09433 */
+                0px 0px 15px 8px rgba(230, 104, 60, 0.3),   /* #e6683c */
+                0px 0px 20px 10px rgba(220, 39, 67, 0.3),    /* #dc2743 */
+                0px 0px 25px 12px rgba(204, 35, 102, 0.2),   /* #cc2366 */
+                0px 0px 30px 15px rgba(188, 24, 136, 0.1);   /* #bc1888 */
 }
 
+/* Estado normal */
 #animacion-instagram a:not(:hover) {
     transform: scale(1);
     box-shadow: none;
     background: grey;
-    filter: brightness(0.7);
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
 
 /*Animación tiktok*/
@@ -314,24 +315,25 @@ footer {
     background-color: gray;
     color: #333;
     text-decoration: none;
+    /* Transiciones suaves */
     transition: all 1s ease;
     opacity: 0.7;
 }
-
+    
 #animacion-tiktok a:hover {
     background-color: black;
     filter: brightness(1.3);
     opacity: 1;
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
 }
 
 #animacion-tiktok a:not(:hover) {
     transform: scale(1);
     box-shadow: none;
     background: grey;
-    filter: brightness(0.7);
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
 
 /*Animación youtube*/
@@ -346,24 +348,25 @@ footer {
     color: #333;
     text-decoration: none;
     transition: all 1s ease;
-    transform: scale(1);
+    transform: scale(1); /* Efecto de aumento al pasar el mouse */
     opacity: 0.7;
 }
-
+    
 #animacion-youtube a:hover {
-    background-color: #ff0000;
-    filter: brightness(1.2);
-    transform: scale(1.1);
+    background-color: #ff0000; /* Color rojo de YouTube */
+    filter: brightness(1.2); /* Aumenta el brillo */
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
     opacity: 1;
-    color: white;
-    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    /* Sombra más intensa y redondeada */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
 }
 
-#animacion-youtube a:not(hover) {
+#animacion-youtube a:not(:hover) {
     transform: scale(1);
     box-shadow: none;
     background: grey;
-    filter: brightness(0.7);
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
 
 /*Animación twitter*/
@@ -377,16 +380,16 @@ footer {
     background-color: gray;
     color: #333;
     text-decoration: none;
-    transition: All 1s ease;
+    transition: all 1s ease;
     opacity: 0.7;
 }
-
+            
 #animacion-twitter a:hover {
     background-color: #1DA1F2;
     filter: brightness(1.2);
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
     opacity: 1;
 }
 
@@ -394,7 +397,7 @@ footer {
     transform: scale(1);
     box-shadow: none;
     background: grey;
-    filter: brightness(0.7);
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
 
 /*Animación facebook*/
@@ -409,16 +412,16 @@ footer {
     color: #333;
     text-decoration: none;
     transition: all 1s ease;
-    transform: scale(1);
+    transform: scale(1); /* Efecto de aumento al pasar el mouse */
     opacity: 0.7;
 }
-
+        
 #animacion-facebook a:hover {
     background-color: #001affc0;
     filter: brightness(1.2);
-    color: white;
-    transform: scale(1.1);
-    box-shadow: 0px 0px 30px rgb(255, 255, 255);
+    color: white; /*Es el color del icono cuando se pone encima el cursor*/
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+    box-shadow: 0px 0px 30px rgb(255, 255, 255); /* Sombra suave al pasar el mouse */
     opacity: 1;
 }
 
@@ -426,8 +429,9 @@ footer {
     transform: scale(1);
     box-shadow: none;
     background: grey;
-    filter: brightness(0.7);
+    filter: brightness(0.7); /* Esto hará que se vea grisáceo */
 }
+
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
 @media (max-width: 768px) {
