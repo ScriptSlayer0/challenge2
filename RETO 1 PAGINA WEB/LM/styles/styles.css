@@ -174,7 +174,7 @@
     width: 140px;
     position: relative;
     top: 250px;
-    left: 650px;
+    left: 900px;
     border-radius: 10px;
     background-color: white;
     display: flex;           /* Añadido para centrar el contenido */
@@ -524,7 +524,7 @@ footer {
 }
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     /*Selección de idioma barra superior*/
     .idioma {
         display: block;
@@ -593,7 +593,7 @@ footer {
         font-size: 1.5em;
         background-color: rgba(255, 255, 255, 0.636);
         width: 70%;
-        left: 60px;
+        left: 100px;
         border-radius: 10px;
         padding: 20px;
     }
@@ -603,7 +603,7 @@ footer {
         width: 140px;
         position: relative;
         top: 200px;
-        left: 130px;
+        left: 260px;
         border-radius: 10px;
         background-color: white;
         display: flex;           /* Añadido para centrar el contenido */
