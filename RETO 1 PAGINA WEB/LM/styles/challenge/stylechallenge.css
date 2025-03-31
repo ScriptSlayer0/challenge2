@@ -50,6 +50,7 @@
     font-size: 16px;
     color: var(--color_letras_header);
     margin: 0 10px;
+    text-decoration: none;
 }
 
 /* Navigation Bar Styles */
