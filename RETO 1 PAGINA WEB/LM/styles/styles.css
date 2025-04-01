@@ -524,7 +524,7 @@ footer {
 }
 
 /* Estilos para el menú hamburguesa en dispositivos móviles */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     /*Selección de idioma barra superior*/
     .idioma {
         display: block;
@@ -637,4 +637,193 @@ footer {
     #texto-contacto-correo{
         font-size: 15px;
     }
+}
+
+
+/* Dispositivos muy pequeños (móviles en portrait, menos de 576px) */
+@media (max-width: 575.98px) {
+    /*Anuncio*/
+    .texto-anuncio {
+        position: relative;
+        top: 120px;
+        font-size: 1.5em;
+        background-color: rgba(255, 255, 255, 0.636);
+        width: 70%;
+        left: 60px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .boton-anuncio {
+        height: 70px;
+        width: 140px;
+        position: relative;
+        top: 200px;
+        left: 130px;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;           /* Añadido para centrar el contenido */
+        justify-content: center; /* Centrado horizontal */
+        align-items: center;     /* Centrado vertical */
+        text-decoration: none;   /* Elimina el subrayado del enlace */
+        transition: all 0.3s ease;
+    }
+  }
+
+  /* Solo para móviles y tablets (desde 320px hasta 1024px) */
+  @media (min-width: 320px) and (max-width: 1024px) {
+    .boton-anuncio {
+        height: 70px;
+        width: 140px;
+        position: relative;
+        top: 200px;
+        left: 300px;
+        border-radius: 10px;
+        background-color: white;
+        display: flex;           /* Añadido para centrar el contenido */
+        justify-content: center; /* Centrado horizontal */
+        align-items: center;     /* Centrado vertical */
+        text-decoration: none;   /* Elimina el subrayado del enlace */
+        transition: all 0.3s ease;
+    }
+  }
+
+  /* Base para todos los dispositivos hasta 1024px */
+@media (max-width: 1024px) {
+    .boton-anuncio {
+      height: 70px;
+      width: 140px;
+      position: relative;
+      border-radius: 10px;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      
+      /* Posición por defecto */
+      top: 210px;
+      left: 395px;
+    }
+  }
+
+  @media (min-width: 1080px) and (max-width: 1280px)  {
+    .boton-anuncio {
+        height: 70px;
+        width: 140px;
+        position: relative;
+        border-radius: 10px;
+        background-color: rgb(255, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        /* Posición por defecto */
+        top: 210px;
+        left: 450px;
+      }
+  }
+  
+  /* Para móviles (320px-1024px) en orientación vertical (portrait) */
+@media (min-width: 320px) and (max-width: 1024px) and (orientation: portrait) {
+    .boton-anuncio {
+      background-color: greenyellow;
+      top: 200px;
+      left: 115px;
+    }
+  }
+  
+  /* Para móviles (320px-1024px) en orientación horizontal (landscape) */
+  @media (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    .boton-anuncio {
+      background-color: greenyellow;
+      /* Ajustes específicos para cuando el móvil está en horizontal */
+      top: 200px; /* Ajusta estos valores según lo necesites */
+      left: 330px;
+    }
+
+    .texto-anuncio {
+        position: relative;
+        top: 120px;
+        font-size: 1.5em;
+        background-color: rgba(255, 255, 255, 0.636);
+        width: 70%;
+        left: 60px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+  }
+
+  /*Para iphone XR*/
+  /* Para móviles (320px-1024px) en orientación vertical (portrait) */
+@media (min-width: 320px) and (max-width: 1024px) and (orientation: portrait) {
+    .boton-anuncio {
+      background-color: greenyellow;
+      top: 200px;
+      left: 115px;
+    }
+  }
+  
+  /* Para móviles (320px-1024px) en orientación horizontal (landscape) */
+  @media (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
+    .boton-anuncio {
+      background-color: greenyellow;
+      top: 200px;
+      left: 310px;
+    }
+  }
+  
+  /* iPhone XR específicamente - estas reglas tendrán mayor prioridad */
+  @media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) {
+      .boton-anuncio {
+        position: relative;
+        top: 120px;
+        font-size: 1.5em;
+        background-color: rgba(255, 255, 255, 0.636);
+        width: 70%;
+        left: 60px;
+        border-radius: 10px;
+        padding: 20px;
+      }
+      
+      @media (orientation: portrait) {
+        .boton-anuncio {
+          top: 220px;
+          left: 137px;
+        }
+      }
+      
+      @media (orientation: landscape) {
+        .boton-anuncio {
+          top: 120px;
+          left: 378px;
+        }
+      }
+  }
+
+  /* iPhone SE (2ª generación - 2020) y iPhone SE (3ª generación - 2022) */
+@media only screen 
+and (device-width: 375px) 
+and (device-height: 667px) 
+and (-webkit-device-pixel-ratio: 2) {
+  .boton-anuncio {
+    top: 220px;
+    left: 137px;
+  }
+  
+  /* Orientación vertical */
+  @media (orientation: portrait) {
+    .boton-anuncio {
+      background-color: greenyellow;
+      top: 150px;
+      left: 117px;
+    }
+  }
+  
 }
